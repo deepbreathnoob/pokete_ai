@@ -19,8 +19,9 @@ class PoketeCareNPCAction(NPCAction):
         if self.care.poke is None:
             npc.text(
                 [
-                    "Here you can leave one of your Poketes for some time \
-and we will train it."
+                    tr(
+                        "Here you can leave one of your Poketes for some time and we will train it."
+                    )
                 ]
             )
             if ui.ask_bool(tr("Do you want to put a Pokete into the Pokete-Care?")):
@@ -28,16 +29,17 @@ and we will train it."
                     self.care.poke = npc.ctx.figure.pokes[index]
                     self.care.entry = timer.time.time
                     npc.ctx.figure.add_poke(Poke("__fallback__", 0), index)
-                    npc.text(["We will take care of it."])
+                    npc.text([tr("We will take care of it.")])
         else:
             add_xp = int((timer.time.time - self.care.entry) / 30)
             self.care.entry = timer.time.time
             self.care.poke.add_xp(add_xp)
             npc.text(
                 [
-                    "Oh, you're back.",
-                    f"Your {self.care.poke.name} \
-gained {add_xp}xp and reached level {self.care.poke.lvl()}!",
+                    tr("Oh, you're back."),
+                    tr("Your {p0} gained {p1}xp and reached level {p2}!").format(
+                        p0=self.care.poke.name, p1=add_xp, p2=self.care.poke.lvl()
+                    ),
                 ]
             )
             if ui.ask_bool(tr("Do you want it back?")):
@@ -55,6 +57,6 @@ gained {add_xp}xp and reached level {self.care.poke.lvl()}!",
                     continue
                 npc.ctx.figure.add_poke(dummy.pokes[0])
                 npc.ctx.figure.caught_pokes += dummy.caught_pokes
-                npc.text(["Here you go!", "Until next time!"])
+                npc.text([tr("Here you go!"), tr("Until next time!")])
                 self.care.poke = None
-        npc.text(["See you!"])
+        npc.text([tr("See you!")])

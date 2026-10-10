@@ -6,6 +6,7 @@ import sys
 import pokete.data as p_data
 from pokete.base.ui.views.boxes import InfoBoxView
 from pokete.i18n import _ as tr
+from pokete.i18n import ngettext
 
 from .settings import settings
 from .side_loops import LoopBox
@@ -30,23 +31,35 @@ class ModError(Exception):
     def __init__(self, name, err):
         self.name = name
         self.err = err
-        super().__init__(f"The mod '{name}' lacks attributes!\n{err}")
+        super().__init__(
+            tr("The mod '{name}' lacks attributes!\n{err}").format(name=name, err=err)
+        )
 
 
 class ModInfo(LoopBox):
     """Gives information about mods"""
 
     def __init__(self):
+        count = len(loaded_mods.mod_info)
+        state = (
+            tr("Mods are enabled!")
+            if settings("load_mods").val
+            else tr("Mods are disabled!")
+        )
         self.text = (
-            f"""
-Mods are { {True: "enabled", False: "disabled"}[settings("load_mods").val] }!
-To load a mod, it has to be placed in '/mods',
-and mods have to be enabled in the menu.
-
-Currently {len(loaded_mods.mod_info)} mod{"s are" if len(loaded_mods.mod_info) != 1 else " is"} loaded:
-   """
+            state
+            + "\n"
+            + tr("To load a mod, place it in '/mods' and enable mods in the menu.")
+        )
+        self.text += "\n\n" + ngettext(
+            "Currently {count} mod is loaded:",
+            "Currently {count} mods are loaded:",
+            count,
+        ).format(count=count)
+        self.text += (
+            "\n   "
             + "\n   ".join(
-                f"{i}-{loaded_mods.mod_info[i]}" for i in loaded_mods.mod_info
+                f"{name}-{info}" for name, info in loaded_mods.mod_info.items()
             )
             + "\n"
         )

@@ -78,7 +78,7 @@ class EvoMap(gm.GameMap, Overview):
         self.show()
         time.sleep(SPEED_OF_TIME * 0.01)
         new.moves.shine()
-        self.outp.outp(tr("{p0} evolved into {p1}!").format(p0=self.name, p1=new.name))
+        self.outp.outp(tr("{p0} evolved into {p1}!").format(p0=poke.name, p1=new.name))
         time.sleep(SPEED_OF_TIME * 5)
         for i in range(
             max(
@@ -88,7 +88,7 @@ class EvoMap(gm.GameMap, Overview):
             )
         ):
             LearnAttack(new)(ctx)
-        ctx.figure.pokes[ctx.figure.pokes.index(self)] = new
+        ctx.figure.pokes[ctx.figure.pokes.index(poke)] = new
         if new.identifier not in ctx.figure.caught_pokes:
             ctx.figure.caught_pokes.append(new.identifier)
         achievements.achieve("first_evolve")

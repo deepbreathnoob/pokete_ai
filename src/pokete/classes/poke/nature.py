@@ -12,6 +12,7 @@ from pokete.base.ui.elements.labels import CloseLabel
 from pokete.base.ui.views.boxes import LabelBoxView
 from pokete.classes.model.poke import NatureDict
 from pokete.i18n import _ as tr
+from pokete.i18n import pgettext
 from pokete.util import liner
 
 from ..asset_service.service import asset_service
@@ -99,7 +100,10 @@ class NatureInfo(LabelBoxView):
         init = self.get_amount(p_n.nature.initiative)
         text = (
             se.Text(tr("Nature: {p0}").format(p0=tr("very ") if p_n.grade == 2 else ""))
-            + se.Text(tr(p_n.nature.name), esccode=Color.thicc + p_n.nature.esccode)
+            + se.Text(
+                pgettext("nature", p_n.nature.name),
+                esccode=Color.thicc + p_n.nature.esccode,
+            )
             + se.Text(
                 liner(
                     tr(

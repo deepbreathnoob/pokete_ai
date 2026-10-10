@@ -41,7 +41,7 @@ def get_language():
 
 def _(message):
     """Translate a complete message before interpolating named parameters."""
-    return _translation.gettext(message)
+    return _translation.gettext(message) if message else ""
 
 
 def ngettext(singular, plural, count):
@@ -56,7 +56,7 @@ def localize_base_assets(assets):
     """
     import copy
 
-    key = (id(assets), get_language())
+    key = (assets, get_language())
     if key not in _asset_cache:
         result = copy.deepcopy(assets)
         for collection, fields in (
@@ -73,3 +73,16 @@ def localize_base_assets(assets):
 
 
 _asset_cache = {}
+
+
+def pgettext(context, message):
+    return _translation.pgettext(context, message)
+
+
+def localize_sign(text):
+    """Translate signs within their existing collision footprint."""
+    for label in ("Center!", "Shop!", "Pokete-Care"):
+        translated = _(label)
+        if len(translated) <= len(label):
+            text = text.replace(label, translated.ljust(len(label)))
+    return text

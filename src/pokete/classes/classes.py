@@ -78,7 +78,9 @@ class OutP(se.Text):
         """Rechar and show wrapper
         ARGS:
             text: String that's printed out"""
-        self.rechar(text)
+        from pokete.util import liner
+
+        self.rechar(liner(text, max(1, self.map.width - self.x - 1)))
         self.map.full_show()
 
     def append(self, *args):

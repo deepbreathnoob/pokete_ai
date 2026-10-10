@@ -65,7 +65,7 @@ class Station(StationObject):
         s_next="",
         d_next="",
     ):
-        self.desc = desc
+        self.desc = tr(desc)
         self.roadmap = roadmap
         self.color = getattr(Color, color, "\033[1;37m")
         self.base_color = self.color

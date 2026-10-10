@@ -194,7 +194,7 @@ class Trainer(NPC, Provider):
                 self.text(
                     {
                         True: self.lose_texts,
-                        False: self.win_texts + ["Here's $20!"],
+                        False: self.win_texts + [tr("Here's $20!")],
                     }[is_winner]
                 )
                 if is_winner:

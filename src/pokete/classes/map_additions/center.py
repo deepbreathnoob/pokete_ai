@@ -125,8 +125,8 @@ class CenterInteract(se.Object, MapInteract):
             mvp.movemap.bmap.inner.x - mvp.movemap.x + 8,
             3,
             [
-                "Welcome to the Pokete-Center",
-                "What do you want to do?",
+                tr("Welcome to the Pokete-Center"),
+                tr("What do you want to do?"),
             ],
         )
 
@@ -142,7 +142,7 @@ class CenterInteract(se.Object, MapInteract):
                     self.ctx,
                     mvp.movemap.bmap.inner.x - mvp.movemap.x + 8,
                     3,
-                    ["...", "Your Poketes are now healed!"],
+                    ["...", tr("Your Poketes are now healed!")],
                 )
             case 2:
                 self.__normalize_pokes(ob)
@@ -155,7 +155,9 @@ class CenterInteract(se.Object, MapInteract):
                     )
                     if selected_idx is not None:
                         poke = ob.pokes[selected_idx]
-                        message = random.choice(CUDDLE_MESSAGES).format(name=poke.name)
+                        message = tr(random.choice(CUDDLE_MESSAGES)).format(
+                            name=poke.name
+                        )
                         mvp.movemap.text(
                             self.ctx,
                             mvp.movemap.bmap.inner.x - mvp.movemap.x + 8,
@@ -167,7 +169,7 @@ class CenterInteract(se.Object, MapInteract):
                         self.ctx,
                         mvp.movemap.bmap.inner.x - mvp.movemap.x + 8,
                         3,
-                        ["You don't have any Poketes to cuddle with!"],
+                        [tr("You don't have any Poketes to cuddle with!")],
                     )
         mvp.movemap.full_show(init=True)
 
@@ -185,7 +187,7 @@ class ShopInteract(se.Object, MapInteract):
             self.ctx,
             mvp.movemap.bmap.inner.x - mvp.movemap.x + 9,
             3,
-            ["Welcome to the Pokete-Shop", "Wanna buy something?"],
+            [tr("Welcome to the Pokete-Shop"), tr("Wanna buy something?")],
         )
         buy(self.ctx)
         mvp.movemap.full_show(init=True)
@@ -193,5 +195,5 @@ class ShopInteract(se.Object, MapInteract):
             self.ctx,
             mvp.movemap.bmap.inner.x - mvp.movemap.x + 9,
             3,
-            ["Have a great day!"],
+            [tr("Have a great day!")],
         )

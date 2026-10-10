@@ -1,6 +1,6 @@
 """Contains some small loops"""
 
-import os
+import shutil
 
 import scrap_engine as se
 
@@ -75,7 +75,7 @@ class LoadingScreen:
     """Loading screen that's shown at game's start"""
 
     def __init__(self):
-        width, height = os.get_terminal_size()
+        width, height = shutil.get_terminal_size(fallback=(80, 24))
         self.map = gm.GameMap(width=width, height=height - 1)
         se.Text(
             r""" _____      _        _

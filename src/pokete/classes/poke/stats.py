@@ -126,7 +126,7 @@ class StatsInfoBox(LabelBoxView):
         poke_stats: PokeStats object"""
 
     def __init__(self, poke_stats: Stats):
-        not_available = "N/A"
+        not_available = tr("N/A")
         if poke_stats.ownership_date is None:
             ownership_date = not_available
         else:
@@ -140,7 +140,10 @@ class StatsInfoBox(LabelBoxView):
         if poke_stats.caught_with is None:
             caught_with = not_available
         else:
-            caught_with = poke_stats.caught_with
+            from pokete.classes.asset_service.service import asset_service
+
+            item = asset_service.get_items().get(poke_stats.caught_with)
+            caught_with = item.pretty_name if item else poke_stats.caught_with
 
         text = (
             se.Text(

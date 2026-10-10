@@ -1,6 +1,6 @@
 """Contains everything related to the resizescreen"""
 
-import os
+import shutil
 
 import scrap_engine as se
 
@@ -22,13 +22,15 @@ class ResizeScreen:
         self.size_label = se.Text(f"{self.width}x{self.height}")
         self.frame = StdFrame(self.height - 1, self.width)
         self.warning_label.add(
-            self.map, int(self.width / 2) - 13, int(self.height / 2) - 1
+            self.map,
+            max(0, (self.width - self.warning_label.width) // 2),
+            int(self.height / 2) - 1,
         )
         self.size_label.add(self.map, 1, 0)
         self.frame.add(self.map, 0, 0)
 
     def __set_dimensions(self):
-        width, height = os.get_terminal_size()
+        width, height = shutil.get_terminal_size(fallback=(80, 24))
         change = self.width != width or self.height != height
         self.height = height
         self.width = width
@@ -39,6 +41,7 @@ class ResizeScreen:
 
     def __call__(self):
         """Shows the map"""
+        self.warning_label.rechar(tr("Minimum windowsize is 70x20"))
         change = self.__set_dimensions()
         while self.__check():
             self.__set_dimensions()
@@ -46,7 +49,8 @@ class ResizeScreen:
             self.frame.remove()
             self.map.resize(self.height - 1, self.width, " ")
             self.warning_label.set(
-                int(self.width / 2) - 13, int((self.height - 1) / 2) - 1
+                max(0, (self.width - self.warning_label.width) // 2),
+                int((self.height - 1) / 2) - 1,
             )
             self.size_label.rechar(f"{self.width}x{self.height}")
             self.frame.resize(self.height - 1, self.width)

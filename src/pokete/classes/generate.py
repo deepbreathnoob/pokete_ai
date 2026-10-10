@@ -9,6 +9,7 @@ from pokete.base.periodic_event_manager import PeriodicEvent
 from pokete.base.tss import tss
 from pokete.classes.asset_service.resources.obmaps import Obmap
 from pokete.classes.map_additions.customizers import customizers
+from pokete.i18n import localize_sign
 
 from . import ob_maps as obmp
 from .asset_service.resources import Map
@@ -99,7 +100,7 @@ def gen_single_map_obs(_map: PlayMap, single_map: Obmap, used_npcs: list[str]):
         __parse_obj(
             _map,
             hard_ob,
-            se.Text(single_hard_ob.txt, ignore=" "),
+            se.Text(localize_sign(single_hard_ob.txt), ignore=" "),
             single_hard_ob,
         )
     for soft_ob, single_soft_ob in single_map.soft_obs.items():
@@ -112,7 +113,7 @@ def gen_single_map_obs(_map: PlayMap, single_map: Obmap, used_npcs: list[str]):
             _map,
             soft_ob,
             cls(
-                single_soft_ob.txt,
+                localize_sign(single_soft_ob.txt),
                 _map.poke_args if cls != Water else _map.w_poke_args,
             ),
             single_soft_ob,

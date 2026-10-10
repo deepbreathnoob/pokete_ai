@@ -5,10 +5,11 @@ from typing import Generator
 import pokete.bs_rpc as bs_rpc
 from pokete.base.context import Context
 from pokete.base.input_loops.ask import wait_event
+from pokete.classes.multiplayer.msg import fight
 from pokete.classes.multiplayer.remote_fight.fight import RemoteFight
 from pokete.classes.multiplayer.remote_fight.figure_wrapper import FigureWrapperProvider
 from pokete.classes.multiplayer.remote_fight.provider import RemoteProvider
-from pokete.classes.multiplayer.msg import fight
+from pokete.i18n import _ as tr
 
 
 class RemoteFightController:
@@ -33,7 +34,7 @@ class RemoteFightController:
     def start(self, ctx: Context, name: str):
         # self.__start.clear()
         logging.info(f"waiting fight {ctx.figure.name}")
-        wait_event(ctx, "Waiting for fight...", self.__start)
+        wait_event(ctx, tr("Waiting for fight..."), self.__start)
         logging.info(f"fight starts {ctx.figure.name}")
 
         starter = self.__wait_starter()

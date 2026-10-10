@@ -66,7 +66,7 @@ class Connector:
             try:
                 self.host_port = HostPort.parse(host)
             except HostPortParseException as e:
-                ask_ok(ctx, tr("Error: {p0}").format(p0=e))
+                ask_ok(ctx, tr("Error: {p0}").format(p0=tr(str(e))))
                 continue
             break
         return True

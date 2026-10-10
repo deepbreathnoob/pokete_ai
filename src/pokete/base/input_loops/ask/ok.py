@@ -11,10 +11,12 @@ from pokete.base.ui.elements.box import Box
 from pokete.base.ui.elements.labels import action_key_label
 from pokete.base.ui.elements.text import HightlightableText
 from pokete.i18n import _ as tr
+from pokete.util import liner
 
 
 class AskOkBox(Box, MouseInteractor):
-    def __init__(self, text: str):
+    def __init__(self, text: str, max_width=76):
+        text = liner(text, max_width)
         text = tr(text)
         self.__do_exit = False
         self.__text_label = se.Text(text)
@@ -23,13 +25,13 @@ class AskOkBox(Box, MouseInteractor):
         )
         super().__init__(
             self.__text_label.height + 3,
-            self.__text_label.width + 4,
+            max(self.__text_label.width, self.__ok_label.width) + 4,
             "info",
         )
         self.add_ob(self.__text_label, 2, 1)
         self.add_ob(
             self.__ok_label,
-            round(self.__text_label.width / 2),
+            max(2, (self.width - self.__ok_label.width) // 2),
             self.__text_label.height + 1,
         )
 
@@ -68,4 +70,4 @@ def ask_ok(ctx: Context, text):
         ctx:Context
         text: The question it self"""
 
-    AskOkBox(text)(ctx)
+    AskOkBox(text, max_width=max(1, ctx.map.width - 4))(ctx)

@@ -70,6 +70,6 @@ class ModeChooser(BetterChooseBoxView[bool]):
         except ValidationException as e:
             ask_ok(
                 ctx,
-                tr("An error ocured validating game data:\n{p0}").format(p0=e),
+                tr("An error ocured validating game data:\n{p0}").format(p0=tr(str(e))),
             )
             return None

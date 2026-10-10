@@ -64,6 +64,16 @@ class Action(Enum):
     INTERACT = auto()
 
     @property
+    def display_name(self):
+        if self.name.startswith("ACT_"):
+            return tr("Action {number}").format(number=self.name.rsplit("_", 1)[-1])
+        if self.name.startswith("QUICK_ATC_"):
+            return tr("Quick attack {number}").format(
+                number=self.name.rsplit("_", 1)[-1]
+            )
+        return tr(self.name)
+
+    @property
     def mapping(self) -> str:
         """Returns the current mapped char"""
         return get_mapping(self, hotkey_mappings)
@@ -209,7 +219,7 @@ def hotkeys_from_save(ctx, save, version_change):
             ctx,
             tr(
                 "The folowing keys are not set:\n{p0}\nShould defaults be loaded for those keys?"
-            ).format(p0=liner(", ".join([i.name for i in unset]), 60)),
+            ).format(p0=liner(", ".join([i.display_name for i in unset]), 60)),
         ):
             for action in unset:
                 key = action.mapping

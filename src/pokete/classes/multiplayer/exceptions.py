@@ -1,3 +1,6 @@
+from pokete.i18n import _ as tr
+
+
 class UserPresentException(Exception):
     def __init__(self):
         super().__init__("user present")
@@ -17,4 +20,4 @@ class InvalidPokeException(Exception):
 
 class ConnectionException(Exception):
     def __init__(self, e: Exception):
-        super().__init__("failed to connect", e)
+        super().__init__(tr("failed to connect"), e)

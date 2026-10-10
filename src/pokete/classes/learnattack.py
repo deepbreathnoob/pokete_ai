@@ -60,7 +60,13 @@ class LearnAttack:
             6,
             25,
             name=tr("Attacks"),
-            info=f"{Action.DECK.mapping}:Details, {Action.INFO.mapping}:Info",
+            info=[
+                se.Text(
+                    tr("{deck}:Details, {info}:Info").format(
+                        deck=Action.DECK.mapping, info=Action.INFO.mapping
+                    )
+                )
+            ],
         )
 
     @staticmethod

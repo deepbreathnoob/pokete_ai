@@ -9,8 +9,10 @@
 	<project_license>GPL-3.0</project_license>
 	<name>Pokete</name>
 	<summary>Terminal based Pokemon like game</summary>
+	<summary xml:lang="pl">Gra terminalowa inspirowana Pokémon</summary>
 	<description>
 		<p>Pokete is a small terminal based game in the style of a very popular and old game by Gamefreak. Imagine you're a Pokete-Trainer and your goal is it to run around in the world and catch/train as many Poketes as possible and to get the best trainer.</p>
+		<p xml:lang="pl">Pokete to niewielka gra terminalowa inspirowana klasycznymi grami studia Gamefreak. Wciel się w trenera, odkrywaj świat, łap i trenuj Pokete, aby stać się najlepszym trenerem.</p>
 	</description>
 	<categories>
 		<category>Game</category>
@@ -30,10 +32,12 @@
 	<screenshots>
 		<screenshot type="default">
 			<caption>Fight against other poketes</caption>
+			<caption xml:lang="pl">Walka z innymi Pokete</caption>
 			<image type="source" width="734" height="410">https://lxgr-linux.github.io/pokete/assets/ss/ss01.png</image>
 		</screenshot>
 		<screenshot>
 			<caption>Conversation with a trainer on Map Route 2</caption>
+			<caption xml:lang="pl">Rozmowa z trenerem na Drodze 2</caption>
 			<image type="source" width="734" height="410">https://lxgr-linux.github.io/pokete/assets/ss/ss05.png</image>
 		</screenshot>
 	</screenshots>

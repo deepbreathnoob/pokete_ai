@@ -67,7 +67,7 @@ class Inv(BaseInv):
         elif isinstance(obj, LearnDisc):
             if ask_bool(
                 ctx,
-                tr("Do you want to teach '{p0}'?").format(p0=obj.attack.name),
+                tr("Do you want to teach '{p0}'?").format(p0=tr(obj.attack.name)),
             ):
                 while True:
                     index = deck.deck(
@@ -86,7 +86,7 @@ class Inv(BaseInv):
                         ctx,
                         tr(
                             "You can't teach '{p0}' to '{p1}'! \nDo you want to continue?"
-                        ).format(p0=obj.attack.name, p1=poke.name),
+                        ).format(p0=tr(obj.attack.name), p1=poke.name),
                     ):
                         poke = None
                 if poke is None:
