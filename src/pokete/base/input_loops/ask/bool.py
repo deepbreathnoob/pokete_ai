@@ -9,31 +9,39 @@ from pokete.base.input.hotkeys import Action, get_action
 from pokete.base.input.mouse import MouseEvent, MouseEventType
 from pokete.base.mouse import MouseInteractor
 from pokete.base.ui.elements.box import Box
+from pokete.base.ui.elements.labels import action_key_label
 from pokete.base.ui.elements.text import HightlightableText
+from pokete.i18n import _
 
 
 class AskBoolBox(Box, MouseInteractor):
     def __init__(self, text: str):
-        assert len(text) >= 12, "Text has to be longer then 12 characters!"
         self.__result: Optional[bool] = None
         self.__text_label = se.Text(text)
-        self.__yes_label = HightlightableText("[Y]es")
-        self.__no_label = HightlightableText("[N]o")
+        self.__yes_label = HightlightableText(
+            f"[{action_key_label(Action.ACCEPT)}] " + _("Yes")
+        )
+        self.__no_label = HightlightableText(
+            f"[{action_key_label(Action.CANCEL)}] " + _("No")
+        )
         self.__labels = [self.__yes_label, self.__no_label]
+        content_width = max(
+            self.__text_label.width, self.__yes_label.width + self.__no_label.width + 3
+        )
         super().__init__(
             self.__text_label.height + 3,
-            self.__text_label.width + 4,
-            "info",
+            content_width + 4,
+            _("info"),
         )
         self.add_ob(self.__text_label, 2, 1)
         self.add_ob(
             self.__yes_label,
-            round(self.__text_label.width / 2 - 4),
+            2,
             self.__text_label.height + 1,
         )
         self.add_ob(
             self.__no_label,
-            round(self.__text_label.width / 2 + 4),
+            self.width - 2 - self.__no_label.width,
             self.__text_label.height + 1,
         )
 

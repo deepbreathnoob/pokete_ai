@@ -25,6 +25,7 @@ from pokete.classes.classes import PlayMap
 from pokete.classes.generate import gen_single_map, gen_single_map_obs
 from pokete.classes.map_additions.center import CenterMap, ShopMap
 from pokete.classes.multiplayer.menu import ModeChooser
+from pokete.i18n import _
 from pokete.release import VERSION
 from pokete.util import liner
 from pokete.util.semantic_version import SemanticVersion
@@ -117,10 +118,9 @@ def check_version(ctx: Context, sinfo):
         if not ask_bool(
             ctx,
             liner(
-                f"The save file was created \
-on version '{ver}', the current version is '{VERSION}', \
-such a downgrade may result in data loss! \
-Do you want to continue?",
+                _(
+                    "The save file was created on version {saved_version}; the current version is {current_version}. Downgrading may cause data loss! Do you want to continue?"
+                ).format(saved_version=ver, current_version=VERSION),
                 int(tss.width * 2 / 3),
             ),
         ):

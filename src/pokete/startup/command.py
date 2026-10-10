@@ -7,6 +7,7 @@ from pokete.util.command.command import Flag, RootCommand
 
 
 class PoketeCommand:
+    language_flag = Flag(["--language"], "Interface language: en or pl")
     log_flag = Flag(["--log"], "Enables logging")
     mods_flag = Flag(["--no_mods"], "Disables mods")
     audio_flag = Flag(["--no_audio"], "Disables audio")
@@ -16,6 +17,7 @@ class PoketeCommand:
     )
 
     def __init__(self, audio):
+        self.language = None
         self.do_logging = False
         self.load_mods = True
         audio.use_audio = True
@@ -24,7 +26,15 @@ class PoketeCommand:
 
     def root_fn(self, ex: str, options: list[str], flags: dict[str, list[str]]):
         for flag, values in flags.items():
-            if self.log_flag.is_flag(flag):
+            if self.language_flag.is_flag(flag):
+                if len(values) != 1 or values[0] not in ("en", "pl"):
+                    print(
+                        "--language expects exactly one argument: en or pl",
+                        file=sys.stderr,
+                    )
+                    sys.exit(2)
+                self.language = values[0]
+            elif self.log_flag.is_flag(flag):
                 self.do_logging = True
             elif self.mods_flag.is_flag(flag):
                 self.load_mods = False
@@ -42,6 +52,7 @@ class PoketeCommand:
             f"{CODENAME} v{VERSION}",
             self.root_fn,
             flags=[
+                self.language_flag,
                 self.log_flag,
                 self.mods_flag,
                 self.audio_flag,

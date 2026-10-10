@@ -1,0 +1,162 @@
+msgid ""
+msgstr "Project-Id-Version: pokete 0.10.0\nPO-Revision-Date: 2026-10-10 19:30+0000\nLast-Translator: Pokete contributors\nLanguage-Team: Polish\nLanguage: pl\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n == 1 ? 0 : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : 2);\n"
+
+msgid "About"
+msgstr "O grze"
+
+msgid "Achievements"
+msgstr "Osiągnięcia"
+
+msgid "Animations"
+msgstr "Animacje"
+
+msgid "Audio"
+msgstr "Dźwięk"
+
+msgid "Autosave"
+msgstr "Autozapis"
+
+msgid "Bad character"
+msgstr "Nieprawidłowy symbol"
+
+msgid "Char:"
+msgstr "Symbol:"
+
+#, python-brace-format
+msgid "Controls:\n{up}: up, {left}: left\n{down}: down, {right}: right\n{menu}: menu\n\nIn tall grass (;), wild Poketes may attack you.\nWeaken them to catch them, or defeat them to gain XP.\nApproach NPCs to talk to them.\nMore information:\nhttps://github.com/deepbreathnoob/pokete_ai/blob/master/docs/HowToPlay.md"
+msgstr "Sterowanie:\n{up}: góra, {left}: lewo\n{down}: dół, {right}: prawo\n{menu}: menu\n\nW wysokiej trawie (;) mogą zaatakować dzikie Pokete.\nOsłab je, aby je złapać, lub pokonaj, aby zdobyć XP.\nPodejdź do postaci, aby rozpocząć rozmowę.\nWięcej informacji:\nhttps://github.com/deepbreathnoob/pokete_ai/blob/master/docs/HowToPlay.md"
+
+msgid "Error"
+msgstr "Błąd"
+
+msgid "Exit"
+msgstr "Wyjdź"
+
+msgid "Hello, my child."
+msgstr "Witaj, moje dziecko."
+
+msgid "Help"
+msgstr "Pomoc"
+
+msgid "I think it's now time for you to travel the world and become a Pokete-trainer."
+msgstr "Pora wyruszyć w świat i zostać trenerem Pokete."
+
+msgid "Language (restart)"
+msgstr "Język (po restarcie)"
+
+msgid "Leave..."
+msgstr "Wyjdź..."
+
+msgid "Load mods"
+msgstr "Wczytuj mody"
+
+msgid "Menu"
+msgstr "Menu"
+
+msgid "Mode"
+msgstr "Tryb gry"
+
+msgid "Mods"
+msgstr "Mody"
+
+msgid "Multiplayer (Beta)"
+msgstr "Gra sieciowa (beta)"
+
+msgid "Name"
+msgstr "Nazwa"
+
+msgid "Name:"
+msgstr "Nazwa:"
+
+msgid "No"
+msgstr "Nie"
+
+msgid "Now go out and become the best!"
+msgstr "Wyrusz i zostań najlepszym trenerem!"
+
+msgid "Off"
+msgstr "Wył."
+
+msgid "On"
+msgstr "Wł."
+
+msgid "Playername:"
+msgstr "Gracz:"
+
+#, python-brace-format
+msgid "Pokete v{version} -- {codename}\nby lxgr-linux <lxgr@protonmail.com>\n\nThis software is licensed under GPLv3. A copy of the license is included with the game.\nContributions, especially new Poketes, are welcome:\nhttps://github.com/lxgr-linux/pokete"
+msgstr "Pokete v{version} -- {codename}\nautor: lxgr-linux <lxgr@protonmail.com>\n\nGra jest udostępniana na licencji GPLv3. Kopię licencji dołączono do gry.\nZapraszamy do współtworzenia, szczególnie do dodawania nowych Pokete:\nhttps://github.com/lxgr-linux/pokete"
+
+msgid "Return to main menu"
+msgstr "Wróć do menu głównego"
+
+msgid "Save"
+msgstr "Zapisz"
+
+msgid "Save trainers"
+msgstr "Pamiętaj trenerów"
+
+msgid "Saving...."
+msgstr "Zapisywanie..."
+
+msgid "Singleplayer"
+msgstr "Gra solo"
+
+msgid "The chosen character has to be a valid single-space character!"
+msgstr "Symbol musi zajmować jedną komórkę terminala!"
+
+#, python-brace-format
+msgid "The save file was created on version {saved_version}; the current version is {current_version}. Downgrading may cause data loss! Do you want to continue?"
+msgstr "Zapis pochodzi z wersji {saved_version}; obecna wersja to {current_version}. Uruchomienie starszej wersji może spowodować utratę danych! Czy chcesz kontynuować?"
+
+msgid "Therefore, I'll give you this powerful 'Steini', 15 'Poketeballs' to catch Poketes, and a 'Healing potion'."
+msgstr "Dostaniesz silnego Steini, 15 kul Pokete do łapania stworzeń i miksturę leczenia."
+
+msgid "Volume"
+msgstr "Głośność"
+
+msgid "Welcome to Pokete!\nPlease choose your name!\n"
+msgstr "Witaj w Pokete!\nWybierz swoją nazwę!\n"
+
+msgid "Yes"
+msgstr "Tak"
+
+msgid "You will be the best Pokete-Trainer in Nice town."
+msgstr "Zostaniesz najlepszym trenerem Pokete w Nice Town."
+
+msgid "You're now ten years old."
+msgstr "Masz już dziesięć lat."
+
+msgid "close"
+msgstr "zamknij"
+
+msgid "info"
+msgstr "Informacja"
+
+msgid "Space"
+msgstr "Spacja"
+
+msgid "Enter"
+msgstr "Enter"
+
+msgid "Esc"
+msgstr "Esc"
+
+msgid "Backspace"
+msgstr "Backspace"
+
+msgid "Up"
+msgstr "Góra"
+
+msgid "Down"
+msgstr "Dół"
+
+msgid "Left"
+msgstr "Lewo"
+
+msgid "Right"
+msgstr "Prawo"
+
+msgid "Do you really wish to exit?"
+msgstr "Czy na pewno chcesz zakończyć grę?"
+

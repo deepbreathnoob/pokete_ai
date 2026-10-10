@@ -1,0 +1,162 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "About"
+msgstr ""
+
+msgid "Achievements"
+msgstr ""
+
+msgid "Animations"
+msgstr ""
+
+msgid "Audio"
+msgstr ""
+
+msgid "Autosave"
+msgstr ""
+
+msgid "Bad character"
+msgstr ""
+
+msgid "Char:"
+msgstr ""
+
+#, python-brace-format
+msgid "Controls:\n{up}: up, {left}: left\n{down}: down, {right}: right\n{menu}: menu\n\nIn tall grass (;), wild Poketes may attack you.\nWeaken them to catch them, or defeat them to gain XP.\nApproach NPCs to talk to them.\nMore information:\nhttps://github.com/deepbreathnoob/pokete_ai/blob/master/docs/HowToPlay.md"
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+msgid "Exit"
+msgstr ""
+
+msgid "Hello, my child."
+msgstr ""
+
+msgid "Help"
+msgstr ""
+
+msgid "I think it's now time for you to travel the world and become a Pokete-trainer."
+msgstr ""
+
+msgid "Language (restart)"
+msgstr ""
+
+msgid "Leave..."
+msgstr ""
+
+msgid "Load mods"
+msgstr ""
+
+msgid "Menu"
+msgstr ""
+
+msgid "Mode"
+msgstr ""
+
+msgid "Mods"
+msgstr ""
+
+msgid "Multiplayer (Beta)"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "Name:"
+msgstr ""
+
+msgid "No"
+msgstr ""
+
+msgid "Now go out and become the best!"
+msgstr ""
+
+msgid "Off"
+msgstr ""
+
+msgid "On"
+msgstr ""
+
+msgid "Playername:"
+msgstr ""
+
+#, python-brace-format
+msgid "Pokete v{version} -- {codename}\nby lxgr-linux <lxgr@protonmail.com>\n\nThis software is licensed under GPLv3. A copy of the license is included with the game.\nContributions, especially new Poketes, are welcome:\nhttps://github.com/lxgr-linux/pokete"
+msgstr ""
+
+msgid "Return to main menu"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Save trainers"
+msgstr ""
+
+msgid "Saving...."
+msgstr ""
+
+msgid "Singleplayer"
+msgstr ""
+
+msgid "The chosen character has to be a valid single-space character!"
+msgstr ""
+
+#, python-brace-format
+msgid "The save file was created on version {saved_version}; the current version is {current_version}. Downgrading may cause data loss! Do you want to continue?"
+msgstr ""
+
+msgid "Therefore, I'll give you this powerful 'Steini', 15 'Poketeballs' to catch Poketes, and a 'Healing potion'."
+msgstr ""
+
+msgid "Volume"
+msgstr ""
+
+msgid "Welcome to Pokete!\nPlease choose your name!\n"
+msgstr ""
+
+msgid "Yes"
+msgstr ""
+
+msgid "You will be the best Pokete-Trainer in Nice town."
+msgstr ""
+
+msgid "You're now ten years old."
+msgstr ""
+
+msgid "close"
+msgstr ""
+
+msgid "info"
+msgstr ""
+
+msgid "Space"
+msgstr ""
+
+msgid "Enter"
+msgstr ""
+
+msgid "Esc"
+msgstr ""
+
+msgid "Backspace"
+msgstr ""
+
+msgid "Up"
+msgstr ""
+
+msgid "Down"
+msgstr ""
+
+msgid "Left"
+msgstr ""
+
+msgid "Right"
+msgstr ""
+
+msgid "Do you really wish to exit?"
+msgstr ""
+

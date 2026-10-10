@@ -67,6 +67,7 @@ from pokete.classes.save import read_save, save
 from pokete.classes.settings import settings
 from pokete.classes.side_loops import Help, loading_screen
 from pokete.figure import Bank, Inventory
+from pokete.i18n import _, resolve_language, set_language
 from pokete.release import SPEED_OF_TIME
 from pokete.startup.command import PoketeCommand
 from pokete.startup.logging import init_logger
@@ -310,7 +311,7 @@ Your partners mods: {', '.join(i + '-' + mod_info[i] for i in mod_info)}"""
 
 
 def quit(ctx: Context):
-    if ask_bool(ctx, "Do you really wish to exit?"):
+    if ask_bool(ctx, _("Do you really wish to exit?")):
         save(ctx.figure)
         sys.exit()
 
@@ -422,10 +423,10 @@ def intro(ctx: Context):
     while ctx.figure.name in ["DEFAULT", ""]:
         ctx.figure.name = ask_text(
             ctx,
-            "Welcome to Pokete!\nPlease choose your name!\n",
-            "Name:",
+            _("Welcome to Pokete!\nPlease choose your name!\n"),
+            _("Name:"),
             "",
-            "Name",
+            _("Name"),
             17,
         )
     mvp.movemap.name_label_rechar(ctx.figure.name)
@@ -434,15 +435,19 @@ def intro(ctx: Context):
         4,
         3,
         [
-            "Hello, my child.",
-            "You're now ten years old.",
-            "I think it's now time for you to travel "
-            "the world and become a Pokete-trainer.",
-            "Therefore, I'll give you this powerful 'Steini', "
-            "15 'Poketeballs' to catch Poketes, and a "
-            "'Healing potion'.",
-            "You will be the best Pokete-Trainer in Nice town.",
-            "Now go out and become the best!",
+            _("Hello, my child."),
+            _("You're now ten years old."),
+            _(
+                "I think it's now time for you to travel "
+                "the world and become a Pokete-trainer."
+            ),
+            _(
+                "Therefore, I'll give you this powerful 'Steini', "
+                "15 'Poketeballs' to catch Poketes, and a "
+                "'Healing potion'."
+            ),
+            _("You will be the best Pokete-Trainer in Nice town."),
+            _("Now go out and become the best!"),
         ],
     )
 
@@ -450,7 +455,8 @@ def intro(ctx: Context):
 def main():
     """Main function"""
 
-    do_logging, load_mods, save_dir = PoketeCommand(audio).run()
+    command = PoketeCommand(audio)
+    do_logging, load_mods, save_dir = command.run()
 
     release.SAVEPATH = save_dir
     release.SAVEPATH.mkdir(parents=True, exist_ok=True)
@@ -463,7 +469,10 @@ def main():
 
         # reading savefile
         session_info = read_save()
-        settings.from_dict(session_info.get("settings", {}))
+        saved_settings = session_info.get("settings", {})
+        language = resolve_language(command.language, saved_settings.get("language"))
+        settings.from_dict(saved_settings)
+        settings("language").val = set_language(language)
 
         if not load_mods:
             settings("load_mods").val = False
