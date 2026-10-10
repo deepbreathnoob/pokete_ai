@@ -2,16 +2,19 @@
 
 import logging
 import time
+
 import scrap_engine as se
 
-from pokete.base.exception_propagation import exception_propagating_periodic_event
-from pokete.release import SPEED_OF_TIME
 import pokete.base.game_map as gm
 from pokete.base import loops
 from pokete.base.context import Context
+from pokete.base.exception_propagation import exception_propagating_periodic_event
 from pokete.base.periodic_event_manager import PeriodicEventManager
 from pokete.base.tss import tss
 from pokete.base.ui import Overview
+from pokete.i18n import _ as tr
+from pokete.release import SPEED_OF_TIME
+
 from ..achievements import achievements
 from ..asset_service.service import asset_service
 from ..classes import OutP
@@ -58,9 +61,11 @@ class EvoMap(gm.GameMap, Overview):
         poke.ico.remove()
         poke.ico.add(self, round(self.width / 2 - 4), round((self.height - 8) / 2))
         poke.moves.shine()
-        self.outp.outp("Look!")
+        self.outp.outp(tr("Look!"))
         time.sleep(SPEED_OF_TIME * 0.5)
-        self.outp.outp(f"{self.outp.text}\n{poke.name} is evolving!")
+        self.outp.outp(
+            tr("{p0}\n{p1} is evolving!").format(p0=self.outp.text, p1=poke.name)
+        )
         time.sleep(SPEED_OF_TIME * 1)
         for i in range(8):
             for j, k in zip([poke.ico, new.ico], [new.ico, poke.ico]):
@@ -73,7 +78,7 @@ class EvoMap(gm.GameMap, Overview):
         self.show()
         time.sleep(SPEED_OF_TIME * 0.01)
         new.moves.shine()
-        self.outp.outp(f"{self.name} evolved into {new.name}!")
+        self.outp.outp(tr("{p0} evolved into {p1}!").format(p0=self.name, p1=new.name))
         time.sleep(SPEED_OF_TIME * 5)
         for i in range(
             max(

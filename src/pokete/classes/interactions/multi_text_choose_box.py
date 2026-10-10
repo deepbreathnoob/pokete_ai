@@ -4,6 +4,7 @@ import scrap_engine as se
 
 from pokete.base.context import Context
 from pokete.base.ui.views.choose_box import ChooseBoxView
+from pokete.i18n import _ as tr
 
 from .. import movemap as mvp
 
@@ -14,11 +15,11 @@ class MultiTextChooseBox(ChooseBoxView[tuple[int, str]]):
     def __init__(self, keys: list[str], name: str):
         super().__init__(
             len(keys) + 2,
-            sorted(len(i) for i in keys)[-1] + 6,
+            max(len(tr(i)) for i in keys) + 6,
             name=name,
         )
         self.keys = keys
-        self.elems: list[se.ObjectGroup] = [se.Text(i, state="float") for i in keys]
+        self.elems: list[se.ObjectGroup] = [se.Text(tr(i), state="float") for i in keys]
         self.fig: Optional[se.Text] = None
 
     def new_size(self) -> tuple[int, int]:

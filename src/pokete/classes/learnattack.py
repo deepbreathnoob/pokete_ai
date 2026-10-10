@@ -10,6 +10,7 @@ from pokete.base.input import Action, get_action
 from pokete.base.input_loops import ask_bool, ask_ok
 from pokete.base.ui.elements import Box, ChooseBox
 from pokete.base.ui.elements.labels import CloseLabel
+from pokete.i18n import _ as tr
 from pokete.util import liner
 
 from . import detail
@@ -38,7 +39,7 @@ class AttackInfo(Box):
         )
         self.add_ob(atc.label_type, 2, 1)
         self.add_ob(atc.label_factor, 2, 2)
-        self.add_ob(se.Text(f"AP:{atc.max_ap}"), 2, 3)
+        self.add_ob(se.Text(tr("AP:{p0}").format(p0=atc.max_ap)), 2, 3)
         self.add_ob(desc_label, 2, 4)
 
     def __enter__(self):
@@ -58,7 +59,7 @@ class LearnAttack:
         self.box = ChooseBox(
             6,
             25,
-            name="Attacks",
+            name=tr("Attacks"),
             info=f"{Action.DECK.mapping}:Details, {Action.INFO.mapping}:Info",
         )
 
@@ -101,7 +102,9 @@ class LearnAttack:
             new_attack = attack
         if ask_bool(
             ctx,
-            f"{self.poke.name} wants to learn {attacks[new_attack].name}!",
+            tr("{p0} wants to learn {p1}!").format(
+                p0=self.poke.name, p1=attacks[new_attack].name
+            ),
         ):
             if len(self.poke.attacks) < 4:
                 self.poke.attacks.append(new_attack)
@@ -125,7 +128,9 @@ class LearnAttack:
                             self.poke.attack_obs[i] = Attack(new_attack, i + 1)
                             ask_ok(
                                 ctx.with_overview(self.box),
-                                f"{self.poke.name} learned {attacks[new_attack].name}!",
+                                tr("{p0} learned {p1}!").format(
+                                    p0=self.poke.name, p1=attacks[new_attack].name
+                                ),
                             )
                             break
                         elif action.triggers(Action.DECK):

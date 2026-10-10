@@ -68,6 +68,7 @@ from pokete.classes.settings import settings
 from pokete.classes.side_loops import Help, loading_screen
 from pokete.figure import Bank, Inventory
 from pokete.i18n import _, resolve_language, set_language
+from pokete.i18n import _ as tr
 from pokete.release import SPEED_OF_TIME
 from pokete.startup.command import PoketeCommand
 from pokete.startup.logging import init_logger
@@ -360,7 +361,7 @@ def _game(_map: PlayMap, figure: Figure):
     ]
     inp_list = [i for j in inp_dict for i in j[0]]
     if _map.weather is not None:
-        notifier.notify("Weather", "Info", _map.weather.info)
+        notifier.notify(tr("Weather"), tr("Info"), _map.weather.info)
     while True:
         # Directions are not being used yet
         action, _ = get_action()
@@ -465,14 +466,16 @@ def main():
 
     with GameContext():
         tss()
-        loading_screen()
-
         # reading savefile
         session_info = read_save()
         saved_settings = session_info.get("settings", {})
         language = resolve_language(command.language, saved_settings.get("language"))
         settings.from_dict(saved_settings)
         settings("language").val = set_language(language)
+        from pokete.classes.localized_views import refresh_localized_views
+
+        refresh_localized_views()
+        loading_screen()
 
         if not load_mods:
             settings("load_mods").val = False

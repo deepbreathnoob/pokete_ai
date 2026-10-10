@@ -11,6 +11,7 @@ from pokete.base.mouse import MouseInteractor
 from pokete.base.ui.elements import LabelBox
 from pokete.base.ui.elements.labels import GenericActionLabel
 from pokete.base.ui.views.choose_box import ChooseBoxView
+from pokete.i18n import _ as tr
 from pokete.util import liner
 
 from ... import effects
@@ -23,8 +24,12 @@ class AttackInfoBox(se.Box):
         self.effect_active = False
         self.effect_available = False
         self.attack_info = LabelBox(se.Text("", state="float"), "Attack Info")
-        self.attack_info_label = GenericActionLabel(Action.SCREEN_SWITCH, "Attack Info")
-        self.effect_info_label = GenericActionLabel(Action.SCREEN_SWITCH, "Effect Info")
+        self.attack_info_label = GenericActionLabel(
+            Action.SCREEN_SWITCH, tr("Attack Info")
+        )
+        self.effect_info_label = GenericActionLabel(
+            Action.SCREEN_SWITCH, tr("Effect Info")
+        )
         self.effect_info = LabelBox(
             se.Text("", state="float"),
             "Effect Info",
@@ -61,7 +66,7 @@ class AttackInfoBox(se.Box):
             self.attack_info.info_labels = [self.effect_info_label]
             self.attack_info.add_info_labels()
             self.effect_info.label.rechar(
-                liner(self.effects_dictionary[attack_ob.effect].desc, 37),
+                liner(tr(self.effects_dictionary[attack_ob.effect].desc), 37),
                 esccode=self.effects_dictionary[attack_ob.effect].color,
             )
             self.effect_info.resize(
@@ -87,7 +92,7 @@ class AttackBox(ChooseBoxView[Attack]):
             6,
             25,
             "Attacks",
-            [GenericActionLabel(Action.INFO, "Info")],
+            [GenericActionLabel(Action.INFO, tr("Info"))],
             index_x=1,
         )
 

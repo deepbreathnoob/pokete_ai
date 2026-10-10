@@ -17,6 +17,7 @@ from pokete.base.tss import tss
 from pokete.base.ui import Overview
 from pokete.base.ui.elements.text import HightlightableText
 from pokete.base.ui.notify import notifier
+from pokete.i18n import _ as tr
 from pokete.release import SPEED_OF_TIME
 from pokete.util import liner
 
@@ -37,13 +38,13 @@ class Movemap(GameSubmap, Overview, MouseInteractor):
         self.balls_label = se.Text("")
         self.label_bg = se.Square(" ", self.width, 1, state="float")
         self.labels: list[HightlightableText] = [
-            HightlightableText(f"{Action.DECK.mapping}: Deck"),
-            HightlightableText(f"{Action.EXIT_GAME.mapping}: Quit"),
-            HightlightableText(f"{Action.MAP.mapping}: Map"),
-            HightlightableText(f"{Action.INVENTORY.mapping}: Inv."),
-            HightlightableText(f"{Action.POKEDEX.mapping}: Dex"),
-            HightlightableText(f"{Action.CLOCK.mapping}: Clock"),
-            HightlightableText(f"{Action.HELP.mapping}: help"),
+            HightlightableText(tr("{p0}: Deck").format(p0=Action.DECK.mapping)),
+            HightlightableText(tr("{p0}: Quit").format(p0=Action.EXIT_GAME.mapping)),
+            HightlightableText(tr("{p0}: Map").format(p0=Action.MAP.mapping)),
+            HightlightableText(tr("{p0}: Inv.").format(p0=Action.INVENTORY.mapping)),
+            HightlightableText(tr("{p0}: Dex").format(p0=Action.POKEDEX.mapping)),
+            HightlightableText(tr("{p0}: Clock").format(p0=Action.CLOCK.mapping)),
+            HightlightableText(tr("{p0}: help").format(p0=Action.HELP.mapping)),
             movemap_deco,
         ]
         self.code_label = OutP("", state="float")
@@ -107,6 +108,9 @@ class Movemap(GameSubmap, Overview, MouseInteractor):
         self.assure_distance(_x, _y, 17, 10)
         self.multitext.rechar("")
         self.multitext.add(self, _x - self.x + 1, _y - self.y)
+        inp_arr = [tr(message) for message in inp_arr]
+        inp_arr = [tr(message) for message in inp_arr]
+        inp_arr = [tr(message) for message in inp_arr]
         arr = [
             " < " + i + (" >" if j != len(inp_arr) - 1 else "")
             for j, i in enumerate(inp_arr)

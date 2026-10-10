@@ -7,6 +7,7 @@ from enum import Enum, auto
 from typing import Optional
 
 from pokete.base.input import key
+from pokete.i18n import _ as tr
 from pokete.util import liner
 
 from .event import _ev
@@ -206,9 +207,9 @@ def hotkeys_from_save(ctx, save, version_change):
     if unset:
         if version_change or ask_bool(
             ctx,
-            f"""The folowing keys are not set:
-{liner(", ".join([i.name for i in unset]), 60)}
-Should defaults be loaded for those keys?""",
+            tr(
+                "The folowing keys are not set:\n{p0}\nShould defaults be loaded for those keys?"
+            ).format(p0=liner(", ".join([i.name for i in unset]), 60)),
         ):
             for action in unset:
                 key = action.mapping

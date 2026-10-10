@@ -1,3 +1,6 @@
+from pokete.i18n import _ as tr
+
+
 class InvItem:
     """Item for the inventory
     ARGS:
@@ -16,7 +19,15 @@ class InvItem:
         _fn: str | None = None,
     ):
         self.name: str = name
-        self.pretty_name = pretty_name
-        self.desc = desc
+        self._pretty_name = pretty_name
+        self._desc = desc
         self.price = price
         self.func = _fn
+
+    @property
+    def pretty_name(self):
+        return tr(self._pretty_name)
+
+    @property
+    def desc(self):
+        return tr(self._desc)

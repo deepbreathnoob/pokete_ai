@@ -46,3 +46,30 @@ def _(message):
 
 def ngettext(singular, plural, count):
     return _translation.ngettext(singular, plural, count)
+
+
+def localize_base_assets(assets):
+    """Copy display fields only. Keys and mechanics remain canonical.
+
+    No generated schema or protocol object is modified in place. Resources are
+    cached per language; choosing another language requires restarting the game.
+    """
+    import copy
+
+    key = (id(assets), get_language())
+    if key not in _asset_cache:
+        result = copy.deepcopy(assets)
+        for collection, fields in (
+            (result.pokes, ("desc",)),
+            (result.attacks, ("name", "desc")),
+            (result.achievements, ("title", "desc")),
+            (result.weathers, ("info",)),
+        ):
+            for resource in collection.values():
+                for field in fields:
+                    setattr(resource, field, _(getattr(resource, field)))
+        _asset_cache[key] = result
+    return _asset_cache[key]
+
+
+_asset_cache = {}

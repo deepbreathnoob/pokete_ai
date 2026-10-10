@@ -17,6 +17,7 @@ from pokete.base.tss import tss
 from pokete.base.ui import Overview
 from pokete.base.ui.elements import StdFrame2
 from pokete.classes import detail
+from pokete.i18n import _ as tr
 
 from .poke import Poke
 
@@ -33,9 +34,11 @@ class Deck(detail.Informer, Overview):
     def __init__(self):
         self.map = GameMap(50, 100, name="deck")
         self.submap = GameSubmap(self.map, 0, 0, 50, 100, "decksubmap")
-        self.exit_label = se.Text(f"{Action.DECK.mapping}: Exit  ")
-        self.move_label = se.Text(f"{Action.MOVE_POKETE.mapping}: Move    ")
-        self.move_free = se.Text(f"{Action.FREE_POKETE.mapping}: Free")
+        self.exit_label = se.Text(tr("{p0}: Exit  ").format(p0=Action.DECK.mapping))
+        self.move_label = se.Text(
+            tr("{p0}: Move    ").format(p0=Action.MOVE_POKETE.mapping)
+        )
+        self.move_free = se.Text(tr("{p0}: Free").format(p0=Action.FREE_POKETE.mapping))
         self.index = Index()
         self.figure = None
         self.pokes = []
@@ -43,8 +46,14 @@ class Deck(detail.Informer, Overview):
         self.overview = None
         # adding
         self.exit_label.add(self.submap, 0, self.submap.height - 1)
-        self.move_label.add(self.submap, 9, self.submap.height - 1)
-        self.move_free.add(self.submap, 20, self.submap.height - 1)
+        self.move_label.add(
+            self.submap, self.exit_label.width + 2, self.submap.height - 1
+        )
+        self.move_free.add(
+            self.submap,
+            self.exit_label.width + self.move_label.width + 4,
+            self.submap.height - 1,
+        )
 
     def rem_pokes(self):
         """Removes all Poketes from the Deck"""
@@ -60,8 +69,14 @@ class Deck(detail.Informer, Overview):
         self.submap.resize(tss.height - 1, tss.width)
 
         self.exit_label.add(self.submap, 0, self.submap.height - 1)
-        self.move_label.add(self.submap, 9, self.submap.height - 1)
-        self.move_free.add(self.submap, 20, self.submap.height - 1)
+        self.move_label.add(
+            self.submap, self.exit_label.width + 2, self.submap.height - 1
+        )
+        self.move_free.add(
+            self.submap,
+            self.exit_label.width + self.move_label.width + 4,
+            self.submap.height - 1,
+        )
 
         if all(i.ico.map == self.map for i in self.pokes):
             self.rem_pokes()
@@ -114,8 +129,14 @@ class Deck(detail.Informer, Overview):
         self.move_free.remove()
         self.submap.resize(tss.height - 1, tss.width)
         self.exit_label.add(self.submap, 0, self.submap.height - 1)
-        self.move_label.add(self.submap, 9, self.submap.height - 1)
-        self.move_free.add(self.submap, 20, self.submap.height - 1)
+        self.move_label.add(
+            self.submap, self.exit_label.width + 2, self.submap.height - 1
+        )
+        self.move_free.add(
+            self.submap,
+            self.exit_label.width + self.move_label.width + 4,
+            self.submap.height - 1,
+        )
         self.map.resize(
             5 * int((len(self.pokes) + 1) / 2) + 2,
             tss.width,
@@ -123,12 +144,14 @@ class Deck(detail.Informer, Overview):
         )
 
         self.label = label
-        se.Text(label, esccode=Color.thicc).add(self.map, 2, 0)
+        se.Text(tr(label), esccode=Color.thicc).add(self.map, 2, 0)
         se.Square("|", 1, self.map.height - 2).add(
             self.map, round(self.map.width / 2), 1
         )
         StdFrame2(self.map.height - 1, self.map.width).add(self.map, 0, 0)
-        self.move_label.rechar(f"{Action.MOVE_POKETE.mapping}: Move    ")
+        self.move_label.rechar(
+            tr("{p0}: Move    ").format(p0=Action.MOVE_POKETE.mapping)
+        )
         indici = []
         self.add_all(True)
         self.index.index = 0
@@ -156,7 +179,9 @@ class Deck(detail.Informer, Overview):
                     continue
                 if not indici:
                     indici.append(self.index.index)
-                    self.move_label.rechar(f"{Action.MOVE_POKETE.mapping}: Move to ")
+                    self.move_label.rechar(
+                        tr("{p0}: Move to ").format(p0=Action.MOVE_POKETE.mapping)
+                    )
                 else:
                     indici.append(self.index.index)
                     (
@@ -177,7 +202,9 @@ class Deck(detail.Informer, Overview):
                         + 1,
                         self.pokes[self.index.index].text_name.y,
                     )
-                    self.move_label.rechar(f"{Action.MOVE_POKETE.mapping}: Move    ")
+                    self.move_label.rechar(
+                        tr("{p0}: Move    ").format(p0=Action.MOVE_POKETE.mapping)
+                    )
                     self.submap.full_show()
             elif action.triggers(Action.FREE_POKETE):
                 if self.pokes[self.index.index].identifier == "__fallback__":
@@ -192,11 +219,12 @@ class Deck(detail.Informer, Overview):
                     )
                     <= 1
                 ):
-                    ask_ok(ctx, "You can't free all your Poketes")
+                    ask_ok(ctx, tr("You can't free all your Poketes"))
                 elif ask_bool(
                     ctx,
-                    f"Do you really want to free \
-{self.figure.pokes[self.index.index].name}?",
+                    tr("Do you really want to free {p0}?").format(
+                        p0=self.figure.pokes[self.index.index].name
+                    ),
                 ):
                     self.rem_pokes()
                     self.figure.pokes[self.index.index] = Poke("__fallback__", 10, 0)

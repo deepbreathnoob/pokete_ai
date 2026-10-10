@@ -11,6 +11,7 @@ from pokete.classes.doors import CenterDoor
 from pokete.classes.interactions.multi_text_choose_box import MultiTextChooseBox
 from pokete.classes.inv import buy
 from pokete.classes.landscape import MapInteract
+from pokete.i18n import _ as tr
 from pokete.release import SPEED_OF_TIME
 
 CUDDLE_MESSAGES = [
@@ -101,12 +102,12 @@ class CenterInteract(se.Object, MapInteract):
         super().__init__(*args, **kwargs)
         self.menu = MultiTextChooseBox(
             [
-                "See your full deck",
-                "Heal all your Poketes",
-                "Cuddle with the Poketes",
-                "Quit",
+                tr("See your full deck"),
+                tr("Heal all your Poketes"),
+                tr("Cuddle with the Poketes"),
+                tr("Quit"),
             ],
-            "Select",
+            tr("Select"),
         )
 
     def __normalize_pokes(self, ob):

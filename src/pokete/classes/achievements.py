@@ -14,6 +14,7 @@ from pokete.base.ui.elements.labels import CloseLabel
 from pokete.base.ui.notify import notifier
 from pokete.base.ui.views.better_choose_box import BetterChooseBoxView
 from pokete.base.ui.views.boxes import LabelBoxView
+from pokete.i18n import _ as tr
 from pokete.util import liner
 
 
@@ -56,7 +57,7 @@ class Achievements:
             identifier: The Achievements identifier"""
         if not self.is_achieved(identifier):
             ach = [i for i in self.achievements if i.identifier == identifier][0]
-            notifier.notify(ach.title, "Achievement unlocked!", ach.desc)
+            notifier.notify(ach.title, tr("Achievement unlocked!"), ach.desc)
             self.achieved.append((identifier, str(datetime.date.today())))
             logging.info("[Achievements] Unlocked %s", identifier)
 
@@ -83,13 +84,13 @@ class AchBox(LabelBoxView):
             else ""
         )
         label = (
-            se.Text("Achieved: ", state="float")
+            se.Text(tr("Achieved: "), state="float")
             + se.Text(
-                "Yes" if is_ach else "No",
+                tr("Yes") if is_ach else tr("No"),
                 esccode=Color.thicc + (Color.green if is_ach else Color.grey),
                 state="float",
             )
-            + (se.Text("\nAt: " + date, state="float") if is_ach else se.Text(""))
+            + (se.Text(tr("\nAt: ") + date, state="float") if is_ach else se.Text(""))
             + se.Text("\n" + liner(ach.desc, 30), state="float")
         )
         super().__init__(

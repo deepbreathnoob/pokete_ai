@@ -5,6 +5,7 @@ import sys
 
 import pokete.data as p_data
 from pokete.base.ui.views.boxes import InfoBoxView
+from pokete.i18n import _ as tr
 
 from .settings import settings
 from .side_loops import LoopBox
@@ -52,7 +53,7 @@ Currently {len(loaded_mods.mod_info)} mod{"s are" if len(loaded_mods.mod_info) !
         super().__init__(
             InfoBoxView(
                 self.text,
-                name="Mods",
+                name=tr("Mods"),
             )
         )
 
@@ -63,7 +64,7 @@ def try_load_mods(_map):
         try:
             import mods
         except ModError as mod_err:
-            error_box = InfoBoxView(str(mod_err), "Mod-loading Error")
+            error_box = InfoBoxView(str(mod_err), tr("Mod-loading Error"))
             error_box.center_add(_map)
             _map.show()
             sys.exit(1)

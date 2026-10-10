@@ -6,6 +6,7 @@ from abc import ABC, abstractmethod
 
 from pokete.base.context import Context
 from pokete.base.input_loops import ask_bool
+from pokete.i18n import _ as tr
 
 from ..achievements import achievements
 from ..poke import Poke
@@ -40,7 +41,7 @@ class Provider(ABC):
                 poke.hp = poke.full_hp
                 poke.effects = []
                 poke.miss_chance = poke.full_miss_chance
-                poke.text_hp.rechar(f"HP:{poke.hp}")
+                poke.text_hp.rechar(tr("HP:{p0}").format(p0=poke.hp))
                 poke.set_vars()
                 poke.hp_bar.make(poke.hp)
             if poke.player:
@@ -110,7 +111,7 @@ class NatureProvider(Provider):
         """Outputs a greeting text at the fights start:
         ARGS:
             fightmap: fightmap object"""
-        fightmap.outp.outp(f"A wild {self.curr.name} appeared!")
+        fightmap.outp.outp(tr("A wild {p0} appeared!").format(p0=self.curr.name))
 
     def handle_defeat(self, ctx: Context, fightmap, winner):
         """Function called when the providers current Pokete dies
@@ -149,7 +150,7 @@ class ProtoFigure(Provider):
         if winner.escapable:
             if ask_bool(
                 ctx,
-                "Do you want to choose another Pokete?",
+                tr("Do you want to choose another Pokete?"),
             ):
                 success = fightmap.choose_poke(ctx, self)
                 if not success:

@@ -103,6 +103,9 @@ class PreGameMap(GameSubmap, Overview):
             session_info.get("hotkeys", {}),
             check_version(ctx, session_info),
         )
+        from pokete.classes.localized_views import refresh_localized_views
+
+        refresh_localized_views()
         if not ModeChooser()(ctx):
             sys.exit()
 

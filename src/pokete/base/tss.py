@@ -1,7 +1,10 @@
 """Contains everything related to the resizescreen"""
 
 import os
+
 import scrap_engine as se
+
+from pokete.i18n import _ as tr
 
 from .game_map import GameMap
 from .ui.elements import StdFrame
@@ -15,7 +18,7 @@ class ResizeScreen:
         self.width = 0
         self.__set_dimensions()
         self.map = GameMap(self.height - 1, self.width)
-        self.warning_label = se.Text("Minimum windowsize is 70x20")
+        self.warning_label = se.Text(tr("Minimum windowsize is 70x20"))
         self.size_label = se.Text(f"{self.width}x{self.height}")
         self.frame = StdFrame(self.height - 1, self.width)
         self.warning_label.add(

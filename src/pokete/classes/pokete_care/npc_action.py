@@ -1,12 +1,14 @@
 from pokete.base.context import Context
 from pokete.base.exception_propagation import exception_propagating_periodic_event
 from pokete.base.periodic_event_manager import PeriodicEventManager
-from .pokete_care import PoketeCare
+from pokete.i18n import _ as tr
+
 from .. import timer
 from ..npcs import NPCAction
 from ..npcs.npc_action import NPCInterface, UIInterface
-from .dummy import DummyFigure
 from ..poke import EvoMap, Poke
+from .dummy import DummyFigure
+from .pokete_care import PoketeCare
 
 
 class PoketeCareNPCAction(NPCAction):
@@ -21,7 +23,7 @@ class PoketeCareNPCAction(NPCAction):
 and we will train it."
                 ]
             )
-            if ui.ask_bool("Do you want to put a Pokete into the Pokete-Care?"):
+            if ui.ask_bool(tr("Do you want to put a Pokete into the Pokete-Care?")):
                 if (index := ui.choose_poke()) is not None:
                     self.care.poke = npc.ctx.figure.pokes[index]
                     self.care.entry = timer.time.time
@@ -38,7 +40,7 @@ and we will train it."
 gained {add_xp}xp and reached level {self.care.poke.lvl()}!",
                 ]
             )
-            if ui.ask_bool("Do you want it back?"):
+            if ui.ask_bool(tr("Do you want it back?")):
                 dummy = DummyFigure(self.care.poke)
                 evomap = EvoMap(npc.ctx.map.height, npc.ctx.map.width)
                 while evomap(

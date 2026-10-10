@@ -13,6 +13,7 @@ from pokete.base.input.hotkeys import ActionList
 from pokete.base.ui.elements.labels import CloseLabel
 from pokete.base.ui.views.box import BoxView
 from pokete.base.ui.views.choose_box import ChooseBoxView
+from pokete.i18n import _ as tr
 from pokete.util import liner
 
 from .asset_service.service import asset_service
@@ -32,18 +33,18 @@ class DetailBox(BoxView):
         poke.nature = PokeNature.dummy()
         poke.set_vars()
         active = {
-            True: ("Night", Color.thicc + Color.blue),
-            False: ("Day", Color.thicc + Color.yellow),
-            None: ("Always", ""),
+            True: (tr("Night"), Color.thicc + Color.blue),
+            False: (tr("Day"), Color.thicc + Color.yellow),
+            None: (tr("Always"), ""),
         }[poke.night_active]
         desc_text = liner(
             poke.desc.text.replace("\n", " ")
             + (
-                f"""\n\n Evolves into {
-                    asset_service.get_base_assets().pokes[poke.evolve_poke].name
+                tr("\n\n Evolves into {p0}.").format(
+                    p0=asset_service.get_base_assets().pokes[poke.evolve_poke].name
                     if poke.evolve_poke in ctx.figure.caught_pokes
                     else "???"
-                }."""
+                )
                 if poke.evolve_lvl != 0
                 else ""
             ),
@@ -53,15 +54,14 @@ class DetailBox(BoxView):
         self.name_label.rechar(poke.name)
         self.add_ob(poke.ico, 3, 2)
         self.detail_desc.rechar(desc_text)
-        self.detail_info.rechar("Type: ")
+        self.detail_info.rechar(tr("Type: "))
         self.detail_info += (
-            se.Text(poke.type.name.capitalize(), esccode=poke.type.color)
-            + se.Text(f"""
-HP: {poke.hp}
-Attack: {poke.atc}
-Defense: {poke.defense}
-Initiative: {poke.initiative}
-Active: """)
+            se.Text(poke.type.display_name.capitalize(), esccode=poke.type.color)
+            + se.Text(
+                tr(
+                    "\nHP: {p0}\nAttack: {p1}\nDefense: {p2}\nInitiative: {p3}\nActive: "
+                ).format(p0=poke.hp, p1=poke.atc, p2=poke.defense, p3=poke.initiative)
+            )
             + se.Text(active[0], esccode=active[1])
         )
 

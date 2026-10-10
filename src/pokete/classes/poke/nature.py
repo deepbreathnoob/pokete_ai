@@ -11,6 +11,7 @@ from pokete.base.context import Context
 from pokete.base.ui.elements.labels import CloseLabel
 from pokete.base.ui.views.boxes import LabelBoxView
 from pokete.classes.model.poke import NatureDict
+from pokete.i18n import _ as tr
 from pokete.util import liner
 
 from ..asset_service.service import asset_service
@@ -97,13 +98,13 @@ class NatureInfo(LabelBoxView):
         defense = self.get_amount(p_n.nature.defense)
         init = self.get_amount(p_n.nature.initiative)
         text = (
-            se.Text(f"Nature: {'very ' if p_n.grade == 2 else ''}")
-            + se.Text(p_n.nature.name, esccode=Color.thicc + p_n.nature.esccode)
+            se.Text(tr("Nature: {p0}").format(p0=tr("very ") if p_n.grade == 2 else ""))
+            + se.Text(tr(p_n.nature.name), esccode=Color.thicc + p_n.nature.esccode)
             + se.Text(
                 liner(
-                    f"\n\n That means it has {atc} attack, \
-{defense} defense and {init} initiative points compared to normal Poketes \
-of its kind.",
+                    tr(
+                        "\n\n That means it has {p0} attack, {p1} defense and {p2} initiative points compared to normal Poketes of its kind."
+                    ).format(p0=atc, p1=defense, p2=init),
                     40,
                     pre="",
                 )
@@ -115,10 +116,10 @@ of its kind.",
     def get_amount(val):
         """Gets the amount denominator for a value"""
         if val == 1:
-            return "the same"
+            return tr("the same")
         if val < 1:
-            return "less"
-        return "more"
+            return tr("less")
+        return tr("more")
 
     def __call__(self, ctx: Context):
         """Shows the box"""

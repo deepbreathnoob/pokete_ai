@@ -9,6 +9,7 @@ from pokete.base.context import Context
 from pokete.base.ui.elements.labels import CloseLabel
 from pokete.base.ui.views.boxes import LabelBoxView
 from pokete.classes.model.poke import StatsDict
+from pokete.i18n import _ as tr
 
 
 class Stats:
@@ -142,27 +143,39 @@ class StatsInfoBox(LabelBoxView):
             caught_with = poke_stats.caught_with
 
         text = (
-            se.Text(f"\nOwnership date: {ownership_date}", state="float")
-            + se.Text(f"\nCaught with: {caught_with}", state="float")
-            + se.Text(f"\nEvolved date: {evolve_date}", state="float")
+            se.Text(
+                tr("\nOwnership date: {p0}").format(p0=ownership_date), state="float"
+            )
             + se.Text(
-                f"\nNumber of total battles: {poke_stats.total_battles}",
+                tr("\nCaught with: {p0}").format(p0=tr(caught_with)), state="float"
+            )
+            + se.Text(tr("\nEvolved date: {p0}").format(p0=evolve_date), state="float")
+            + se.Text(
+                tr("\nNumber of total battles: {p0}").format(
+                    p0=poke_stats.total_battles
+                ),
                 state="float",
             )
             + se.Text(
-                f"\nNumber of won battles: {poke_stats.win_battles}",
+                tr("\nNumber of won battles: {p0}").format(p0=poke_stats.win_battles),
                 state="float",
             )
             + se.Text(
-                f"\nNumber of lost battles: {poke_stats.lost_battles}",
+                tr("\nNumber of lost battles: {p0}").format(p0=poke_stats.lost_battles),
                 state="float",
             )
-            + se.Text(f"\nNumber of run away: {poke_stats.run_away}", state="float")
-            + se.Text(f"\nTotal XP earned: {poke_stats.earned_xp}\n", state="float")
+            + se.Text(
+                tr("\nNumber of run away: {p0}").format(p0=poke_stats.run_away),
+                state="float",
+            )
+            + se.Text(
+                tr("\nTotal XP earned: {p0}\n").format(p0=poke_stats.earned_xp),
+                state="float",
+            )
         )
         super().__init__(
             text,
-            name=f"{poke_stats.poke_name} statistics",
+            name=tr("{name} statistics").format(name=poke_stats.poke_name),
             info=[CloseLabel()],
         )
 

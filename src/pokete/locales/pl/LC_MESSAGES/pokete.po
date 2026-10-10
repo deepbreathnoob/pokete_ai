@@ -1,5 +1,15 @@
+#
 msgid ""
-msgstr "Project-Id-Version: pokete 0.10.0\nPO-Revision-Date: 2026-10-10 19:30+0000\nLast-Translator: Pokete contributors\nLanguage-Team: Polish\nLanguage: pl\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n == 1 ? 0 : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : 2);\n"
+msgstr ""
+"Project-Id-Version: pokete 0.10.0\n"
+"PO-Revision-Date: 2026-10-10 19:30+0000\n"
+"Last-Translator: Pokete contributors\n"
+"Language-Team: Polish\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n == 1 ? 0 : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : 2);\n"
 
 msgid "About"
 msgstr "O grze"
@@ -23,8 +33,28 @@ msgid "Char:"
 msgstr "Symbol:"
 
 #, python-brace-format
-msgid "Controls:\n{up}: up, {left}: left\n{down}: down, {right}: right\n{menu}: menu\n\nIn tall grass (;), wild Poketes may attack you.\nWeaken them to catch them, or defeat them to gain XP.\nApproach NPCs to talk to them.\nMore information:\nhttps://github.com/deepbreathnoob/pokete_ai/blob/master/docs/HowToPlay.md"
-msgstr "Sterowanie:\n{up}: góra, {left}: lewo\n{down}: dół, {right}: prawo\n{menu}: menu\n\nW wysokiej trawie (;) mogą zaatakować dzikie Pokete.\nOsłab je, aby je złapać, lub pokonaj, aby zdobyć XP.\nPodejdź do postaci, aby rozpocząć rozmowę.\nWięcej informacji:\nhttps://github.com/deepbreathnoob/pokete_ai/blob/master/docs/HowToPlay.md"
+msgid ""
+"Controls:\n"
+"{up}: up, {left}: left\n"
+"{down}: down, {right}: right\n"
+"{menu}: menu\n"
+"\n"
+"In tall grass (;), wild Poketes may attack you.\n"
+"Weaken them to catch them, or defeat them to gain XP.\n"
+"Approach NPCs to talk to them.\n"
+"More information:\n"
+"https://github.com/deepbreathnoob/pokete_ai/blob/master/docs/HowToPlay.md"
+msgstr ""
+"Sterowanie:\n"
+"{up}: góra, {left}: lewo\n"
+"{down}: dół, {right}: prawo\n"
+"{menu}: menu\n"
+"\n"
+"W wysokiej trawie (;) mogą zaatakować dzikie Pokete.\n"
+"Osłab je, aby je złapać, lub pokonaj, aby zdobyć XP.\n"
+"Podejdź do postaci, aby rozpocząć rozmowę.\n"
+"Więcej informacji:\n"
+"https://github.com/deepbreathnoob/pokete_ai/blob/master/docs/HowToPlay.md"
 
 msgid "Error"
 msgstr "Błąd"
@@ -38,7 +68,9 @@ msgstr "Witaj, moje dziecko."
 msgid "Help"
 msgstr "Pomoc"
 
-msgid "I think it's now time for you to travel the world and become a Pokete-trainer."
+msgid ""
+"I think it's now time for you to travel the world and become a Pokete-"
+"trainer."
 msgstr "Pora wyruszyć w świat i zostać trenerem Pokete."
 
 msgid "Language (restart)"
@@ -56,6 +88,7 @@ msgstr "Menu"
 msgid "Mode"
 msgstr "Tryb gry"
 
+#: src/pokete/classes/mods.py:55
 msgid "Mods"
 msgstr "Mody"
 
@@ -68,6 +101,7 @@ msgstr "Nazwa"
 msgid "Name:"
 msgstr "Nazwa:"
 
+#: src/pokete/classes/achievements.py:88
 msgid "No"
 msgstr "Nie"
 
@@ -84,8 +118,20 @@ msgid "Playername:"
 msgstr "Gracz:"
 
 #, python-brace-format
-msgid "Pokete v{version} -- {codename}\nby lxgr-linux <lxgr@protonmail.com>\n\nThis software is licensed under GPLv3. A copy of the license is included with the game.\nContributions, especially new Poketes, are welcome:\nhttps://github.com/lxgr-linux/pokete"
-msgstr "Pokete v{version} -- {codename}\nautor: lxgr-linux <lxgr@protonmail.com>\n\nGra jest udostępniana na licencji GPLv3. Kopię licencji dołączono do gry.\nZapraszamy do współtworzenia, szczególnie do dodawania nowych Pokete:\nhttps://github.com/lxgr-linux/pokete"
+msgid ""
+"Pokete v{version} -- {codename}\n"
+"by lxgr-linux <lxgr@protonmail.com>\n"
+"\n"
+"This software is licensed under GPLv3. A copy of the license is included with the game.\n"
+"Contributions, especially new Poketes, are welcome:\n"
+"https://github.com/lxgr-linux/pokete"
+msgstr ""
+"Pokete v{version} -- {codename}\n"
+"autor: lxgr-linux <lxgr@protonmail.com>\n"
+"\n"
+"Gra jest udostępniana na licencji GPLv3. Kopię licencji dołączono do gry.\n"
+"Zapraszamy do współtworzenia, szczególnie do dodawania nowych Pokete:\n"
+"https://github.com/lxgr-linux/pokete"
 
 msgid "Return to main menu"
 msgstr "Wróć do menu głównego"
@@ -106,18 +152,33 @@ msgid "The chosen character has to be a valid single-space character!"
 msgstr "Symbol musi zajmować jedną komórkę terminala!"
 
 #, python-brace-format
-msgid "The save file was created on version {saved_version}; the current version is {current_version}. Downgrading may cause data loss! Do you want to continue?"
-msgstr "Zapis pochodzi z wersji {saved_version}; obecna wersja to {current_version}. Uruchomienie starszej wersji może spowodować utratę danych! Czy chcesz kontynuować?"
+msgid ""
+"The save file was created on version {saved_version}; the current version is"
+" {current_version}. Downgrading may cause data loss! Do you want to "
+"continue?"
+msgstr ""
+"Zapis pochodzi z wersji {saved_version}; obecna wersja to {current_version}."
+" Uruchomienie starszej wersji może spowodować utratę danych! Czy chcesz "
+"kontynuować?"
 
-msgid "Therefore, I'll give you this powerful 'Steini', 15 'Poketeballs' to catch Poketes, and a 'Healing potion'."
-msgstr "Dostaniesz silnego Steini, 15 kul Pokete do łapania stworzeń i miksturę leczenia."
+msgid ""
+"Therefore, I'll give you this powerful 'Steini', 15 'Poketeballs' to catch "
+"Poketes, and a 'Healing potion'."
+msgstr ""
+"Dostaniesz silnego Steini, 15 kul Pokete do łapania stworzeń i miksturę "
+"leczenia."
 
 msgid "Volume"
 msgstr "Głośność"
 
-msgid "Welcome to Pokete!\nPlease choose your name!\n"
-msgstr "Witaj w Pokete!\nWybierz swoją nazwę!\n"
+msgid ""
+"Welcome to Pokete!\n"
+"Please choose your name!\n"
+msgstr ""
+"Witaj w Pokete!\n"
+"Wybierz swoją nazwę!\n"
 
+#: src/pokete/classes/achievements.py:88
 msgid "Yes"
 msgstr "Tak"
 
@@ -160,3 +221,1665 @@ msgstr "Prawo"
 msgid "Do you really wish to exit?"
 msgstr "Czy na pewno chcesz zakończyć grę?"
 
+#: src/pokete/__main__.py:363
+msgid "Weather"
+msgstr "Pogoda"
+
+#: src/pokete/__main__.py:363 src/pokete/classes/fight/fightmap/attack.py:90
+msgid "Info"
+msgstr "Informacja"
+
+#: src/pokete/classes/dex.py:42
+msgid ""
+"\n"
+"\n"
+" Evolves into {p0}."
+msgstr ""
+"\n"
+"\n"
+" Ewoluuje w {p0}."
+
+#: src/pokete/classes/dex.py:56
+msgid "Type: "
+msgstr "Typ: "
+
+#: src/pokete/classes/dex.py:59
+msgid ""
+"\n"
+"HP: {p0}\n"
+"Attack: {p1}\n"
+"Defense: {p2}\n"
+"Initiative: {p3}\n"
+"Active: "
+msgstr ""
+"\n"
+"HP: {p0}\n"
+"Atak: {p1}\n"
+"Obrona: {p2}\n"
+"Inicjatywa: {p3}\n"
+"Aktywność: "
+
+#: src/pokete/classes/effects.py:106 src/pokete/classes/effects.py:144
+#: src/pokete/classes/effects.py:201 src/pokete/classes/effects.py:242
+msgid "{p0} is still "
+msgstr "{p0} — nadal: "
+
+#: src/pokete/classes/effects.py:62
+msgid "{p0} is not affected by "
+msgstr "{p0} — odporność na: "
+
+#: src/pokete/classes/effects.py:116
+msgid "{p0} isn't "
+msgstr "{p0} — koniec efektu: "
+
+#: src/pokete/classes/effects.py:147
+msgid " and can't attack!"
+msgstr " i nie może atakować!"
+
+#: src/pokete/classes/effects.py:71
+msgid "{p0} is now "
+msgstr "{p0} — nowy efekt: "
+
+#: src/pokete/classes/effects.py:78
+msgid "{p0} is already "
+msgstr "{p0} — aktywny efekt: "
+
+#: src/pokete/classes/effects.py:119
+msgid " anymore!"
+msgstr "!"
+
+#: src/pokete/classes/health_bar.py:47 src/pokete/classes/health_bar.py:40
+#: src/pokete/classes/fight/providers.py:43
+#: src/pokete/classes/poke/poke.py:121
+msgid "HP:{p0}"
+msgstr "HP:{p0}"
+
+#: src/pokete/classes/landscape.py:124
+msgid "You found {p0} {p1}{p2}!"
+msgstr "Znaleziono: {p1} × {p0}{p2}!"
+
+#: src/pokete/classes/attack.py:41 src/pokete/classes/detail.py:190
+msgid "AP:{p0}/{p1}"
+msgstr "AP:{p0}/{p1}"
+
+#: src/pokete/classes/attack.py:42
+msgid "Attack:{p0}"
+msgstr "Atak:{p0}"
+
+#: src/pokete/classes/attack.py:44 src/pokete/classes/detail.py:103
+msgid "Type:"
+msgstr "Typ:"
+
+#: src/pokete/classes/deck.py:36
+msgid "{p0}: Exit  "
+msgstr "{p0}: Wyjdź  "
+
+#: src/pokete/classes/deck.py:37 src/pokete/classes/deck.py:131
+#: src/pokete/classes/deck.py:180
+msgid "{p0}: Move    "
+msgstr "{p0}: Przesuń "
+
+#: src/pokete/classes/deck.py:38
+msgid "{p0}: Free"
+msgstr "{p0}: Wypuść"
+
+#: src/pokete/classes/deck.py:159
+msgid "{p0}: Move to "
+msgstr "{p0}: Cel: "
+
+#: src/pokete/classes/deck.py:195
+msgid "You can't free all your Poketes"
+msgstr "Nie możesz wypuścić wszystkich Pokete"
+
+#: src/pokete/classes/deck.py:198
+msgid "Do you really want to free {p0}?"
+msgstr "Czy na pewno wypuścić {p0}?"
+
+#: src/pokete/classes/attack_actions.py:85
+msgid "It started raining!"
+msgstr "Zaczęło padać!"
+
+#: src/pokete/classes/mods.py:66
+msgid "Mod-loading Error"
+msgstr "Błąd wczytywania modów"
+
+#: src/pokete/classes/achievements.py:59
+msgid "Achievement unlocked!"
+msgstr "Odblokowano osiągnięcie!"
+
+#: src/pokete/classes/achievements.py:86
+msgid "Achieved: "
+msgstr "Zdobyte: "
+
+#: src/pokete/classes/achievements.py:92
+msgid ""
+"\n"
+"At: "
+msgstr ""
+"\n"
+"Data: "
+
+#: src/pokete/classes/roadmap.py:165
+msgid ""
+"│ Legend:\n"
+"│ P-Pokecenter\n"
+"│ $-Shop\n"
+"│ C-PoketeCare\n"
+"│ A-Arena\n"
+"└──────────────"
+msgstr ""
+"│ Legenda:\n"
+"│ P-Centrum\n"
+"│ $-Sklep\n"
+"│ C-Opieka\n"
+"│ A-Arena\n"
+"└──────────────"
+
+#: src/pokete/classes/roadmap.py:270
+msgid ""
+"\n"
+"\n"
+" Here you can find: "
+msgstr ""
+"\n"
+"\n"
+" Występują tu: "
+
+#: src/pokete/classes/roadmap.py:271
+msgid "Nothing"
+msgstr "Brak"
+
+#: src/pokete/classes/detail.py:98
+msgid "Details"
+msgstr "Szczegóły"
+
+#: src/pokete/classes/detail.py:99 src/pokete/classes/learnattack.py:61
+msgid "Attacks"
+msgstr "Ataki"
+
+#: src/pokete/classes/detail.py:101
+msgid "Attack:   Defense:"
+msgstr "Atak:     Obrona:"
+
+#: src/pokete/classes/detail.py:102 src/pokete/classes/detail.py:247
+msgid "Abilities:"
+msgstr "Zdolności:"
+
+#: src/pokete/classes/detail.py:104
+msgid "Initiative:"
+msgstr "Inicjatywa:"
+
+#: src/pokete/classes/detail.py:105
+msgid "{p0}: Exit"
+msgstr "{p0}: Wyjdź"
+
+#: src/pokete/classes/detail.py:107
+msgid "{p0}: Nature"
+msgstr "{p0}: Natura"
+
+#: src/pokete/classes/detail.py:110
+msgid "{p0}: Statistics"
+msgstr "{p0}: Statystyki"
+
+#: src/pokete/classes/detail.py:113
+msgid "{p0}: Use ability"
+msgstr "{p0}: Zdolność"
+
+#: src/pokete/classes/detail.py:254
+msgid "Attack:{p0}{p1}Defense:{p2}"
+msgstr "Atak:{p0}{p1}Obrona:{p2}"
+
+#: src/pokete/classes/detail.py:257
+msgid "Initiative:{p0}"
+msgstr "Inicjatywa:{p0}"
+
+#: src/pokete/classes/detail.py:281
+msgid "Abilities"
+msgstr "Zdolności"
+
+#: src/pokete/classes/movemap.py:40
+#: src/pokete/classes/fight/fightmap/fightmap.py:76
+msgid "{p0}: Deck"
+msgstr "{p0}: Druż."
+
+#: src/pokete/classes/movemap.py:41
+msgid "{p0}: Quit"
+msgstr "{p0}: Wyjdź"
+
+#: src/pokete/classes/movemap.py:42
+msgid "{p0}: Map"
+msgstr "{p0}: Mapa"
+
+#: src/pokete/classes/movemap.py:43
+msgid "{p0}: Inv."
+msgstr "{p0}: Ekw."
+
+#: src/pokete/classes/movemap.py:44
+msgid "{p0}: Dex"
+msgstr "{p0}: Dex"
+
+#: src/pokete/classes/movemap.py:45
+msgid "{p0}: Clock"
+msgstr "{p0}: Czas"
+
+#: src/pokete/classes/movemap.py:46
+msgid "{p0}: help"
+msgstr "{p0}: Pomoc"
+
+#: src/pokete/classes/general.py:18
+msgid ""
+"All your Poketes have died and you ran\n"
+"back to the last Pokecenter you visited to heal them!\n"
+"On the way there, ${p0} fell out of your pocket!"
+msgstr ""
+"Wszystkie twoje Pokete straciły przytomność!\n"
+"Wracasz do ostatniego centrum, by je uleczyć.\n"
+"Po drodze wypada ci z kieszeni ${p0}!"
+
+#: src/pokete/classes/learnattack.py:104
+msgid "{p0} wants to learn {p1}!"
+msgstr "{p0} chce nauczyć się ataku {p1}!"
+
+#: src/pokete/classes/learnattack.py:41
+msgid "AP:{p0}"
+msgstr "AP:{p0}"
+
+#: src/pokete/classes/learnattack.py:128
+msgid "{p0} learned {p1}!"
+msgstr "{p0} poznaje atak {p1}!"
+
+#: src/pokete/base/tss.py:18
+msgid "Minimum windowsize is 70x20"
+msgstr "Minimalny rozmiar terminala: 70×20"
+
+#: src/pokete/classes/inv/inv.py:44
+msgid "Do you want to upgrade one of your Poketes by a level?"
+msgstr "Czy podnieść poziom jednego z twoich Pokete?"
+
+#: src/pokete/classes/inv/inv.py:103
+msgid "Do you really want to throw {p0} away?"
+msgstr "Czy na pewno wyrzucić {p0}?"
+
+#: src/pokete/classes/inv/inv.py:30
+msgid "remove"
+msgstr "usuń"
+
+#: src/pokete/classes/inv/inv.py:64
+msgid "{p0} reached level {p1}!"
+msgstr "{p0} osiąga poziom {p1}!"
+
+#: src/pokete/classes/inv/inv.py:69
+msgid "Do you want to teach '{p0}'?"
+msgstr "Czy nauczyć ataku „{p0}”?"
+
+#: src/pokete/classes/inv/inv.py:86
+msgid ""
+"You can't teach '{p0}' to '{p1}'! \n"
+"Do you want to continue?"
+msgstr ""
+"Nie można nauczyć „{p0}” Pokete „{p1}”! \n"
+"Czy kontynuować?"
+
+#: src/pokete/classes/npcs/npcs.py:93
+msgid "{p0} gifted you a '{p1}'. Do you want to accept it?"
+msgstr "{p0} daje ci przedmiot „{p1}”. Przyjąć go?"
+
+#: src/pokete/classes/npcs/npcs.py:214
+msgid "{p0} started a fight!"
+msgstr "{p0} rozpoczyna walkę!"
+
+#: src/pokete/classes/npcs/npcs.py:217
+msgid ""
+"{p0}\n"
+"{p1} used {p2} against you!"
+msgstr ""
+"{p0}\n"
+"{p1} wystawia przeciwko tobie {p2}!"
+
+#: src/pokete/classes/npcs/npcs.py:127
+msgid "Answer"
+msgstr "Odpowiedź"
+
+#: src/pokete/classes/fight/providers.py:113
+msgid "A wild {p0} appeared!"
+msgstr "Pojawia się dziki Pokete: {p0}!"
+
+#: src/pokete/classes/fight/providers.py:152
+msgid "Do you want to choose another Pokete?"
+msgstr "Czy wybrać innego Pokete?"
+
+#: src/pokete/classes/poke/stats.py:161
+msgid ""
+"\n"
+"Total XP earned: {p0}\n"
+msgstr ""
+"\n"
+"Zdobyte XP: {p0}\n"
+
+#: src/pokete/classes/poke/stats.py:160
+msgid ""
+"\n"
+"Number of run away: {p0}"
+msgstr ""
+"\n"
+"Ucieczki: {p0}"
+
+#: src/pokete/classes/poke/stats.py:157
+msgid ""
+"\n"
+"Number of lost battles: {p0}"
+msgstr ""
+"\n"
+"Przegrane walki: {p0}"
+
+#: src/pokete/classes/poke/stats.py:153
+msgid ""
+"\n"
+"Number of won battles: {p0}"
+msgstr ""
+"\n"
+"Wygrane walki: {p0}"
+
+#: src/pokete/classes/poke/stats.py:149
+msgid ""
+"\n"
+"Number of total battles: {p0}"
+msgstr ""
+"\n"
+"Wszystkie walki: {p0}"
+
+#: src/pokete/classes/poke/stats.py:147
+msgid ""
+"\n"
+"Evolved date: {p0}"
+msgstr ""
+"\n"
+"Data ewolucji: {p0}"
+
+#: src/pokete/classes/poke/stats.py:145
+msgid ""
+"\n"
+"Ownership date: {p0}"
+msgstr ""
+"\n"
+"Data zdobycia: {p0}"
+
+#: src/pokete/classes/poke/stats.py:146
+msgid ""
+"\n"
+"Caught with: {p0}"
+msgstr ""
+"\n"
+"Złapano za pomocą: {p0}"
+
+#: src/pokete/classes/poke/nature.py:100
+msgid "Nature: {p0}"
+msgstr "Natura: {p0}"
+
+#: src/pokete/classes/poke/nature.py:104
+msgid ""
+"\n"
+"\n"
+" That means it has {p0} attack, {p1} defense and {p2} initiative points compared to normal Poketes of its kind."
+msgstr ""
+"\n"
+"\n"
+" W porównaniu ze zwykłymi Pokete tego gatunku ma {p0} punktów ataku, {p1} punktów obrony i {p2} punktów inicjatywy."
+
+#: src/pokete/classes/poke/evomap.py:61
+msgid "Look!"
+msgstr "Spójrz!"
+
+#: src/pokete/classes/poke/evomap.py:63
+msgid ""
+"{p0}\n"
+"{p1} is evolving!"
+msgstr ""
+"{p0}\n"
+"{p1} ewoluuje!"
+
+#: src/pokete/classes/poke/evomap.py:76
+msgid "{p0} evolved into {p1}!"
+msgstr "{p0} ewoluuje w {p1}!"
+
+#: src/pokete/classes/poke/poke.py:122 src/pokete/classes/poke/poke.py:215
+msgid "Lvl:{p0}"
+msgstr "Poz:{p0}"
+
+#: src/pokete/classes/poke/poke.py:129 src/pokete/classes/poke/poke.py:212
+msgid "XP:{p0}/{p1}"
+msgstr "XP:{p0}/{p1}"
+
+#: src/pokete/classes/pokete_care/npc_action.py:24
+msgid "Do you want to put a Pokete into the Pokete-Care?"
+msgstr "Czy oddać Pokete pod opiekę?"
+
+#: src/pokete/classes/pokete_care/npc_action.py:41
+msgid "Do you want it back?"
+msgstr "Czy odebrać swojego Pokete?"
+
+#: src/pokete/classes/multiplayer/menu.py:72
+msgid ""
+"An error ocured validating game data:\n"
+"{p0}"
+msgstr ""
+"Błąd sprawdzania danych gry:\n"
+"{p0}"
+
+#: src/pokete/classes/multiplayer/connector.py:80
+msgid "That username isn't available right now\n"
+msgstr "Ta nazwa gracza jest obecnie zajęta\n"
+
+#: src/pokete/classes/multiplayer/connector.py:81
+msgid "Please enter the username you want to use on the server"
+msgstr "Wpisz nazwę gracza, której chcesz używać na serwerze"
+
+#: src/pokete/classes/multiplayer/connector.py:82
+msgid "Username:"
+msgstr "Gracz:"
+
+#: src/pokete/classes/multiplayer/connector.py:84
+msgid "Username"
+msgstr "Gracz"
+
+#: src/pokete/classes/multiplayer/connector.py:57
+msgid "Please enter the servers host you want to connect to."
+msgstr "Wpisz adres serwera, z którym chcesz się połączyć."
+
+#: src/pokete/classes/multiplayer/connector.py:58
+msgid "Host:"
+msgstr "Adres:"
+
+#: src/pokete/classes/multiplayer/connector.py:60
+msgid "Host"
+msgstr "Serwer"
+
+#: src/pokete/classes/multiplayer/connector.py:48
+msgid "Version mismatch: {p0}"
+msgstr "Niezgodna wersja: {p0}"
+
+#: src/pokete/classes/multiplayer/connector.py:50
+msgid "Invalid Poke: {p0}"
+msgstr "Nieprawidłowy Pokete: {p0}"
+
+#: src/pokete/classes/multiplayer/connector.py:106
+msgid ""
+"An error occurred connecting to {p0} :\n"
+"{p1}"
+msgstr ""
+"Błąd połączenia z {p0}:\n"
+"{p1}"
+
+#: src/pokete/classes/multiplayer/connector.py:68
+msgid "Error: {p0}"
+msgstr "Błąd: {p0}"
+
+#: src/pokete/classes/map_additions/center.py:104
+msgid "See your full deck"
+msgstr "Cała drużyna"
+
+#: src/pokete/classes/map_additions/center.py:105
+msgid "Heal all your Poketes"
+msgstr "Ulecz wszystkie Pokete"
+
+#: src/pokete/classes/map_additions/center.py:106
+msgid "Cuddle with the Poketes"
+msgstr "Przytul Pokete"
+
+#: src/pokete/classes/map_additions/center.py:107
+msgid "Quit"
+msgstr "Wyjdź"
+
+#: src/pokete/classes/map_additions/center.py:109
+msgid "Select"
+msgstr "Wybierz"
+
+#: src/pokete/classes/fight/items/balls.py:38
+msgid "You threw a {p0}!"
+msgstr "Rzucasz: {p0}!"
+
+#: src/pokete/classes/fight/items/balls.py:71
+msgid "You missed!"
+msgstr "Nie trafiasz!"
+
+#: src/pokete/classes/fight/items/balls.py:36
+msgid "You can't do that in a duel!"
+msgstr "Nie możesz tego zrobić w pojedynku!"
+
+#: src/pokete/classes/fight/items/balls.py:58
+msgid "You caught {p0}!"
+msgstr "Łapiesz {p0}!"
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:67
+msgid "{p0}: Attack"
+msgstr "{p0}: Atak"
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:70
+msgid "{p0}: Run!"
+msgstr "{p0}: Uciekaj!"
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:73
+msgid "{p0}: Inv"
+msgstr "{p0}: Ekw."
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:338
+msgid "You used {p0}"
+msgstr "Wystawiasz {p0}"
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:346
+msgid "{p0} used {p1}!"
+msgstr "{p0} wystawia {p1}!"
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:366
+msgid "You have choosen {p0}"
+msgstr "Wybierasz {p0}"
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:385
+msgid "{p0} reached lvl {p1}!"
+msgstr "{p0} osiąga poziom {p1}!"
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:392
+msgid "{p0} won!"
+msgstr "{p0} wygrywa!"
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:393
+msgid ""
+"\n"
+"XP + {p0}"
+msgstr ""
+"\n"
+"XP + {p0}"
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:398
+msgid "{p0} has used all its' attacks!"
+msgstr "{p0} nie ma już punktów ataków!"
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:402
+msgid "{p0} is dead!"
+msgstr "{p0} traci przytomność!"
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:405
+msgid "You failed to run away!"
+msgstr "Nie udaje ci się uciec!"
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:409
+msgid "You ran away!"
+msgstr "Uciekasz!"
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:422
+msgid "{p0} used {p1}! {p2}"
+msgstr "{p0} używa ataku {p1}! {p2}"
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:433
+msgid "{p0} hurt itself!"
+msgstr "{p0} rani się!"
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:264
+msgid "What do you want to do?"
+msgstr "Co chcesz zrobić?"
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:290
+msgid "Do you really want to run away?"
+msgstr "Czy na pewno chcesz uciec?"
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:303
+msgid ""
+"You don't have any items left!\n"
+"What do you want to do?"
+msgstr ""
+"Nie masz już przedmiotów!\n"
+"Co chcesz zrobić?"
+
+#: src/pokete/classes/fight/fightmap/attack.py:26
+msgid "Attack Info"
+msgstr "Opis ataku"
+
+#: src/pokete/classes/fight/fightmap/attack.py:27
+msgid "Effect Info"
+msgstr "Opis efektu"
+
+#: src/pokete/classes/multiplayer/remote_fight/main_thread_fight_event.py:17
+msgid "'{p0}' wants to start a fight with you"
+msgstr "„{p0}” chce stoczyć z tobą walkę"
+
+#: src/pokete/classes/multiplayer/remote_fight/provider.py:48
+msgid "Fight started with {p0}, good luck!"
+msgstr "Rozpoczyna się walka z {p0}. Powodzenia!"
+
+#: src/pokete/classes/multiplayer/interactions/context_menu.py:16
+msgid "Interact"
+msgstr "Interakcja"
+
+#: src/pokete/base/input/hotkeys.py:209
+msgid ""
+"The folowing keys are not set:\n"
+"{p0}\n"
+"Should defaults be loaded for those keys?"
+msgstr ""
+"Nie przypisano klawiszy:\n"
+"{p0}\n"
+"Czy wczytać dla nich ustawienia domyślne?"
+
+msgid "Your deck"
+msgstr "Twoja drużyna"
+
+msgid "Your full deck"
+msgstr "Cała drużyna"
+
+msgid "Inventory"
+msgstr "Ekwipunek"
+
+msgid "Shop"
+msgstr "Sklep"
+
+msgid "Clock"
+msgstr "Zegar"
+
+msgid "Nature"
+msgstr "Natura"
+
+msgid "Poketedex"
+msgstr "Poketedex"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "very "
+msgstr "bardzo "
+
+msgid "Night"
+msgstr "Noc"
+
+msgid "Day"
+msgstr "Dzień"
+
+msgid "Always"
+msgstr "Zawsze"
+
+msgid "the same"
+msgstr "tyle samo"
+
+msgid "less"
+msgstr "mniej"
+
+msgid "more"
+msgstr "więcej"
+
+msgid "you"
+msgstr "twój"
+
+msgid "enemy"
+msgstr "przeciwnika"
+
+msgid "He"
+msgstr "Trener"
+
+msgid "She"
+msgstr "Trenerka"
+
+msgid "normal"
+msgstr "zwykły"
+
+msgid "stone"
+msgstr "kamienny"
+
+msgid "plant"
+msgstr "roślinny"
+
+msgid "water"
+msgstr "wodny"
+
+msgid "fire"
+msgstr "ognisty"
+
+msgid "ground"
+msgstr "ziemny"
+
+msgid "electro"
+msgstr "elektryczny"
+
+msgid "flying"
+msgstr "latający"
+
+msgid "undead"
+msgstr "nieumarły"
+
+msgid "ice"
+msgstr "lodowy"
+
+msgid "poison"
+msgstr "trujący"
+
+msgid "bird"
+msgstr "ptak"
+
+msgid "snake"
+msgstr "wąż"
+
+msgid "brave"
+msgstr "odważna"
+
+msgid "shy"
+msgstr "nieśmiała"
+
+msgid "LD-{attack}"
+msgstr "PN-{attack}"
+
+msgid "Teaches a Pokete the attack '{attack}'."
+msgstr "Uczy Pokete ataku „{attack}”."
+
+msgid "You found: {item} × {count}!"
+msgstr "Znaleziono: {item} × {count}!"
+
+msgid "{name} statistics"
+msgstr "Statystyki: {name}"
+
+msgid ""
+"\n"
+"That was not effective! "
+msgstr ""
+"\n"
+"To mało skuteczne! "
+
+msgid ""
+"\n"
+"That was very effective! "
+msgstr ""
+"\n"
+"To bardzo skuteczne! "
+
+msgid "{name} missed!"
+msgstr "{name} nie trafia!"
+
+msgid "paralyzed"
+msgstr "paraliż"
+
+msgid "sleeping"
+msgstr "sen"
+
+msgid "burning"
+msgstr "oparzenie"
+
+msgid "poisoned"
+msgstr "zatrucie"
+
+msgid "confused"
+msgstr "dezorientacja"
+
+msgid "frozen"
+msgstr "zamrożenie"
+
+msgid "(Par)"
+msgstr "(Par)"
+
+msgid "(Sle)"
+msgstr "(Sen)"
+
+msgid "(Bur)"
+msgstr "(Opa)"
+
+msgid "(Poi)"
+msgstr "(Zat)"
+
+msgid "(Con)"
+msgstr "(Dez)"
+
+msgid "(Fro)"
+msgstr "(Mró)"
+
+msgid "burned it self!"
+msgstr "cierpi od oparzeń!"
+
+msgid "got damaged through poison!"
+msgstr "cierpi od trucizny!"
+
+msgid ""
+"Paralyses the enemy and stops it from attacking. This is reverted randomly."
+msgstr ""
+"Paraliżuje przeciwnika i uniemożliwia mu atakowanie. Efekt ustępuje losowo."
+
+msgid ""
+"Makes the enemy fall asleep and stops it from attacking. This is reverted "
+"randomly."
+msgstr ""
+"Usypia przeciwnika i uniemożliwia mu atakowanie. Efekt ustępuje losowo."
+
+msgid ""
+"Sets the enemy on fire and damages them with 2 HP every round. This is "
+"reverted randomly."
+msgstr ""
+"Podpala przeciwnika i odbiera mu 2 HP w każdej rundzie. Efekt ustępuje "
+"losowo."
+
+msgid ""
+"Poisons the enemy and damages the enemy with 1 HP every round. This is "
+"reverted randomly."
+msgstr ""
+"Zatruwa przeciwnika i odbiera mu 1 HP w każdej rundzie. Efekt ustępuje "
+"losowo."
+
+msgid "Makes the enemy hurt it self. This is reverted randomly."
+msgstr ""
+"Dezorientuje przeciwnika, który rani sam siebie. Efekt ustępuje losowo."
+
+msgid ""
+"Freezes the enemy and stops it from attacking. This is reverted randomly."
+msgstr ""
+"Zamraża przeciwnika i uniemożliwia mu atakowanie. Efekt ustępuje losowo."
+
+msgid "Tackle"
+msgstr "Natarcie"
+
+msgid "Tackles the enemy very hard."
+msgstr "Mocno taranuje przeciwnika."
+
+msgid "Cry"
+msgstr "Krzyk"
+
+msgid "So loud that it confuses the enemy."
+msgstr "Tak głośny, że dezorientuje przeciwnika."
+
+msgid "Bite"
+msgstr "Ugryzienie"
+
+msgid "A hard bite with sharp teeth."
+msgstr "Mocne ugryzienie ostrymi zębami."
+
+msgid "Power Bite"
+msgstr "Potężne ugryzienie"
+
+msgid "The hardest bite you can think of."
+msgstr "Najsilniejsze ugryzienie, jakie można sobie wyobrazić."
+
+msgid "Choker"
+msgstr "Duszenie"
+
+msgid "Chokes the enemy and makes it weaker."
+msgstr "Dusi i osłabia przeciwnika."
+
+msgid "Tail Swipe"
+msgstr "Smagnięcie ogonem"
+
+msgid "Swipes through the enemy's face."
+msgstr "Uderza przeciwnika ogonem w twarz."
+
+msgid "Meat Skewer"
+msgstr "Mięsny szaszłyk"
+
+msgid "Drills a horn deep in the enemy's flesh."
+msgstr "Wbija róg głęboko w ciało przeciwnika."
+
+msgid "Snooze"
+msgstr "Drzemka"
+
+msgid "Makes the enemy sleepy."
+msgstr "Usypia przeciwnika."
+
+msgid "Supercow Power"
+msgstr "Moc superkrowy"
+
+msgid "Makes the Pokete angry and strong."
+msgstr "Rozwściecza i wzmacnia Pokete."
+
+msgid "Poison Bite"
+msgstr "Jadowite ugryzienie"
+
+msgid "Makes the enemy weaker."
+msgstr "Osłabia przeciwnika."
+
+msgid "Poison Thorn"
+msgstr "Jadowity cierń"
+
+msgid "Stabs a venomous thorn into the enemy's flesh."
+msgstr "Wbija jadowity cierń w ciało przeciwnika."
+
+msgid "Pebble Fire"
+msgstr "Ostrzał kamykami"
+
+msgid "Fires pebbles at the enemy and makes it blind."
+msgstr "Wystrzeliwuje kamyki w przeciwnika i oślepia go."
+
+msgid "Sand Throw"
+msgstr "Rzut piaskiem"
+
+msgid "Throws sand at the enemy and makes it blind."
+msgstr "Rzuca piaskiem w przeciwnika i oślepia go."
+
+msgid "Polish"
+msgstr "Polerowanie"
+
+msgid "Upgrades defense and attack points."
+msgstr "Zwiększa punkty obrony i ataku."
+
+msgid "Brick Throw"
+msgstr "Rzut cegłą"
+
+msgid "Throws an Euler brick at the enemy."
+msgstr "Rzuca w przeciwnika cegłą Eulera."
+
+msgid "Stone crush"
+msgstr "Kamienne miażdżenie"
+
+msgid "Crushes the enemy between two heavy stones."
+msgstr "Miażdży przeciwnika między dwoma ciężkimi kamieniami."
+
+msgid "Rock Smash"
+msgstr "Skalne uderzenie"
+
+msgid "Pounds the enemy with the Pokete's full weight."
+msgstr "Uderza przeciwnika całym ciężarem Pokete."
+
+msgid "Dia Stab"
+msgstr "Diamentowe pchnięcie"
+
+msgid "Stabs the enemy with a giant diamond spike."
+msgstr "Przebija przeciwnika ogromnym diamentowym kolcem."
+
+msgid "Dazzle"
+msgstr "Oślepienie"
+
+msgid "Shines a bright light at the enemy and dazzles them."
+msgstr "Oślepia przeciwnika jasnym światłem."
+
+msgid "Dia spikes"
+msgstr "Diamentowe kolce"
+
+msgid "Throws a heck of a lot of diamond spikes at the enemy."
+msgstr "Zasypuje przeciwnika mnóstwem diamentowych kolców."
+
+msgid "Earthquake"
+msgstr "Trzęsienie ziemi"
+
+msgid "Moves the ground with tremendous force."
+msgstr "Porusza ziemią z ogromną siłą."
+
+msgid "Power Roll"
+msgstr "Potężne toczenie"
+
+msgid "Rolls over the enemy."
+msgstr "Przetacza się po przeciwniku."
+
+msgid "Toe Breaker"
+msgstr "Łamacz palców"
+
+msgid "Breaks the enemy's toes."
+msgstr "Łamie przeciwnikowi palce u stóp."
+
+msgid "Ground Hit"
+msgstr "Cios z ziemi"
+
+msgid "Damages the enemy with an unpredictable hit out of the ground."
+msgstr "Rani przeciwnika nieprzewidywalnym ciosem spod ziemi."
+
+msgid "Dick Energy"
+msgstr "Energia fiuta"
+
+msgid "Collects a great amount of energy in the Pokete's tip."
+msgstr "Gromadzi ogromną ilość energii w czubku Pokete."
+
+msgid "Hiding"
+msgstr "Ukrycie"
+
+msgid "Makes the Pokete hide under the ground to minimize damage."
+msgstr "Chowa Pokete pod ziemią, aby ograniczyć obrażenia."
+
+msgid "Web attack"
+msgstr "Atak siecią"
+
+msgid "Thows web towards enemy in order to immobilize."
+msgstr "Rzuca siecią w przeciwnika, aby go unieruchomić."
+
+msgid "Fire Bite"
+msgstr "Ogniste ugryzienie"
+
+msgid "Burns and bites the enemy at the same time."
+msgstr "Jednocześnie podpala i gryzie przeciwnika."
+
+msgid "Ash Throw"
+msgstr "Rzut popiołem"
+
+msgid "Throws ashes in the enemy's eyes."
+msgstr "Rzuca popiołem w oczy przeciwnika."
+
+msgid "Flame Throw"
+msgstr "Miotacz ognia"
+
+msgid "Hans! Get ze Flammenwerfer!"
+msgstr "Hans! Przynieś miotacz ognia!"
+
+msgid "Fire Ball"
+msgstr "Kula ognia"
+
+msgid "Casts a fireball at the enemy."
+msgstr "Ciska w przeciwnika kulą ognia."
+
+msgid "Flying"
+msgstr "Lot"
+
+msgid "Gives the Pokete the ability to fly you around."
+msgstr "Pozwala Pokete przenosić cię w powietrzu."
+
+msgid "Peck"
+msgstr "Dziobnięcie"
+
+msgid "A peck at the enemy's weakest spot."
+msgstr "Dziobie przeciwnika w najsłabszy punkt."
+
+msgid "Wind Blow"
+msgstr "Podmuch wiatru"
+
+msgid "Casts a gust of wind at the enemy."
+msgstr "Uderza przeciwnika podmuchem wiatru."
+
+msgid "Storm Gale"
+msgstr "Nawałnica"
+
+msgid ""
+"Casts a vicious and violent storm full of rain and hail, hitting the enemy "
+"in its weakest spots and makes it want to die."
+msgstr ""
+"Przywołuje gwałtowną burzę z deszczem i gradem, uderzając w najsłabsze "
+"punkty przeciwnika i odbierając mu chęć do życia."
+
+msgid "Schmetter"
+msgstr "Grzmotnięcie"
+
+msgid "Schmetters the enemy away."
+msgstr "Odtrąca przeciwnika potężnym uderzeniem."
+
+msgid "Eye Peck"
+msgstr "Dziobnięcie w oko"
+
+msgid "Pecks at one of the enemy's eyes."
+msgstr "Dziobie przeciwnika w jedno oko."
+
+msgid "Wing Hit"
+msgstr "Cios skrzydłem"
+
+msgid "Hits the enemy with a wing."
+msgstr "Uderza przeciwnika skrzydłem."
+
+msgid "Brooding"
+msgstr "Wysiadywanie"
+
+msgid "Regenerates 2 HP."
+msgstr "Przywraca 2 HP."
+
+msgid "Power Peck"
+msgstr "Potężne dziobnięcie"
+
+msgid "A harsh pecking on the enemy's head."
+msgstr "Mocno dziobie przeciwnika w głowę."
+
+msgid "Bubble Gun"
+msgstr "Bąbelkowy pistolet"
+
+msgid "Fires some bubbles at the enemy."
+msgstr "Wystrzeliwuje bąbelki w przeciwnika."
+
+msgid "Rain dance"
+msgstr "Taniec deszczu"
+
+msgid "Summons rainy clouds."
+msgstr "Przywołuje deszczowe chmury."
+
+msgid "Bubble Bomb"
+msgstr "Bąbelkowa bomba"
+
+msgid "A deadly bubble."
+msgstr "Śmiercionośny bąbelek."
+
+msgid "Bubble Shield"
+msgstr "Bąbelkowa tarcza"
+
+msgid "Creates a giant bubble that protects the Pokete."
+msgstr "Tworzy wielką bańkę chroniącą Pokete."
+
+msgid "Wet Slap"
+msgstr "Mokry policzek"
+
+msgid "Gives the enemy a cold and wet slap in the face."
+msgstr "Wymierza przeciwnikowi zimny, mokry policzek."
+
+msgid "Shell Pinch"
+msgstr "Szczypnięcie muszlą"
+
+msgid "Pinches the enemy with its strong shell."
+msgstr "Szczypie przeciwnika mocną muszlą."
+
+msgid "Heart Touch"
+msgstr "Dotyk serca"
+
+msgid "Touches the enemy's heart with cold, ghostly claws."
+msgstr "Dotyka serca przeciwnika zimnymi, upiornymi szponami."
+
+msgid "Confusion"
+msgstr "Dezorientacja"
+
+msgid "Confuses the enemy."
+msgstr "Dezorientuje przeciwnika."
+
+msgid "Mind Blow"
+msgstr "Wstrząs umysłu"
+
+msgid "Causes confusion deep in the enemy's mind."
+msgstr "Wywołuje zamęt głęboko w umyśle przeciwnika."
+
+msgid "Shock"
+msgstr "Porażenie"
+
+msgid "Gives the enemy a shock."
+msgstr "Poraża przeciwnika prądem."
+
+msgid "Charging"
+msgstr "Ładowanie"
+
+msgid "Charges up the Pokete."
+msgstr "Ładuje Pokete energią."
+
+msgid "Mega Arch"
+msgstr "Potężny łuk"
+
+msgid "Gives the enemy a massive shock."
+msgstr "Poraża przeciwnika potężnym wyładowaniem."
+
+msgid "Special Smell"
+msgstr "Wyjątkowy zapach"
+
+msgid ""
+"Spreads a special smell that will make the enemy confused but very happy."
+msgstr ""
+"Rozsiewa zapach, który dezorientuje przeciwnika, ale też bardzo go "
+"uszczęśliwia."
+
+msgid "Apple Drop"
+msgstr "Spadające jabłko"
+
+msgid "Makes an apple drop on the enemy's head."
+msgstr "Zrzuca jabłko na głowę przeciwnika."
+
+msgid "Encouragement"
+msgstr "Dodanie otuchy"
+
+msgid "Encourages and strengthens all Poketes in your team."
+msgstr "Dodaje otuchy i wzmacnia wszystkie Pokete w twojej drużynie."
+
+msgid "Super Sucker"
+msgstr "Potężne wysysanie"
+
+msgid "Sucks 2 HP from the enemy and adds to its own."
+msgstr "Odbiera przeciwnikowi 2 HP i przywraca je sobie."
+
+msgid "Sucker"
+msgstr "Wysysanie"
+
+msgid "Sucks 1 HP from the enemy and adds to its own."
+msgstr "Odbiera przeciwnikowi 1 HP i przywraca je sobie."
+
+msgid "Root Strangler"
+msgstr "Duszące korzenie"
+
+msgid "Uses old and crusty roots to strangle the enemy."
+msgstr "Dusi przeciwnika starymi, twardymi korzeniami."
+
+msgid "Root Slap"
+msgstr "Smagnięcie korzeniem"
+
+msgid "Uses old and crusty roots to slap the enemy."
+msgstr "Smaga przeciwnika starymi, twardymi korzeniami."
+
+msgid "The Old Roots Hit"
+msgstr "Cios prastarych korzeni"
+
+msgid ""
+"An ancient attack that summons the deepest and oldest roots from deep in the"
+" earth to defeat the enemy."
+msgstr ""
+"Prastary atak przywołujący najstarsze korzenie z głębi ziemi, aby pokonać "
+"przeciwnika."
+
+msgid "Leaf Storm"
+msgstr "Burza liści"
+
+msgid "Blasts a bunch of spiky leaves at the enemy."
+msgstr "Zasypuje przeciwnika ostrymi liśćmi."
+
+msgid "Bark Hardening"
+msgstr "Utwardzenie kory"
+
+msgid "Hardens its outer layers to protect itself."
+msgstr "Utwardza zewnętrzne warstwy ciała, aby się chronić."
+
+msgid "Poison Spores"
+msgstr "Trujące zarodniki"
+
+msgid "Ejects some poisonous spores onto the enemy."
+msgstr "Wyrzuca trujące zarodniki na przeciwnika."
+
+msgid "Branch Stab"
+msgstr "Pchnięcie gałęzią"
+
+msgid "Stabs the enemy with a branch, preferably in the enemy's eyes."
+msgstr "Dźga przeciwnika gałęzią, najlepiej prosto w oczy."
+
+msgid "Freeze"
+msgstr "Zamrożenie"
+
+msgid "Freezes the enemy."
+msgstr "Zamraża przeciwnika."
+
+msgid "Snow Storm"
+msgstr "Śnieżyca"
+
+msgid "Summons a snow storm full of ice spikes onto the enemy."
+msgstr "Zasypuje przeciwnika śnieżną burzą pełną lodowych kolców."
+
+msgid "Sword of Ice"
+msgstr "Lodowy miecz"
+
+msgid "Stabs a giant ice spike into the enemy."
+msgstr "Przebija przeciwnika ogromnym lodowym kolcem."
+
+msgid "Spikes"
+msgstr "Kolce"
+
+msgid "Stabs the enemy with some small ice spikes."
+msgstr "Kłuje przeciwnika małymi lodowymi kolcami."
+
+msgid "Sweet smell"
+msgstr "Słodki zapach"
+
+msgid "Unleashes a sweet scent that's turning heads and minds alike."
+msgstr "Uwalnia słodki zapach, który zawraca w głowie."
+
+msgid "A squared stone that can be readily found just lying around."
+msgstr "Kwadratowy kamień, który łatwo znaleźć leżący w okolicy."
+
+msgid "A cow-like creature found in meadows."
+msgstr "Stworzenie podobne do krowy, spotykane na łąkach."
+
+msgid "A big and heavy stone made from one of the hardest materials."
+msgstr "Duży i ciężki kamień z jednego z najtwardszych materiałów."
+
+msgid "A powerful and heavy stone Pokete that lives in mountain caves."
+msgstr "Potężny i ciężki kamienny Pokete zamieszkujący górskie jaskinie."
+
+msgid "A small but powerful stone Pokete that lives in the mountains."
+msgstr "Mały, ale potężny kamienny Pokete zamieszkujący góry."
+
+msgid "A plant Pokete that's often mistaken for a normal flower."
+msgstr "Roślinny Pokete często mylony ze zwykłym kwiatem."
+
+msgid "A plant Pokete found in Agrawos; it has special 'Powers'."
+msgstr "Roślinny Pokete spotykany w Agrawos. Ma szczególne „moce”."
+
+msgid ""
+"The dark and fiery souls of those who got burned to death by the hot sun!"
+msgstr "Mroczne, ogniste dusze tych, których spaliło gorące słońce!"
+
+msgid "A scary ghost Pokete that lives in caves and old houses."
+msgstr "Przerażający upiorny Pokete zamieszkujący jaskinie i stare domy."
+
+msgid "A ghost Pokete that will scare your pants off."
+msgstr "Upiorny Pokete, który przestraszy cię na śmierć."
+
+msgid "A very common bird Pokete; it lives everywhere."
+msgstr "Bardzo pospolity ptasi Pokete. Żyje wszędzie."
+
+msgid "A very aggressive bird Pokete that can only be found in the woods."
+msgstr "Bardzo agresywny ptasi Pokete spotykany wyłącznie w lasach."
+
+msgid "A very aggressive and hard to find bird Pokete."
+msgstr "Bardzo agresywny i trudny do znalezienia ptasi Pokete."
+
+msgid ""
+"A very aggressive bird Pokete that lives near deserts; it will try to peck "
+"out your eyes."
+msgstr ""
+"Bardzo agresywny ptasi Pokete zamieszkujący okolice pustyń. Spróbuje "
+"wydziobać ci oczy."
+
+msgid "A harmless water Pokete that can be found everywhere."
+msgstr "Niegroźny wodny Pokete spotykany wszędzie."
+
+msgid "A dangerous snake Pokete."
+msgstr "Niebezpieczny wężowy Pokete."
+
+msgid "A fucking dangerous and enormous snake Pokete."
+msgstr "Cholernie niebezpieczny i ogromny wężowy Pokete."
+
+msgid "A scary and dangerous apple tree."
+msgstr "Przerażająca i niebezpieczna jabłoń."
+
+msgid "An annoying flying rat."
+msgstr "Irytujący latający szczur."
+
+msgid "A chongus flying rat."
+msgstr "Ogromny latający szczur."
+
+msgid "Very delicious and low fat water Pokete."
+msgstr "Bardzo smaczny, niskotłuszczowy wodny Pokete."
+
+msgid ""
+"A nocturnal Pokete that is looking for small children to eat as a midnight "
+"snack."
+msgstr "Nocny Pokete szukający małych dzieci na przekąskę o północy."
+
+msgid "An annoying rat."
+msgstr "Irytujący szczur."
+
+msgid "A damn dangerous and enourmous rat; it will bite of your leg."
+msgstr "Cholernie niebezpieczny i ogromny szczur. Odgryzie ci nogę."
+
+msgid ""
+"A majestic horse that is always looking for something to pick with its horn."
+msgstr ""
+"Majestatyczny koń, który ciągle szuka czegoś, co mógłby nadziać na róg."
+
+msgid "A teenage unicorn in the middle of puberty."
+msgstr "Nastoletni jednorożec w środku okresu dojrzewania."
+
+msgid "A bush, and just a bush. But watch out!"
+msgstr "Krzak. Po prostu krzak. Ale uważaj!"
+
+msgid ""
+"A fiery wolf straight from hell that likes to burn 11 years old butts off."
+msgstr ""
+"Ognisty wilk prosto z piekła, który lubi przypiekać tyłki jedenastolatkom."
+
+msgid "A fiery wolf from hell on steroids."
+msgstr "Ognisty wilk z piekła na sterydach."
+
+msgid "An ancient dragon Pokete famous for destroying cities and villages."
+msgstr "Prastary smoczy Pokete słynący z niszczenia miast i wiosek."
+
+msgid "A big chunk of stone and dirt that rolls around."
+msgstr "Duża bryła kamienia i ziemi, która toczy się po okolicy."
+
+msgid ""
+"A shell that lives deep in the sea or near bays; it's pretty hard to crack."
+msgstr "Muszla żyjąca w głębinach lub przy zatokach. Trudno ją rozłupać."
+
+msgid "A crusty Pokete that loves to pinch big toes."
+msgstr "Skorupiasty Pokete uwielbiający szczypać duże palce u stóp."
+
+msgid ""
+"A crusty Pokete that will pinch your toes and check whether or not you "
+"borrowed something."
+msgstr ""
+"Skorupiasty Pokete, który uszczypnie cię w palce i sprawdzi, czy coś "
+"pożyczasz."
+
+msgid "A small floating ball that will give you a shock."
+msgstr "Mała unosząca się kula, która porazi cię prądem."
+
+msgid "A small ice cube."
+msgstr "Mała kostka lodu."
+
+msgid "A block of ice."
+msgstr "Blok lodu."
+
+msgid ""
+"A ball floating around in dark woods and caves, that will confuse the shit "
+"out of you."
+msgstr ""
+"Kula unosząca się w mrocznych lasach i jaskiniach, która narobi ci niezłego "
+"zamętu w głowie."
+
+msgid "A unsuspicious plant."
+msgstr "Niewinnie wyglądająca roślina."
+
+msgid "A small plant Pokete found burried in the ground."
+msgstr "Mały roślinny Pokete zakopany w ziemi."
+
+msgid "A small plant Pokete deeply burried in the ground."
+msgstr "Mały roślinny Pokete zakopany głęboko w ziemi."
+
+msgid "A small plant Pokete found in the ground."
+msgstr "Mały roślinny Pokete spotykany w ziemi."
+
+msgid "A not at all suspicious plant."
+msgstr "Roślina, która wcale nie wygląda podejrzanie."
+
+msgid ""
+"A small heavy thing that can be found on the ground; it may reveal something"
+" wonderful later."
+msgstr ""
+"Mała, ciężka rzecz leżąca na ziemi. Może później ujawni coś wspaniałego."
+
+msgid "A small caterpillar found on leaves."
+msgstr "Mała gąsienica spotykana na liściach."
+
+msgid "A butterfly that will schmetter you away."
+msgstr "Motyl, który zmiecie cię z nóg."
+
+msgid "A dark butterfly that will schmetter you away."
+msgstr "Mroczny motyl, który zmiecie cię z nóg."
+
+msgid "A very small whatever that sticks out of the ground."
+msgstr "Bardzo małe coś, co wystaje z ziemi."
+
+msgid "A little whatever that sticks out of the ground."
+msgstr "Małe coś, co wystaje z ziemi."
+
+msgid "An even bigger whatever that sticks out of the ground."
+msgstr "Jeszcze większe coś, co wystaje z ziemi."
+
+msgid "A precious diamond that can only be found in the darkest caves."
+msgstr "Cenny diament spotykany wyłącznie w najciemniejszych jaskiniach."
+
+msgid "A freshwater fighting fish Pokete."
+msgstr "Słodkowodny rybi Pokete — bojownik."
+
+msgid "Dead or alive entity with slow movement and mental ability."
+msgstr ""
+"Żywa lub martwa istota o powolnych ruchach i ograniczonej sprawności "
+"umysłowej."
+
+msgid "A terrestrial crab full of accumulated electrical energy."
+msgstr "Lądowy krab pełen zgromadzonej energii elektrycznej."
+
+msgid "A tiny spider like Pokete."
+msgstr "Malutki Pokete podobny do pająka."
+
+msgid "Dangerous spider like Pokete with strong mandibles."
+msgstr "Niebezpieczny Pokete podobny do pająka, z mocnymi żuwaczkami."
+
+msgid ""
+"Sweat and juicy plant pokete thats' looks and thiccness will drive you "
+"crazy."
+msgstr ""
+"Słodki i soczysty roślinny Pokete, którego wygląd i krągłości doprowadzą cię"
+" do szaleństwa."
+
+msgid "Poketeball"
+msgstr "Poketeball"
+
+msgid "A ball you can use to catch Poketes"
+msgstr "Kula do łapania Pokete"
+
+msgid "Superball"
+msgstr "Superball"
+
+msgid "A ball you can use to catch Poketes with an increased chance"
+msgstr "Kula zwiększająca szansę złapania Pokete"
+
+msgid "Hyperball"
+msgstr "Hyperball"
+
+msgid "For catching Poketes with a waaay higher chance"
+msgstr "Kula znacznie zwiększająca szansę złapania Pokete"
+
+msgid "Healing potion"
+msgstr "Mikstura lecznicza"
+
+msgid "Heals a Pokete with 5 HP"
+msgstr "Przywraca Pokete 5 HP"
+
+msgid "Super potion"
+msgstr "Supermikstura"
+
+msgid "Heals a Pokete with 15 HP"
+msgstr "Przywraca Pokete 15 HP"
+
+msgid "AP potion"
+msgstr "Mikstura AP"
+
+msgid "Refills the Poketes attack APs."
+msgstr "Uzupełnia punkty ataków Pokete."
+
+msgid "Treat"
+msgstr "Przysmak"
+
+msgid "Upgrades a Pokete by a whole level."
+msgstr "Podnosi poziom Pokete o jeden."
+
+msgid "'Shut the fuck up' stone"
+msgstr "Kamień „Zamknij się, kurwa”"
+
+msgid "Makes trainer leaving you alone"
+msgstr "Sprawia, że trenerzy zostawiają cię w spokoju"
+
+msgid "It's raining!"
+msgstr "Pada deszcz!"
+
+msgid "There is a thunderstorm going on!"
+msgstr "Trwa burza z piorunami!"
+
+msgid "It's foggy!"
+msgstr "Jest mgliście!"
+
+msgid "It's a hot sunny day!"
+msgstr "Jest gorący, słoneczny dzień!"
+
+msgid "First Pokete"
+msgstr "Pierwszy Pokete"
+
+msgid "Catch your first Pokete!"
+msgstr "Złap swojego pierwszego Pokete!"
+
+msgid "First duel"
+msgstr "Pierwszy pojedynek"
+
+msgid "Fight against your first trainer!"
+msgstr "Stocz walkę z pierwszym trenerem!"
+
+msgid "Catch em all"
+msgstr "Złap je wszystkie"
+
+msgid "Catch all Poketes and fill your Pokete-Dex!"
+msgstr "Złap wszystkie Pokete i uzupełnij Poketedex!"
+
+msgid "First evolution"
+msgstr "Pierwsza ewolucja"
+
+msgid "Evolve your first Pokete!"
+msgstr "Przeprowadź pierwszą ewolucję Pokete!"
+
+msgid "Your home"
+msgstr "Twój dom"
+
+msgid "Nice Town"
+msgstr "Miłe Miasto"
+
+msgid "Route 0"
+msgstr "Droga 0"
+
+msgid "Nice Town Cave"
+msgstr "Jaskinia Miłego Miasta"
+
+msgid "Route 1"
+msgstr "Droga 1"
+
+msgid "Sunnydale"
+msgstr "Sunnydale"
+
+msgid "Sunnydale Lake"
+msgstr "Jezioro Sunnydale"
+
+msgid "Mysterious Cave"
+msgstr "Tajemnicza jaskinia"
+
+msgid "Route 2"
+msgstr "Droga 2"
+
+msgid "Dark Cave"
+msgstr "Mroczna jaskinia"
+
+msgid "Abandoned Village"
+msgstr "Opuszczona wioska"
+
+msgid "Abandoned House"
+msgstr "Opuszczony dom"
+
+msgid "Old House"
+msgstr "Stary dom"
+
+msgid "Route 3"
+msgstr "Droga 3"
+
+msgid "Route 4"
+msgstr "Droga 4"
+
+msgid "Deepest Forest"
+msgstr "Najgłębszy Las"
+
+msgid "Arena"
+msgstr "Arena"
+
+msgid "Route 5"
+msgstr "Droga 5"
+
+msgid "Route 6"
+msgstr "Droga 6"
+
+msgid "Big Mountain Sea"
+msgstr "Wielkie górskie jezioro"
+
+msgid "Big Mountain Cave"
+msgstr "Wielka górska jaskinia"
+
+msgid "House"
+msgstr "Dom"
+
+msgid "Rock-ville"
+msgstr "Rock-ville"
+
+msgid "Rocky Hotel"
+msgstr "Hotel Rocky"
+
+msgid "Town Hall"
+msgstr "Ratusz"
+
+msgid "Battle Cave"
+msgstr "Jaskinia bitew"
+
+msgid "Route 7"
+msgstr "Droga 7"
+
+msgid "Flowy Town"
+msgstr "Flowy Town"
+
+msgid "Mowcow Meadow"
+msgstr "Łąka Mowcow"
+
+msgid "The Fields of Agrawos"
+msgstr "Pola Agrawos"
+
+msgid "Agrawos"
+msgstr "Agrawos"
+
+msgid "Sunny Beach"
+msgstr "Słoneczna plaża"
+
+msgid "MowCow-Burger Restaurant"
+msgstr "Restauracja MowCow-Burger"
+
+msgid "The Temple of the Wheeto"
+msgstr "Świątynia Wheeto"
+
+msgid "Arena of Agrawos"
+msgstr "Arena Agrawos"
+
+msgid "Pokete-Care"
+msgstr "Opieka nad Pokete"
