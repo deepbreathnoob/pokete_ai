@@ -11,13 +11,12 @@ from pokete.base.ui.elements.box import Box
 from pokete.base.ui.elements.labels import action_key_label
 from pokete.base.ui.elements.text import HightlightableText
 from pokete.i18n import _ as tr
-from pokete.util import liner
+from pokete.util.liner import wrap_text
 
 
 class AskOkBox(Box, MouseInteractor):
     def __init__(self, text: str, max_width=76):
-        text = liner(text, max_width)
-        text = tr(text)
+        text = wrap_text(text, max_width)
         self.__do_exit = False
         self.__text_label = se.Text(text)
         self.__ok_label = HightlightableText(

@@ -3,6 +3,7 @@
 
 import ast
 from pathlib import Path
+from string import Formatter
 
 import polib
 
@@ -141,8 +142,42 @@ def messages():
     return result
 
 
+def translation_complete(entry, context, message, plural):
+    """Check the exact gettext key, all plural forms and format parameters."""
+    if (
+        entry is None
+        or entry.obsolete
+        or entry.fuzzy
+        or entry.msgctxt != context
+        or entry.msgid_plural != (plural or "")
+    ):
+        return False
+    translations = (
+        [entry.msgstr_plural.get(i, "") for i in range(3)] if plural else [entry.msgstr]
+    )
+    formatter = Formatter()
+
+    def fields(text):
+        return {
+            (field, spec, conversion)
+            for _, field, spec, conversion in formatter.parse(text)
+            if field is not None
+        }
+
+    try:
+        expected = fields(message)
+        return (not plural or fields(plural) == expected) and all(
+            text and fields(text) == expected for text in translations
+        )
+    except ValueError:
+        return False
+
+
 def main():
     po = polib.pofile(PO)
+    entries = {
+        (entry.msgctxt, entry.msgid): entry for entry in po if not entry.obsolete
+    }
     pot = polib.POFile()
     pot.metadata = dict(
         po.metadata,
@@ -164,15 +199,8 @@ def main():
                 ],
             )
         )
-        entry = po.find(message, msgctxt=context)
-        if (
-            entry is None
-            or entry.fuzzy
-            or (
-                not entry.msgstr
-                and not all(entry.msgstr_plural.get(i) for i in range(3))
-            )
-        ):
+        entry = entries.get((context, message))
+        if not translation_complete(entry, context, message, plural):
             missing.append((context, message))
     pot.save(POT)
     if missing:

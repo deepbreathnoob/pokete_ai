@@ -12,12 +12,12 @@ from pokete.base.ui.elements.box import Box
 from pokete.base.ui.elements.labels import action_key_label
 from pokete.base.ui.elements.text import HightlightableText
 from pokete.i18n import _
-from pokete.util import liner
+from pokete.util.liner import wrap_text
 
 
 class AskBoolBox(Box, MouseInteractor):
     def __init__(self, text: str, max_width=76):
-        text = liner(text, max_width)
+        text = wrap_text(text, max_width)
         self.__result: Optional[bool] = None
         self.__text_label = se.Text(text)
         self.__yes_label = HightlightableText(

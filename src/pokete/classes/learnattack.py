@@ -56,17 +56,23 @@ class LearnAttack:
 
     def __init__(self, poke):
         self.poke = poke
+        info_label = se.Text(
+            tr("{deck}:Details, {info}:Info").format(
+                deck=Action.DECK.mapping, info=Action.INFO.mapping
+            )
+        )
+        choice_width = max(
+            (
+                len(f"{i + 1}: {attack.name}") + 5
+                for i, attack in enumerate(poke.attack_obs)
+            ),
+            default=0,
+        )
         self.box = ChooseBox(
             6,
-            25,
+            max(25, choice_width, info_label.width + 4),
             name=tr("Attacks"),
-            info=[
-                se.Text(
-                    tr("{deck}:Details, {info}:Info").format(
-                        deck=Action.DECK.mapping, info=Action.INFO.mapping
-                    )
-                )
-            ],
+            info=[info_label],
         )
 
     @staticmethod

@@ -109,8 +109,6 @@ class Movemap(GameSubmap, Overview, MouseInteractor):
         self.multitext.rechar("")
         self.multitext.add(self, _x - self.x + 1, _y - self.y)
         inp_arr = [tr(message) for message in inp_arr]
-        inp_arr = [tr(message) for message in inp_arr]
-        inp_arr = [tr(message) for message in inp_arr]
         arr = [
             " < " + i + (" >" if j != len(inp_arr) - 1 else "")
             for j, i in enumerate(inp_arr)

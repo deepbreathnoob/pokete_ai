@@ -1882,7 +1882,7 @@ msgid "Arena of Agrawos"
 msgstr "Arena Agrawos"
 
 msgid "Pokete-Care"
-msgstr "Opieka     "
+msgstr "Opieka"
 
 msgid "Hey."
 msgstr "Hej."

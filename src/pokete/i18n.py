@@ -84,5 +84,8 @@ def localize_sign(text):
     for label in ("Center!", "Shop!", "Pokete-Care"):
         translated = _(label)
         if len(translated) <= len(label):
-            text = text.replace(label, translated.ljust(len(label)))
+            # Spaces are ignored by hard map objects: use roof characters so
+            # shortening a label cannot open a passage through the building.
+            if not any(char.isspace() for char in translated):
+                text = text.replace(label, translated.ljust(len(label), "_"))
     return text

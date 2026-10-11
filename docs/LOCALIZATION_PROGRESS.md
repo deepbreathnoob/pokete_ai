@@ -25,7 +25,7 @@ Gałąź: `feat/polish-localization`. Nie scalać automatycznie z `master`.
 
 ## Weryfikacja i wznowienie
 
-**Wszystkie fazy ukończone.** Stan końcowy: 60 testów zaliczonych; 980
+**Wszystkie fazy ukończone.** Stan po code review: 72 testy zaliczone; 980
 przetłumaczonych wpisów katalogu, w tym wszystkie 956 komunikatów wymaganych
 przez audyt. Brak wpisów fuzzy i brak brakujących tłumaczeń w danych gry oraz
 zasobach dołączonego serwera. Liczby obejmują także etykiety/nazwy własne,
@@ -62,7 +62,10 @@ python -m build --wheel
 4. Przy dodawaniu nowych tekstów rozszerz katalog i audyt, skompiluj MO,
    odtwórz polską encyklopedię, zaktualizuj ten punkt kontrolny i zapisz commit.
 
-**Następny krok:** przegląd zmian i opcjonalny test pojedynku z serwerem.
+**Code review ukończone:** cztery rundy, siedem poprawionych problemów; ostatnia
+runda bez nowych ustaleń. Szczegóły: [LOCALIZATION_REVIEW.md](LOCALIZATION_REVIEW.md).
+
+**Następny krok:** opcjonalny test pojedynku z serwerem i decyzja o scaleniu PR.
 Nie ma otwartej fazy tłumaczenia. Angielska dokumentacja techniczna,
 licencja, changelogi, komentarze, diagnostyka techniczna i dowolne treści
 zewnętrznych modów/serwerów nie należą do katalogu tłumaczeń interfejsu gry.

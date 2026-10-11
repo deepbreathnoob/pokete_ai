@@ -1051,7 +1051,7 @@ msgstr ""
 msgid "Attack:{p0}{p1}Defense:{p2}"
 msgstr ""
 
-#: src/pokete/classes/detail.py:100 src/pokete/classes/learnattack.py:62
+#: src/pokete/classes/detail.py:100 src/pokete/classes/learnattack.py:74
 msgid "Attacks"
 msgstr ""
 
@@ -2493,7 +2493,7 @@ msgstr ""
 msgid "Now go out and become the best!"
 msgstr ""
 
-#: src/pokete/base/input_loops/ask/ok.py:24
+#: src/pokete/base/input_loops/ask/ok.py:23
 msgid "OK"
 msgstr ""
 
@@ -3733,7 +3733,7 @@ msgstr ""
 msgid "burned it self!"
 msgstr ""
 
-#: src/pokete/base/ui/elements/labels.py:56
+#: src/pokete/base/ui/elements/labels.py:58
 msgid "close"
 msgstr ""
 
@@ -3825,7 +3825,7 @@ msgstr ""
 msgid "you"
 msgstr ""
 
-#: src/pokete/classes/learnattack.py:65
+#: src/pokete/classes/learnattack.py:60
 msgid "{deck}:Details, {info}:Info"
 msgstr ""
 
@@ -3894,7 +3894,7 @@ msgstr ""
 msgid "{p0} is still "
 msgstr ""
 
-#: src/pokete/classes/learnattack.py:137
+#: src/pokete/classes/learnattack.py:143
 msgid "{p0} learned {p1}!"
 msgstr ""
 
@@ -3918,7 +3918,7 @@ msgstr ""
 msgid "{p0} used {p1}!"
 msgstr ""
 
-#: src/pokete/classes/learnattack.py:111
+#: src/pokete/classes/learnattack.py:117
 msgid "{p0} wants to learn {p1}!"
 msgstr ""
 

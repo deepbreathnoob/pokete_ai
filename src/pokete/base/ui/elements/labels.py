@@ -30,11 +30,13 @@ def action_key_label(action: Action) -> str:
 class GenericActionLabel(HightlightableText, MouseInteractor):
     def __init__(self, action: Action, text: str):
         self.action = action
-        assert action.mapping is not None and len(action.mapping) == 1, (
-            "Trying to create Actionlabel with noch char mapping"
+        mapping = action.mapping
+        self.key = (
+            Key(rep=mapping.removeprefix("Key."))
+            if mapping.startswith("Key.")
+            else Key(mapping)
         )
-        self.key = Key(action.mapping)
-        super().__init__(f"{action.mapping}:{text}")
+        super().__init__(f"{action_key_label(action)}:{text}")
 
     def get_interaction_areas(self) -> list[Area]:
         return [self.get_area()]
