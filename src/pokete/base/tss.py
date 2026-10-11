@@ -1,10 +1,9 @@
 """Contains everything related to the resizescreen"""
 
-import shutil
-
 import scrap_engine as se
 
 from pokete.i18n import _ as tr
+from pokete.util.terminal import terminal_size
 
 from .game_map import GameMap
 from .ui.elements import StdFrame
@@ -30,7 +29,7 @@ class ResizeScreen:
         self.frame.add(self.map, 0, 0)
 
     def __set_dimensions(self):
-        width, height = shutil.get_terminal_size(fallback=(80, 24))
+        width, height = terminal_size()
         change = self.width != width or self.height != height
         self.height = height
         self.width = width

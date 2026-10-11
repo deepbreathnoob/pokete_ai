@@ -36,6 +36,7 @@ class AttackInfoBox(se.Box):
             info=[self.attack_info_label],
         )
         super().__init__(1, 1)
+        self.add_ob(self.attack_info, 0, 0)
 
     def show_effect(self):
         if self.effect_available:

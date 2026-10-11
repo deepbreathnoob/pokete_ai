@@ -1,7 +1,5 @@
 """Contains some small loops"""
 
-import shutil
-
 import scrap_engine as se
 
 import pokete.base.game_map as gm
@@ -13,6 +11,7 @@ from pokete.base.input import Action
 from pokete.base.ui.views.boxes import InfoBoxView
 from pokete.i18n import _
 from pokete.util import liner
+from pokete.util.terminal import terminal_size
 
 
 class LoopBox:
@@ -75,7 +74,7 @@ class LoadingScreen:
     """Loading screen that's shown at game's start"""
 
     def __init__(self):
-        width, height = shutil.get_terminal_size(fallback=(80, 24))
+        width, height = terminal_size()
         self.map = gm.GameMap(width=width, height=height - 1)
         se.Text(
             r""" _____      _        _

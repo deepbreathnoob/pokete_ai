@@ -212,7 +212,7 @@ def hotkeys_from_save(ctx, save, version_change):
         },
     )
     unset = [
-        action for action in Action if get_mapping(action, new_hotkey_mappings) is None
+        action for action in Action if not get_mapping(action, new_hotkey_mappings)
     ]
     if unset:
         if version_change or ask_bool(

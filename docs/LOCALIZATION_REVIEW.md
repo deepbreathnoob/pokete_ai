@@ -13,17 +13,23 @@ niezmienność identyfikatorów oraz istniejące testy zapisu i mechanik gry.
 | 2 | ✅ zakończona, 1 problem poprawiony | Aktywne powiadomienie traciło elementy mapy podczas odświeżania, a późniejsze usunięcie powodowało `ValueError`. Powiadomienie jest teraz odłączane i ponownie dołączane; kolejka pozostaje zachowana. |
 | 3 | ✅ zakończona, 1 problem poprawiony | Menu ataków w walce miało stałą szerokość 25. Szerokość zależy teraz od etykiet; panel opisu mieści się obok niego przy 70 kolumnach, jest wyrównany w pionie i sprzątany przy zamknięciu. |
 | 4 | ✅ zakończona, bez nowych ustaleń | Ponowny przegląd poprawek, danych katalogu i cyklu życia widoków oraz komplet kontroli poniżej nie wykazały kolejnych problemów w sprawdzonym zakresie. |
+| 5 | ✅ zakończona, 2 problemy poprawione | Ponowny review: pierwszy atak z efektem specjalnym otwierał pusty panel opisu; brakujące przypisania klawiszy w zapisie nie uruchamiały odzyskiwania, ponieważ kod porównywał pusty ciąg do `None`. Dodano inicjalizację panelu i poprawiono wykrywanie brakujących przypisań. |
+| 6 | ✅ zakończona, 1 problem poprawiony | `shutil.get_terminal_size` traktował eksportowane `COLUMNS`/`LINES` jako ważniejsze od rozmiaru TTY. Wspólny odczyt dla ekranu ładowania i obsługi zmiany rozmiaru korzysta najpierw z rzeczywistych wymiarów terminala; fallback działa nadal bez TTY. |
+| 7 | ✅ zakończona, bez nowych ustaleń | Ponowne sprawdzenie inicjalizacji i przełączania paneli, odzyskiwania skrótów, wykrywania rozmiaru, testów regresji i uruchamiania PL/EN nie wykazało kolejnych problemów w sprawdzonym zakresie. |
 
 Usunięto także potrójne tłumaczenie tej samej tablicy dialogów. Nazwy własne,
 ID w zapisie i protokole oraz mechaniki pozostają zgodne z dotychczasowymi testami.
 
 ## Weryfikacja
 
-- **72 testy zaliczone**, w tym 12 nowych przypadków regresji. Testy obejmują
+- **80 testów zaliczonych**, w tym 20 przypadków regresji dodanych podczas obu przeglądów. Testy obejmują
   klawisze specjalne i kliknięcia etykiet, wszystkie szyldy w danych gry,
   długie słowa i wieloliniowe komunikaty, wszystkie nazwy ataków w menu nauki,
   powtarzane odświeżanie z aktywnym powiadomieniem i kolejką oraz wszystkie
   ataki i opisy efektów w walce w EN/PL na mapie 70 × 19 (terminal 70 × 20).
+- Drugi przegląd: 8 nowych przypadków najpierw odtworzyło błędy panelu
+  opisu i odzyskiwania skrótów lub sprawdziło rzeczywiste wymiary terminala
+  oraz fallback bez TTY; wersje EN i PL są objęte testami panelu.
 - Audyt: 956 wymaganych komunikatów, brak brakujących lub niekompletnych
   tłumaczeń, brak fuzzy i zduplikowanych kluczy katalogu.
 - `msgfmt --check`, kompilacja Pythona oraz Ruff E4/E7/E9/F/I dla zmienionych

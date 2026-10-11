@@ -211,3 +211,112 @@ def test_fight_attack_choices_and_info_fit_minimum_terminal(monkeypatch, languag
         group = attacks[start : start + 4]
         assert box(ctx, group) is group[0]
         assert not box.attack_info_box.added
+
+
+@pytest.mark.parametrize("language", ["pl", "en"])
+def test_first_attack_with_effect_shows_description(monkeypatch, language):
+    from types import SimpleNamespace
+
+    from pokete.base.game_map import GameMap
+    from pokete.base.ui.views.choose_box import ChooseBoxView
+    from pokete.classes.asset_service.service import asset_service
+    from pokete.classes.attack import Attack
+    from pokete.classes.fight.fightmap.attack import AttackBox
+
+    set_language(language)
+    screen = GameMap(19, 70)
+    monkeypatch.setattr(screen, "show", lambda *args, **kwargs: None)
+
+    def inspect_panel(view, ctx):
+        view.toggle_atk_box()
+        panel = view.attack_info_box
+        assert panel.attack_info.added
+        assert panel.attack_info.label.added
+        assert panel.attack_info.label.text.strip()
+        panel.toggle()
+        assert panel.effect_info.added
+        panel.toggle()
+        assert panel.attack_info.added
+
+    monkeypatch.setattr(ChooseBoxView, "__call__", inspect_panel)
+    for name, resource in asset_service.get_base_assets().attacks.items():
+        if resource.effect is not None:
+            AttackBox()(SimpleNamespace(map=screen, overview=None), [Attack(name, 1)])
+
+
+@pytest.mark.parametrize("version_change", [False, True])
+def test_missing_saved_hotkey_is_restored(monkeypatch, version_change):
+    from pokete.base import input_loops
+    from pokete.base.input import hotkeys
+
+    original = hotkeys.hotkey_mappings
+    monkeypatch.setattr(hotkeys, "hotkey_mappings", original.copy())
+    saved = {
+        key: [action.name for action in actions if action != hotkeys.Action.CANCEL]
+        for key, actions in original.items()
+    }
+    prompts = []
+    monkeypatch.setattr(
+        input_loops, "ask_bool", lambda ctx, text: prompts.append(text) or True
+    )
+    hotkeys.hotkeys_from_save(None, saved, version_change)
+    assert hotkeys.Action.CANCEL.mapping
+    assert all(action.mapping for action in hotkeys.Action)
+    assert bool(prompts) is not version_change
+    if prompts:
+        assert hotkeys.Action.CANCEL.display_name in prompts[0]
+
+
+def test_declining_missing_hotkey_recovery_keeps_current_bindings(monkeypatch):
+    from pokete.base import input_loops
+    from pokete.base.input import hotkeys
+
+    original = hotkeys.hotkey_mappings
+    monkeypatch.setattr(hotkeys, "hotkey_mappings", original.copy())
+    monkeypatch.setattr(input_loops, "ask_bool", lambda ctx, text: False)
+    with pytest.raises(SystemExit):
+        hotkeys.hotkeys_from_save(None, {"q": ["CANCEL"]}, False)
+    assert hotkeys.hotkey_mappings == original
+
+
+def test_live_terminal_size_overrides_stale_environment(monkeypatch):
+    import os
+
+    from pokete.base.tss import ResizeScreen
+    from pokete.classes.side_loops import LoadingScreen
+
+    monkeypatch.setenv("COLUMNS", "80")
+    monkeypatch.setenv("LINES", "24")
+    monkeypatch.setattr(
+        os, "get_terminal_size", lambda *args: os.terminal_size((100, 30))
+    )
+    screen = ResizeScreen()
+    assert (screen.width, screen.height) == (100, 30)
+    loading = LoadingScreen()
+    assert (loading.map.width, loading.map.height) == (100, 29)
+    monkeypatch.setattr(
+        os, "get_terminal_size", lambda *args: os.terminal_size((90, 25))
+    )
+    assert screen()
+    assert (screen.width, screen.height) == (90, 25)
+
+
+@pytest.mark.parametrize(
+    "environment, expected", [(None, (80, 24)), ((100, 30), (100, 30))]
+)
+def test_terminal_dimensions_without_tty(monkeypatch, environment, expected):
+    import os
+
+    from pokete.util.terminal import terminal_size
+
+    monkeypatch.delenv("COLUMNS", raising=False)
+    monkeypatch.delenv("LINES", raising=False)
+    if environment:
+        monkeypatch.setenv("COLUMNS", str(environment[0]))
+        monkeypatch.setenv("LINES", str(environment[1]))
+
+    def no_terminal(*args):
+        raise OSError("not a terminal")
+
+    monkeypatch.setattr(os, "get_terminal_size", no_terminal)
+    assert terminal_size() == expected
