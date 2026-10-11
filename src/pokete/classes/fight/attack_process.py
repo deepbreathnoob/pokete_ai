@@ -38,9 +38,10 @@ class AttackProcess:
     def get_hp(
         attacker: Poke, defender: Poke, attack: Attack, random_factor: float, eff: int
     ) -> int:
+        # Zero-power moves apply only their action/effect, never the damage floor.
         return (
             0
-            if random_factor == 0
+            if random_factor == 0 or attack.factor == 0
             else max(
                 3,
                 round(
