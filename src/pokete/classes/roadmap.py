@@ -18,6 +18,7 @@ from pokete.base.ui.elements.labels import CloseLabel
 from pokete.base.ui.views.boxes import InfoBoxView
 from pokete.classes.asset_service.service import asset_service
 from pokete.classes.classes import PlayMap
+from pokete.i18n import _ as tr
 from pokete.util import liner
 
 
@@ -64,7 +65,7 @@ class Station(StationObject):
         s_next="",
         d_next="",
     ):
-        self.desc = desc
+        self.desc = tr(desc)
         self.roadmap = roadmap
         self.color = getattr(Color, color, "\033[1;37m")
         self.base_color = self.color
@@ -162,12 +163,9 @@ W ◀ ▶ E
             state="float",
         )
         self.legend = se.Text(
-            """│ Legend:
-│ P-Pokecenter
-│ $-Shop
-│ C-PoketeCare
-│ A-Arena
-└──────────────""",
+            tr(
+                "│ Legend:\n│ P-Pokecenter\n│ $-Shop\n│ C-PoketeCare\n│ A-Arena\n└──────────────"
+            ),
             state="float",
         )
         self.info_label = se.Text("", state="float")
@@ -267,8 +265,8 @@ W ◀ ▶ E
                     with InfoBoxView(
                         liner(
                             self.sta.desc
-                            + "\n\n Here you can find: "
-                            + (p_list if p_list != "" else "Nothing"),
+                            + tr("\n\n Here you can find: ")
+                            + (p_list if p_list != "" else tr("Nothing")),
                             30,
                         ),
                         self.sta.name,

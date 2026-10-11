@@ -2,6 +2,7 @@ import logging
 
 import pokete.data as p_data
 from pokete.classes.items import InvItem, LearnDisc
+from pokete.i18n import localize_base_assets
 
 from .resources import Assets, AssetsDict, BaseAssets, BaseAssetsDict
 
@@ -77,7 +78,7 @@ class AssetSerice:
         return self.__assets
 
     def get_base_assets(self) -> BaseAssets:
-        return self.__base_assets
+        return localize_base_assets(self.__base_assets)
 
 
 asset_service: AssetSerice = AssetSerice()

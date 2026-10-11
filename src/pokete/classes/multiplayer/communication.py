@@ -21,6 +21,7 @@ from pokete.classes.multiplayer.msg import (
 )
 from pokete.classes.multiplayer.msg.position.update import UpdateDict
 from pokete.classes.multiplayer.pc_manager import pc_manager
+from pokete.i18n import _ as tr
 
 
 class CommunicationService:
@@ -141,7 +142,7 @@ class CommunicationService:
                 ctx.figure.x = pos["x"]
                 ctx.figure.y = pos["y"]
                 pc_manager.waiting_users = data["users"]
-                return data["greeting_text"]
+                return tr(data["greeting_text"])
             case _:
                 assert False, resp.get_type()
 

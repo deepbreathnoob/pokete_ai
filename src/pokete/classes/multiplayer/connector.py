@@ -3,6 +3,7 @@
 from pokete import release
 from pokete.base.context import Context
 from pokete.base.input_loops import ask_ok, ask_text
+from pokete.i18n import _ as tr
 from pokete.util import liner
 
 from .communication import ConnectionException, com_service
@@ -45,19 +46,19 @@ class Connector:
             self.establish_connection(ctx)
             self.handshake(ctx)
         except VersionMismatchException as e:
-            ask_ok(ctx, f"Version mismatch: {e.version}")
+            ask_ok(ctx, tr("Version mismatch: {p0}").format(p0=e.version))
         except InvalidPokeException as e:
-            ask_ok(ctx, f"Invalid Poke: {e.msg}")
+            ask_ok(ctx, tr("Invalid Poke: {p0}").format(p0=e.msg))
 
     def set_host_port(self, ctx: Context) -> bool:
         """Asks the user for host and port to connect to"""
         while True:
             host = ask_text(
                 ctx,
-                "Please enter the servers host you want to connect to.",
-                "Host:",
+                tr("Please enter the servers host you want to connect to."),
+                tr("Host:"),
                 str(self.host_port),
-                "Host",
+                tr("Host"),
                 40,
             )
             if host is None:
@@ -65,7 +66,7 @@ class Connector:
             try:
                 self.host_port = HostPort.parse(host)
             except HostPortParseException as e:
-                ask_ok(ctx, f"Error: {e}")
+                ask_ok(ctx, tr("Error: {p0}").format(p0=tr(str(e))))
                 continue
             break
         return True
@@ -77,11 +78,11 @@ class Connector:
         self.user_name = ctx.figure.name
         name = ask_text(
             ctx,
-            ("That username isn't available right now\n" if reask else "")
-            + "Please enter the username you want to use on the server",
-            "Username:",
+            (tr("That username isn't available right now\n") if reask else "")
+            + tr("Please enter the username you want to use on the server"),
+            tr("Username:"),
             self.user_name,
-            "Username",
+            tr("Username"),
             20,
         )
         if name is None:
@@ -103,7 +104,9 @@ class Connector:
         except ConnectionException as excpt:
             ask_ok(
                 ctx,
-                f"An error occurred connecting to {self.host_port} :\n{excpt}",
+                tr("An error occurred connecting to {p0} :\n{p1}").format(
+                    p0=self.host_port, p1=excpt
+                ),
             )
             return False
         return True

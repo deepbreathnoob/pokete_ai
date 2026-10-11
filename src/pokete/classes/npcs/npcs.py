@@ -11,6 +11,7 @@ from pokete.base.context import Context
 from pokete.base.input import get_action
 from pokete.base.input_loops import ask_bool
 from pokete.classes.asset_service.service import asset_service
+from pokete.i18n import _ as tr
 from pokete.release import SPEED_OF_TIME
 
 from ..asset_service.resources import Chat
@@ -89,10 +90,15 @@ class NPC(se.Box, NPCInterface, MapInteract, Interactor):
         self.set_used()
         if ask_bool(
             self.ctx,
-            f"{name} gifted you a '{item.pretty_name}'. \
-Do you want to accept it?",
+            tr("{p0} gifted you a '{p1}'. Do you want to accept it?").format(
+                p0=tr(name), p1=item.pretty_name
+            ),
         ):
             self.ctx.figure.give_item(item.name)
+
+    @property
+    def display_name(self):
+        return tr(self.name)
 
     @property
     def used(self):
@@ -119,7 +125,9 @@ Do you want to accept it?",
                 loops.std(self.ctx)
             if q_a.a == {}:
                 break
-            q_a = q_a.a[MultiTextChooseBox(list(q_a.a.keys()), "Answer")(self.ctx)[1]]
+            q_a = q_a.a[
+                MultiTextChooseBox(list(q_a.a.keys()), tr("Answer"))(self.ctx)[1]
+            ]
 
 
 class Trainer(NPC, Provider):
@@ -186,7 +194,7 @@ class Trainer(NPC, Provider):
                 self.text(
                     {
                         True: self.lose_texts,
-                        False: self.win_texts + ["Here's $20!"],
+                        False: self.win_texts + [tr("Here's $20!")],
                     }[is_winner]
                 )
                 if is_winner:
@@ -206,10 +214,12 @@ class Trainer(NPC, Provider):
         """Outputs a greeting text at the fights start:
         ARGS:
             fightmap: fightmap object"""
-        fightmap.outp.outp(f"{self.name} started a fight!")
+        fightmap.outp.outp(tr("{p0} started a fight!").format(p0=self.display_name))
         time.sleep(SPEED_OF_TIME * 1)
         fightmap.outp.outp(
-            f"{fightmap.outp.text}\n{self.gender} used {self.curr.name} against you!"
+            tr("{p0}\n{p1} used {p2} against you!").format(
+                p0=fightmap.outp.text, p1=tr(self.gender), p2=self.curr.name
+            )
         )
 
     def handle_defeat(self, ctx: Context, fightmap, winner):

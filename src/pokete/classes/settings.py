@@ -127,7 +127,7 @@ class Slider(se.Box, Overview, MouseInteractor):
         self.overview = ctx.overview
         ctx = change_ctx(ctx, self)
         while True:
-            action, _ = get_action()          
+            action, _ = get_action()
             if (strength := action.get_x_strength()) != 0:
                 if 0 <= (self.offset + strength) <= self.boundary:
                     self.set_slider(self.offset + strength)
@@ -166,6 +166,7 @@ class Settings:
 
     def __init__(self):
         self.keywords = {
+            "language": "en",
             "autosave": True,
             "animations": True,
             "save_trainers": True,
@@ -179,6 +180,9 @@ class Settings:
         """Sets the settings from a dict
         ARGS:
             src: The Dict"""
+        src = dict(src)
+        if src.get("language") not in ("en", "pl"):
+            src["language"] = "en"
         self.settings = []
         for name, val in src.items():
             self.settings.append(Setting(name, val))

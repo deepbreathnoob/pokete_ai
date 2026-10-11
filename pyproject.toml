@@ -23,6 +23,7 @@ pokete-util = "pokete.util.__main__:main"
 
 [tool.setuptools.package-data]
 "*" = ["*.mp3", "*.so", "*.dll"]
+"pokete" = ["locales/*.pot", "locales/*/LC_MESSAGES/*.po", "locales/*/LC_MESSAGES/*.mo"]
 
 [project.urls]
 Homepage = "https://github.com/lxgr-linux/pokete"

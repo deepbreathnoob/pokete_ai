@@ -8,6 +8,8 @@ import scrap_engine as se
 from pokete.base.context import Context
 from pokete.base.input_loops import ask_ok
 from pokete.base.ui.views.better_choose_box import BetterChooseBoxView
+from pokete.i18n import _
+from pokete.i18n import _ as tr
 
 from .. import roadmap
 from ..asset_service.service import ValidationException, asset_service
@@ -30,11 +32,11 @@ class ModeChooser(BetterChooseBoxView[bool]):
         super().__init__(
             1,
             [
-                se.Text("Singleplayer", state="float"),
-                se.Text("Multiplayer (Beta)", state="float"),
-                se.Text("Leave...", state="float"),
+                se.Text(_("Singleplayer"), state="float"),
+                se.Text(_("Multiplayer (Beta)"), state="float"),
+                se.Text(_("Leave..."), state="float"),
             ],
-            name="Mode",
+            name=_("Mode"),
         )
 
     def choose(self, ctx: Context, idx: int) -> Optional[bool]:
@@ -68,6 +70,6 @@ class ModeChooser(BetterChooseBoxView[bool]):
         except ValidationException as e:
             ask_ok(
                 ctx,
-                f"An error ocured validating game data:\n{e}",
+                tr("An error ocured validating game data:\n{p0}").format(p0=tr(str(e))),
             )
             return None

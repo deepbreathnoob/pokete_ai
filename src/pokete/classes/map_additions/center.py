@@ -11,6 +11,7 @@ from pokete.classes.doors import CenterDoor
 from pokete.classes.interactions.multi_text_choose_box import MultiTextChooseBox
 from pokete.classes.inv import buy
 from pokete.classes.landscape import MapInteract
+from pokete.i18n import _ as tr
 from pokete.release import SPEED_OF_TIME
 
 CUDDLE_MESSAGES = [
@@ -101,12 +102,12 @@ class CenterInteract(se.Object, MapInteract):
         super().__init__(*args, **kwargs)
         self.menu = MultiTextChooseBox(
             [
-                "See your full deck",
-                "Heal all your Poketes",
-                "Cuddle with the Poketes",
-                "Quit",
+                tr("See your full deck"),
+                tr("Heal all your Poketes"),
+                tr("Cuddle with the Poketes"),
+                tr("Quit"),
             ],
-            "Select",
+            tr("Select"),
         )
 
     def __normalize_pokes(self, ob):
@@ -124,8 +125,8 @@ class CenterInteract(se.Object, MapInteract):
             mvp.movemap.bmap.inner.x - mvp.movemap.x + 8,
             3,
             [
-                "Welcome to the Pokete-Center",
-                "What do you want to do?",
+                tr("Welcome to the Pokete-Center"),
+                tr("What do you want to do?"),
             ],
         )
 
@@ -141,7 +142,7 @@ class CenterInteract(se.Object, MapInteract):
                     self.ctx,
                     mvp.movemap.bmap.inner.x - mvp.movemap.x + 8,
                     3,
-                    ["...", "Your Poketes are now healed!"],
+                    ["...", tr("Your Poketes are now healed!")],
                 )
             case 2:
                 self.__normalize_pokes(ob)
@@ -154,7 +155,9 @@ class CenterInteract(se.Object, MapInteract):
                     )
                     if selected_idx is not None:
                         poke = ob.pokes[selected_idx]
-                        message = random.choice(CUDDLE_MESSAGES).format(name=poke.name)
+                        message = tr(random.choice(CUDDLE_MESSAGES)).format(
+                            name=poke.name
+                        )
                         mvp.movemap.text(
                             self.ctx,
                             mvp.movemap.bmap.inner.x - mvp.movemap.x + 8,
@@ -166,7 +169,7 @@ class CenterInteract(se.Object, MapInteract):
                         self.ctx,
                         mvp.movemap.bmap.inner.x - mvp.movemap.x + 8,
                         3,
-                        ["You don't have any Poketes to cuddle with!"],
+                        [tr("You don't have any Poketes to cuddle with!")],
                     )
         mvp.movemap.full_show(init=True)
 
@@ -184,7 +187,7 @@ class ShopInteract(se.Object, MapInteract):
             self.ctx,
             mvp.movemap.bmap.inner.x - mvp.movemap.x + 9,
             3,
-            ["Welcome to the Pokete-Shop", "Wanna buy something?"],
+            [tr("Welcome to the Pokete-Shop"), tr("Wanna buy something?")],
         )
         buy(self.ctx)
         mvp.movemap.full_show(init=True)
@@ -192,5 +195,5 @@ class ShopInteract(se.Object, MapInteract):
             self.ctx,
             mvp.movemap.bmap.inner.x - mvp.movemap.x + 9,
             3,
-            ["Have a great day!"],
+            [tr("Have a great day!")],
         )

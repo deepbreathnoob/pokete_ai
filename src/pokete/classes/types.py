@@ -1,7 +1,8 @@
 """Type and PokeType class"""
 
-from pokete.classes.asset_service.service import asset_service
 from pokete.base.color import Color
+from pokete.classes.asset_service.service import asset_service
+from pokete.i18n import _ as tr
 
 
 class Types:
@@ -27,6 +28,10 @@ class PokeType:
         self.effective = effective
         self.ineffective = ineffective
         self.color = "" if color is None else "".join(getattr(Color, i) for i in color)
+
+    @property
+    def display_name(self):
+        return tr(self.name)
 
 
 class PokeSubType(PokeType):

@@ -13,6 +13,7 @@ from pokete.classes.items.invitem import InvItem
 from pokete.classes.items.learndisc import LearnDisc
 from pokete.classes.poke.poke import Poke
 from pokete.figure.inv import Inventory
+from pokete.i18n import _ as tr
 
 from .. import deck
 from ..learnattack import LearnAttack
@@ -27,7 +28,7 @@ class Inv(BaseInv):
     def __init__(self):
         super().__init__(
             "Inventory",
-            [CloseLabel(), GenericActionLabel(Action.REMOVE, "remove")],
+            [CloseLabel(), GenericActionLabel(Action.REMOVE, tr("remove"))],
         )
         self.items: list[InvItem] = []
 
@@ -41,7 +42,7 @@ class Inv(BaseInv):
         if obj.name == "treat":
             if ask_bool(
                 ctx,
-                "Do you want to upgrade one of your Poketes by a level?",
+                tr("Do you want to upgrade one of your Poketes by a level?"),
             ):
                 while True:
                     index = deck.deck(
@@ -61,12 +62,12 @@ class Inv(BaseInv):
                 self.rem_item(ctx.figure, obj.name)
                 ask_ok(
                     ctx,
-                    f"{poke.name} reached level {poke.lvl()}!",
+                    tr("{p0} reached level {p1}!").format(p0=poke.name, p1=poke.lvl()),
                 )
         elif isinstance(obj, LearnDisc):
             if ask_bool(
                 ctx,
-                f"Do you want to teach '{obj.attack.name}'?",
+                tr("Do you want to teach '{p0}'?").format(p0=tr(obj.attack.name)),
             ):
                 while True:
                     index = deck.deck(
@@ -83,10 +84,9 @@ class Inv(BaseInv):
                         break
                     if not ask_bool(
                         ctx,
-                        "You can't teach "
-                        f"'{obj.attack.name}' to "
-                        f"'{poke.name}'! \n"
-                        "Do you want to continue?",
+                        tr(
+                            "You can't teach '{p0}' to '{p1}'! \nDo you want to continue?"
+                        ).format(p0=tr(obj.attack.name), p1=poke.name),
                     ):
                         poke = None
                 if poke is None:
@@ -100,8 +100,9 @@ class Inv(BaseInv):
         if action.triggers(Action.REMOVE):
             if ask_bool(
                 ctx,
-                "Do you really want to throw "
-                f"{self.items[self.index.index].pretty_name} away?",
+                tr("Do you really want to throw {p0} away?").format(
+                    p0=self.items[self.index.index].pretty_name
+                ),
             ):
                 self.rem_item(ctx.figure, self.items[self.index.index].name)
                 if len(self.items) == 0:
@@ -138,7 +139,7 @@ class Inv(BaseInv):
         inv = figure.get_inv()
         self.items = [asset_service.get_items()[i] for i in inv if inv[i] > 0]
         self.elems = [
-            se.Text(f"{i.pretty_name}s : {inv[i.name]}", state="float")
+            se.Text(f"{i.pretty_name} × {inv[i.name]}", state="float")
             for i in self.items
         ]
         self.add_elems()

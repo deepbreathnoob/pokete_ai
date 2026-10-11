@@ -2,7 +2,9 @@
 Version=1.0
 Type=Application
 Name=Pokete
+Name[pl]=Pokete
 Comment=A terminal based Pokemon clone, based on the scrap engine.
+Comment[pl]=Gra terminalowa inspirowana Pokémon, oparta na scrap_engine.
 Exec=pokete
 Icon=${SNAP}/meta/gui/icon.svg
 Terminal=true

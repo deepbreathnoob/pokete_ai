@@ -20,6 +20,7 @@ from pokete.base.ui.elements.text import HightlightableText
 from pokete.classes import animations, deck
 from pokete.classes.asset_service.service import asset_service
 from pokete.classes.items.invitem import InvItem
+from pokete.i18n import _ as tr
 from pokete.release import SPEED_OF_TIME
 
 from ...classes import OutP
@@ -64,16 +65,16 @@ class FightMap(gm.GameMap, Overview, MouseInteractor):
         self.p_sideline = se.Square("|", 1, 4, state="float")
         self.outp = OutP("", state="float")
         self.label_attack = HightlightableText(
-            f"{Action.CHOOSE_ATTACK.mapping}: Attack", state="float"
+            tr("{p0}: Attack").format(p0=Action.CHOOSE_ATTACK.mapping), state="float"
         )
         self.label_run = HightlightableText(
-            f"{Action.RUN.mapping}: Run!", state="float"
+            tr("{p0}: Run!").format(p0=Action.RUN.mapping), state="float"
         )
         self.label_inv = HightlightableText(
-            f"{Action.CHOOSE_ITEM.mapping}: Inv", state="float"
+            tr("{p0}: Inv").format(p0=Action.CHOOSE_ITEM.mapping), state="float"
         )
         self.label_deck = HightlightableText(
-            f"{Action.CHOOSE_POKE.mapping}: Deck", state="float"
+            tr("{p0}: Deck").format(p0=Action.CHOOSE_POKE.mapping), state="float"
         )
         self.labels: list[HightlightableText] = [
             self.label_attack,
@@ -261,7 +262,7 @@ class FightMap(gm.GameMap, Overview, MouseInteractor):
         self.outp.append(
             se.Text(
                 ("\n" if "\n" not in self.outp.text else "")
-                + "What do you want to do?",
+                + tr("What do you want to do?"),
                 state="float",
             )
         )
@@ -287,7 +288,7 @@ class FightMap(gm.GameMap, Overview, MouseInteractor):
             elif action.triggers(Action.RUN) or mouse_choosen == 1:
                 if not enem.escapable or not ask_bool(
                     ctx,
-                    "Do you really want to run away?",
+                    tr("Do you really want to run away?"),
                 ):
                     continue
                 return FightDecision.run_away()
@@ -300,7 +301,7 @@ class FightMap(gm.GameMap, Overview, MouseInteractor):
                 ]
                 if not items:
                     self.outp.outp(
-                        "You don't have any items left!\nWhat do you want to do?"
+                        tr("You don't have any items left!\nWhat do you want to do?")
                     )
                     continue
                 item = self.invbox(ctx, items, player.get_inv())
@@ -335,7 +336,7 @@ class FightMap(gm.GameMap, Overview, MouseInteractor):
             ],
             providers[0].curr.ico,
         )
-        self.outp.outp(f"You used {providers[0].curr.name}")
+        self.outp.outp(tr("You used {p0}").format(p0=providers[0].curr.name))
         self.show()
         time.sleep(SPEED_OF_TIME * 0.5)
 
@@ -343,7 +344,11 @@ class FightMap(gm.GameMap, Overview, MouseInteractor):
         self.__add_1(winner, enem)
         ico = enem.curr.ico
         self.fast_change([ico, self.deadico2, self.deadico1, ico], ico)
-        self.outp.outp(f"{enem.name} used {enem.curr.name}!")
+        self.outp.outp(
+            tr("{p0} used {p1}!").format(
+                p0=getattr(enem, "display_name", enem.name), p1=enem.curr.name
+            )
+        )
         self.show()
         time.sleep(SPEED_OF_TIME * 2)
 
@@ -363,7 +368,7 @@ class FightMap(gm.GameMap, Overview, MouseInteractor):
         if index is not None:
             player.play_index = index
         self.__add_player(player)
-        self.outp.outp(f"You have choosen {player.curr.name}")
+        self.outp.outp(tr("You have choosen {p0}").format(p0=player.curr.name))
         for j in player.curr.effects:
             time.sleep(SPEED_OF_TIME * 1)
             j.readd()
@@ -382,31 +387,37 @@ class FightMap(gm.GameMap, Overview, MouseInteractor):
 
     def win_animation(self, winner: Provider):
         time.sleep(SPEED_OF_TIME * 1)
-        self.outp.outp(f"{winner.curr.name} reached lvl {winner.curr.lvl()}!")
+        self.outp.outp(
+            tr("{p0} reached lvl {p1}!").format(
+                p0=winner.curr.name, p1=winner.curr.lvl()
+            )
+        )
         winner.curr.moves.shine()
         time.sleep(SPEED_OF_TIME * 0.5)
 
     def declare_winner(self, winner: Provider, xp: int):
         time.sleep(SPEED_OF_TIME * 1)
         self.outp.outp(
-            f"{winner.curr.ext_name} won!"
-            + (f"\nXP + {xp}" if winner.curr.player else "")
+            tr("{p0} won!").format(p0=winner.curr.ext_name)
+            + (tr("\nXP + {p0}").format(p0=xp) if winner.curr.player else "")
         )
 
     def show_used_all_attacks(self, player: Provider):
         time.sleep(SPEED_OF_TIME * 2)
-        self.outp.outp(f"{player.curr.ext_name} has used all its' attacks!")
+        self.outp.outp(
+            tr("{p0} has used all its' attacks!").format(p0=player.curr.ext_name)
+        )
         time.sleep(SPEED_OF_TIME * 3)
 
     def show_death(self, loser: Provider):
-        self.outp.outp(f"{loser.curr.ext_name} is dead!")
+        self.outp.outp(tr("{p0} is dead!").format(p0=loser.curr.ext_name))
 
     def failed_to_escape(self):
-        self.outp.outp("You failed to run away!")
+        self.outp.outp(tr("You failed to run away!"))
         time.sleep(SPEED_OF_TIME * 1)
 
     def ran_away(self, *providers):
-        self.outp.outp("You ran away!")
+        self.outp.outp(tr("You ran away!"))
         time.sleep(SPEED_OF_TIME * 2)
         self.clean_up(*providers)
 
@@ -414,12 +425,16 @@ class FightMap(gm.GameMap, Overview, MouseInteractor):
         self, eff: int, n_hp: int, random_factor: int, attacker, attack
     ):
         eff_text = {
-            eff < 1: "\nThat was not effective! ",
-            eff > 1: "\nThat was very effective! ",
+            eff < 1: tr("\nThat was not effective! "),
+            eff > 1: tr("\nThat was very effective! "),
             eff == 1 or n_hp == 0: "",
-            random_factor == 0: f"{attacker.name} missed!",
+            random_factor == 0: tr("{name} missed!").format(name=attacker.name),
         }[True]
-        self.outp.outp(f"{attacker.ext_name} used {attack.name}! {eff_text}")
+        self.outp.outp(
+            tr("{p0} used {p1}! {p2}").format(
+                p0=attacker.ext_name, p1=attack.name, p2=eff_text
+            )
+        )
 
     def show_weather(self, weather):
         self.outp.outp(weather.info)
@@ -430,7 +445,7 @@ class FightMap(gm.GameMap, Overview, MouseInteractor):
 
     def show_hurt_it_self(self, attacker):
         time.sleep(SPEED_OF_TIME * 1)
-        self.outp.outp(f"{attacker.ext_name} hurt itself!")
+        self.outp.outp(tr("{p0} hurt itself!").format(p0=attacker.ext_name))
 
 
 if __name__ == "__main__":

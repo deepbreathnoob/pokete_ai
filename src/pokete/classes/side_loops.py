@@ -1,7 +1,5 @@
 """Contains some small loops"""
 
-import os
-
 import scrap_engine as se
 
 import pokete.base.game_map as gm
@@ -9,8 +7,11 @@ from pokete import release
 from pokete.base import loops
 from pokete.base.change import change_ctx
 from pokete.base.context import Context
+from pokete.base.input import Action
 from pokete.base.ui.views.boxes import InfoBoxView
+from pokete.i18n import _
 from pokete.util import liner
+from pokete.util.terminal import terminal_size
 
 
 class LoopBox:
@@ -36,19 +37,12 @@ class About(LoopBox):
         super().__init__(
             InfoBoxView(
                 liner(
-                    f"""Pokete v{release.VERSION} -- {release.CODENAME}
-by  lxgr-linux <lxgr@protonmail.com>
-
-This  software is licensed under the GPL3, you should have gotten a \
-copy of the GPL3 license alongside this software.
-Feel  free to contribute what ever you want to this game, \
-new Pokete contributions are especially welcome.
-For  this see the comments in the definitions area.
-You  can contribute here: https://github.com/lxgr-linux/pokete""",
+                    _(
+                        "Pokete v{version} -- {codename}\nby lxgr-linux <lxgr@protonmail.com>\n\nThis software is licensed under GPLv3. A copy of the license is included with the game.\nContributions, especially new Poketes, are welcome:\nhttps://github.com/lxgr-linux/pokete"
+                    ).format(version=release.VERSION, codename=release.CODENAME),
                     60,
-                    pre="",
                 ),
-                name="About",
+                name=_("About"),
             )
         )
 
@@ -59,17 +53,19 @@ class Help(LoopBox):
     def __init__(self):
         super().__init__(
             InfoBoxView(
-                """Controls:
-'w':up, 'a':left,
-'s':down, 'd':right,
-'e':menu
-
-When walking into the high grass (';') you may get attacked
-by wild Poketes, those can be killed or weakened and caught.
-NPCs will talk to you when walking up to them.
-For more information about how to play this game, check out
-https://git.io/JRRqe""",
-                name="Help",
+                liner(
+                    _(
+                        "Controls:\n{up}: up, {left}: left\n{down}: down, {right}: right\n{menu}: menu\n\nIn tall grass (;), wild Poketes may attack you.\nWeaken them to catch them, or defeat them to gain XP.\nApproach NPCs to talk to them.\nMore information:\nhttps://github.com/deepbreathnoob/pokete_ai/blob/master/docs/HowToPlay.md"
+                    ).format(
+                        up=Action.UP.mapping,
+                        left=Action.LEFT.mapping,
+                        down=Action.DOWN.mapping,
+                        right=Action.RIGHT.mapping,
+                        menu=Action.MENU.mapping,
+                    ),
+                    60,
+                ),
+                name=_("Help"),
             )
         )
 
@@ -78,7 +74,7 @@ class LoadingScreen:
     """Loading screen that's shown at game's start"""
 
     def __init__(self):
-        width, height = os.get_terminal_size()
+        width, height = terminal_size()
         self.map = gm.GameMap(width=width, height=height - 1)
         se.Text(
             r""" _____      _        _

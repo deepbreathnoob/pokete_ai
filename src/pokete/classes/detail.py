@@ -19,6 +19,7 @@ from pokete.base.tss import tss
 from pokete.base.ui import Overview
 from pokete.base.ui.elements import ChooseBox, StdFrame2
 from pokete.classes.single_events import TeleportationSingleEvent
+from pokete.i18n import _ as tr
 from pokete.util import liner
 
 from .poke.stats import StatsInfoBox
@@ -95,22 +96,25 @@ class Detail(Informer, Overview):
 
     def __init__(self):
         self.map = gm.GameMap(50, 200, name="detail")
-        self.name_label = se.Text("Details", esccode=Color.thicc)
-        self.name_attacks = se.Text("Attacks", esccode=Color.thicc)
+        self.name_label = se.Text(tr("Details"), esccode=Color.thicc)
+        self.name_attacks = se.Text(tr("Attacks"), esccode=Color.thicc)
         self.frame = StdFrame2(17, self.map.width, state="float")
-        self.attack_defense = se.Text("Attack:   Defense:", state="float")
-        self.world_actions_label = se.Text("Abilities:", state="float")
-        self.type_label = se.Text("Type:", state="float")
-        self.initiative_label = se.Text("Initiative:", state="float")
-        self.exit_label = se.Text(f"{Action.DECK.mapping}: Exit", state="float")
+        self.attack_defense = se.Text(tr("Attack:   Defense:"), state="float")
+        self.world_actions_label = se.Text(tr("Abilities:"), state="float")
+        self.type_label = se.Text(tr("Type:"), state="float")
+        self.initiative_label = se.Text(tr("Initiative:"), state="float")
+        self.exit_label = se.Text(
+            tr("{p0}: Exit").format(p0=Action.DECK.mapping), state="float"
+        )
         self.nature_label = se.Text(
-            f"{Action.NATURE_INFO.mapping}: Nature", state="float"
+            tr("{p0}: Nature").format(p0=Action.NATURE_INFO.mapping), state="float"
         )
         self.stats_label = se.Text(
-            f"{Action.STATS_INFO.mapping}: Statistics", state="float"
+            tr("{p0}: Statistics").format(p0=Action.STATS_INFO.mapping), state="float"
         )
         self.ability_label = se.Text(
-            f"{Action.ABILITIES_INFO.mapping}: Use ability", state="float"
+            tr("{p0}: Use ability").format(p0=Action.ABILITIES_INFO.mapping),
+            state="float",
         )
         self.line_sep1 = se.Square("-", self.map.width - 2, 1, state="float")
         self.line_sep2 = se.Square("-", self.map.width - 2, 1, state="float")
@@ -187,7 +191,7 @@ class Detail(Informer, Overview):
             atc.temp_i = 0
             atc.temp_j = -30
             atc.label_desc.rechar(atc.desc[: int(self.map.width / 2 - 1)])
-            atc.label_ap.rechar(f"AP:{atc.ap}/{atc.max_ap}")
+            atc.label_ap.rechar(tr("AP:{p0}/{p1}").format(p0=atc.ap, p1=atc.max_ap))
             for label, __x, __y in zip(
                 [
                     atc.label_name,
@@ -244,17 +248,22 @@ class Detail(Informer, Overview):
         abb_obs = [i for i in self.poke.attack_obs if i.world_action != ""]
         if abb_obs != [] and abb:
             self.world_actions_label.rechar(
-                "Abilities:" + " ".join([i.name for i in abb_obs])
+                tr("Abilities:") + " ".join([i.name for i in abb_obs])
             )
             self.ability_label.add(self.map, 35, self.map.height - 1)
         else:
             self.world_actions_label.rechar("")
             self.ability_label.remove()
         self.attack_defense.rechar(
-            f"Attack:{self.poke.atc}\
-{(4 - len(str(self.poke.atc))) * ' '}Defense:{self.poke.defense}"
+            tr("Attack:{p0}{p1}Defense:{p2}").format(
+                p0=self.poke.atc,
+                p1=(4 - len(str(self.poke.atc))) * " ",
+                p2=self.poke.defense,
+            )
         )
-        self.initiative_label.rechar(f"Initiative:{self.poke.initiative}")
+        self.initiative_label.rechar(
+            tr("Initiative:{p0}").format(p0=self.poke.initiative)
+        )
         for obj, _x, _y in zip([self.poke.desc, self.poke.text_type], [34, 41], [2, 5]):
             obj.add(self.map, _x, _y)
         self.add_attack_labels()
@@ -278,7 +287,7 @@ class Detail(Informer, Overview):
                     with ChooseBox(
                         len(abb_obs) + 2,
                         25,
-                        name="Abilities",
+                        name=tr("Abilities"),
                         c_obs=[se.Text(i.name) for i in abb_obs],
                         overview=self,
                     ).center_add(self.map) as box:

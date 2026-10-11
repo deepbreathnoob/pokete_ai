@@ -1,6 +1,7 @@
 from pokete.base.color import Color
 from pokete.base.input import Action
 from pokete.base.ui.elements.text import HightlightableText
+from pokete.i18n import _ as tr
 
 
 class MovemapDeco(HightlightableText):
@@ -11,7 +12,7 @@ class MovemapDeco(HightlightableText):
     def __get_text(self):
         if self.blank:
             return ""
-        return f"{Action.INTERACT.mapping}: act"
+        return tr("{key}: act").format(key=Action.INTERACT.mapping)
 
     def set_active(self):
         self.rechar(self.__get_text())

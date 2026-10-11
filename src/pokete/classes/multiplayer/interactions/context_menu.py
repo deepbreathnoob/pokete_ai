@@ -1,4 +1,5 @@
 from pokete.base.context import Context
+from pokete.i18n import _ as tr
 
 from ...interactions import MultiTextChooseBox
 from ...multiplayer.pc_manager import pc_manager
@@ -13,7 +14,7 @@ OPTION_QUIT = "Quit..."
 class ContextMenu:
     def __init__(self):
         self.menu = MultiTextChooseBox(
-            [OPTION_FIGHT, OPTION_TRADE, OPTION_QUIT], "Interact"
+            [OPTION_FIGHT, OPTION_TRADE, OPTION_QUIT], tr("Interact")
         )
 
     def __call__(self, ctx: Context):

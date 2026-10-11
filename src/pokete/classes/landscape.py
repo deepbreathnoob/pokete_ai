@@ -9,6 +9,7 @@ from pokete.base.color import Color
 from pokete.base.input_loops import ask_ok
 from pokete.classes import movemap as mvp
 from pokete.classes import timer
+from pokete.i18n import _ as tr
 
 from .asset_service.resources import PokeArgs
 from .asset_service.service import asset_service
@@ -121,7 +122,8 @@ class Poketeball(se.Object, MapInteract):
         mvp.movemap.full_show()
         ask_ok(
             self.ctx,
-            f"You found {amount if amount > 1 else 'a'} \
-{asset_service.get_base_assets().items[item].pretty_name}{'s' if amount > 1 else ''}!",
+            tr("You found: {item} × {count}!").format(
+                item=asset_service.get_items()[item].pretty_name, count=amount
+            ),
         )
         self.ctx.figure.used_npcs.append(self.name)

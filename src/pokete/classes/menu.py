@@ -9,6 +9,7 @@ from pokete.base.ui.elements.labels import CloseLabel
 from pokete.base.ui.notify import notifier
 from pokete.base.ui.views.boxes import InfoBoxView
 from pokete.base.ui.views.choose_box import ChooseBoxView
+from pokete.i18n import _
 from pokete.release import SPEED_OF_TIME
 
 from .achievements import AchievementOverview
@@ -22,24 +23,36 @@ from .side_loops import About
 
 class Menu(ChooseBoxView):
     def __init__(self):
-        super().__init__(50, 35, "Menu", [CloseLabel(),])
-        self.playername_input = TextInputBox("Playername:", 17)
-        self.represent_char_input = TextInputBox("Char:", 1)
-        self.mods_label = se.Text("Mods", state="float")
-        self.ach_label = se.Text("Achievements", state="float")
-        self.about_label = se.Text("About", state="float")
-        self.save_label = se.Text("Save", state="float")
-        self.exit_label = se.Text("Exit", state="float")
-        self.return_label = se.Text("Return to main menu", state="float")
+        super().__init__(
+            50,
+            35,
+            _("Menu"),
+            [
+                CloseLabel(),
+            ],
+        )
+        self.playername_input = TextInputBox(_("Playername:"), 17)
+        self.represent_char_input = TextInputBox(_("Char:"), 1)
+        self.mods_label = se.Text(_("Mods"), state="float")
+        self.ach_label = se.Text(_("Achievements"), state="float")
+        self.about_label = se.Text(_("About"), state="float")
+        self.save_label = se.Text(_("Save"), state="float")
+        self.exit_label = se.Text(_("Exit"), state="float")
+        self.return_label = se.Text(_("Return to main menu"), state="float")
         self.elems = [
             self.playername_input,
             self.represent_char_input,
-            VisSetting("Autosave", "autosave", {True: "On", False: "Off"}),
-            VisSetting("Animations", "animations", {True: "On", False: "Off"}),
-            VisSetting("Save trainers", "save_trainers", {True: "On", False: "Off"}),
-            VisSetting("Audio", "audio", {True: "On", False: "Off"}),
-            Slider("Volume", "volume"),
-            VisSetting("Load mods", "load_mods", {True: "On", False: "Off"}),
+            VisSetting(_("Autosave"), "autosave", {True: _("On"), False: _("Off")}),
+            VisSetting(_("Animations"), "animations", {True: _("On"), False: _("Off")}),
+            VisSetting(
+                _("Save trainers"), "save_trainers", {True: _("On"), False: _("Off")}
+            ),
+            VisSetting(_("Audio"), "audio", {True: _("On"), False: _("Off")}),
+            Slider(_("Volume"), "volume"),
+            VisSetting(_("Load mods"), "load_mods", {True: _("On"), False: _("Off")}),
+            VisSetting(
+                _("Language (restart)"), "language", {"en": "English", "pl": "Polski"}
+            ),
             self.mods_label,
             self.ach_label,
             self.about_label,
@@ -74,10 +87,12 @@ class Menu(ChooseBoxView):
                 inp = ctx.figure.char
                 self.represent_char_input.set_value(inp)
                 notifier.notify(
-                    "Error",
-                    "Bad character",
-                    "The chosen character has to be a \
-valid single-space character!",
+                    _("Error"),
+                    _("Bad character"),
+                    _(
+                        "The chosen character has to be a \
+valid single-space character!"
+                    ),
                 )
                 return
             self.represent_char_input.set_value(inp)
@@ -87,7 +102,7 @@ valid single-space character!",
         elif i == self.save_label:
             # When will python3.10 come out?
             with InfoBoxView(
-                "Saving....",
+                _("Saving...."),
                 info=None,
                 ctx=ctx,
             ):

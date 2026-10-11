@@ -1,6 +1,9 @@
 """Contains the AttackActions class"""
 
 import time
+
+from pokete.i18n import _ as tr
+
 from .weather import Weather
 
 
@@ -82,7 +85,7 @@ class AttackActions:
     def rain_dance(obj, _, providers):
         """Rain dance attack action"""
         providers[0].map.weather = Weather("rain")
-        obj.ico.map.outp.outp("It started raining!")
+        obj.ico.map.outp.outp(tr("It started raining!"))
         time.sleep(2)
 
     @staticmethod

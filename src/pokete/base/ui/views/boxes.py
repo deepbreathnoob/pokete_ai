@@ -33,6 +33,9 @@ class LabelBoxView(BoxView):
         self.set_ob(self.label, 2, 1)
 
 
+_DEFAULT_INFO = object()
+
+
 class InfoBoxView(LabelBoxView):
     """Box to display basic text information in
     ARGS:
@@ -44,9 +47,11 @@ class InfoBoxView(LabelBoxView):
         self,
         text,
         name="",
-        info: Optional[list[se.Text]] = [CloseLabel()],
+        info=_DEFAULT_INFO,
         ctx=None,
     ):
+        if info is _DEFAULT_INFO:
+            info = [CloseLabel()]
         super().__init__(se.Text(text), name=name, info=info, ctx=ctx)
 
     def __enter__(self):  # Contextmanagement is fucking awesome!
@@ -84,7 +89,7 @@ class InputBoxView(InfoBoxView):
         )
         self.__input = TextInput(
             self.text,
-            wrap_len=max_len+1,
+            wrap_len=max_len + 1,
             max_len=max_len,
         )
 

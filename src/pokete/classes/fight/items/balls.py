@@ -1,17 +1,18 @@
-from abc import ABC
 import logging
 import random
 import time
+from abc import ABC
 
 from pokete.classes.achievements import achievements
-from pokete.classes.fight.fightmap.fightmap import FightMap
-from pokete.classes.fight.providers import Provider
 from pokete.classes.audio import audio
-from ... import ob_maps as obmp
-from pokete.classes.fight.providers import NatureProvider
-from .item import FightItem, RoundContinuation
-from ...asset_service.service import asset_service
+from pokete.classes.fight.fightmap.fightmap import FightMap
+from pokete.classes.fight.providers import NatureProvider, Provider
+from pokete.i18n import _ as tr
 from pokete.release import SPEED_OF_TIME
+
+from ... import ob_maps as obmp
+from ...asset_service.service import asset_service
+from .item import FightItem, RoundContinuation
 
 
 class GenericPokeBall(FightItem, ABC):
@@ -33,9 +34,9 @@ class GenericPokeBall(FightItem, ABC):
             2: The win the game
             None: To let the enemy attack"""
         if not isinstance(enem, NatureProvider):
-            fightmap.outp.outp("You can't do that in a duel!")
+            fightmap.outp.outp(tr("You can't do that in a duel!"))
             return RoundContinuation.CONTINUE_ATTACK
-        fightmap.outp.rechar(f"You threw a {self.name.capitalize()}!")
+        fightmap.outp.rechar(tr("You threw a {p0}!").format(p0=self.name.capitalize()))
         fightmap.fast_change(
             [enem.curr.ico, fightmap.deadico1, fightmap.deadico2, fightmap.pball],
             enem.curr.ico,
@@ -55,7 +56,7 @@ class GenericPokeBall(FightItem, ABC):
         )[0]:
             audio.play("xDeviruchi - Decisive Battle (End).mp3")
             obj.add_poke(enem.curr, caught_with=self.name)
-            fightmap.outp.outp(f"You caught {enem.curr.name}!")
+            fightmap.outp.outp(tr("You caught {p0}!").format(p0=enem.curr.name))
             time.sleep(SPEED_OF_TIME * 2)
             fightmap.pball.remove()
             fightmap.clean_up(obj, enem)
@@ -68,7 +69,7 @@ class GenericPokeBall(FightItem, ABC):
             ):
                 achievements.achieve("catch_em_all")
             return RoundContinuation.EXIT
-        fightmap.outp.outp("You missed!")
+        fightmap.outp.outp(tr("You missed!"))
         fightmap.show()
         fightmap.pball.remove()
         enem.curr.ico.add(fightmap, enem.curr.ico.x, enem.curr.ico.y)

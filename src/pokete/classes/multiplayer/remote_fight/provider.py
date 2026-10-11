@@ -5,8 +5,10 @@ import pokete.bs_rpc as bs_rpc
 from pokete.base.context import Context
 from pokete.classes.fight.fight_decision import FightDecision
 from pokete.classes.fight.fightmap.fightmap import FightMap
-from pokete.classes.multiplayer.msg import player, fight
+from pokete.classes.multiplayer.msg import fight, player
 from pokete.classes.poke.poke import Poke
+from pokete.i18n import _ as tr
+
 from ...fight import Provider
 
 
@@ -45,7 +47,9 @@ class RemoteProvider(Provider):
         )
 
     def greet(self, fightmap: FightMap):
-        fightmap.outp.outp(f"Fight started with {self.name}, good luck!")
+        fightmap.outp.outp(
+            tr("Fight started with {p0}, good luck!").format(p0=self.name)
+        )
 
     def get_decision(self, ctx: Context, fightmap: FightMap, enem) -> FightDecision:
         resp = next(self.incomming)

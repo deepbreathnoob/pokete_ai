@@ -1,12 +1,14 @@
 """Contains everything related to Effects"""
 
-import time
-import random
 import logging
+import random
+import time
+
 import scrap_engine as se
 
-from pokete.release import SPEED_OF_TIME
 from pokete.base.color import Color
+from pokete.i18n import _ as tr
+from pokete.release import SPEED_OF_TIME
 
 
 class Effect:
@@ -40,7 +42,7 @@ class Effect:
         obj=None,
         exclude=None,
     ):
-        self.name = name
+        self.name = tr(name)
         self.rem_chance = rem_chance
         self.catch_chance = catch_chance
         self.str_esccode = str_esccode
@@ -48,7 +50,7 @@ class Effect:
             self.exclude = exclude
         else:
             self.exclude = []
-        self.label = se.Text(text, state="float", esccode=str_esccode)
+        self.label = se.Text(tr(text), state="float", esccode=str_esccode)
         self.obj = obj
 
     def __repr__(self):
@@ -59,7 +61,9 @@ class Effect:
         ARGS:
             obj: The Poke the effect is added to"""
         if obj.type.name in self.exclude:
-            obj.ico.map.outp.rechar(f"{obj.ext_name} is not affected by ")
+            obj.ico.map.outp.rechar(
+                tr("{p0} is not affected by ").format(p0=obj.ext_name)
+            )
             obj.ico.map.outp.append(
                 se.Text(self.name, esccode=self.str_esccode, state="float"),
                 se.Text("!", state="float"),
@@ -68,14 +72,14 @@ class Effect:
             self.obj = obj
             self.obj.effects.append(self)
             self.add_label()
-            self.obj.ico.map.outp.rechar(f"{obj.ext_name} is now ")
+            self.obj.ico.map.outp.rechar(tr("{p0} is now ").format(p0=obj.ext_name))
             self.obj.ico.map.outp.append(
                 se.Text(self.name, esccode=self.str_esccode, state="float"),
                 se.Text("!", state="float"),
             )
             logging.info("[Effect][%s] Added to %s", self.name, obj.name)
         else:
-            obj.ico.map.outp.rechar(f"{obj.ext_name} is already ")
+            obj.ico.map.outp.rechar(tr("{p0} is already ").format(p0=obj.ext_name))
             obj.ico.map.outp.append(
                 se.Text(self.name, esccode=self.str_esccode, state="float"),
                 se.Text("!", state="float"),
@@ -103,7 +107,7 @@ class Effect:
     def readd(self):
         """Readds label and shows text"""
         self.add_label()
-        self.obj.ico.map.outp.outp(f"{self.obj.ext_name} is still ")
+        self.obj.ico.map.outp.outp(tr("{p0} is still ").format(p0=self.obj.ext_name))
         self.obj.ico.map.outp.append(
             se.Text(self.name, esccode=self.str_esccode, state="float"),
             se.Text("!", state="float"),
@@ -113,10 +117,10 @@ class Effect:
     def remove(self):
         """Removes itself from the current pokete with a certain chance"""
         if random.randint(0, self.rem_chance) == 0:
-            self.obj.ico.map.outp.outp(f"{self.obj.ext_name} isn't ")
+            self.obj.ico.map.outp.outp(tr("{p0} isn't ").format(p0=self.obj.ext_name))
             self.obj.ico.map.outp.append(
                 se.Text(self.name, esccode=self.str_esccode, state="float"),
-                se.Text(" anymore!", state="float"),
+                se.Text(tr(" anymore!"), state="float"),
             )
             i = self.obj.effects.index(self)
             del self.obj.effects[i]
@@ -141,10 +145,10 @@ class Effect:
 
     def effect(self):
         """The action that's executed every attack round"""
-        self.obj.ico.map.outp.outp(f"{self.obj.ext_name} is still ")
+        self.obj.ico.map.outp.outp(tr("{p0} is still ").format(p0=self.obj.ext_name))
         self.obj.ico.map.outp.append(
             se.Text(self.name, esccode=self.str_esccode, state="float"),
-            se.Text(" and can't attack!", state="float"),
+            se.Text(tr(" and can't attack!"), state="float"),
         )
         time.sleep(SPEED_OF_TIME * 0.5)
         return 1
@@ -194,11 +198,11 @@ This is reverted randomly."
         super().__init__(
             "burning", 3, 0, "(Bur)", self.color, obj, exclude=["fire", "water"]
         )
-        self.hurt_text = "burned it self!"
+        self.hurt_text = tr("burned it self!")
         self.damage = 2
 
     def effect(self):
-        self.obj.ico.map.outp.outp(f"{self.obj.ext_name} is still ")
+        self.obj.ico.map.outp.outp(tr("{p0} is still ").format(p0=self.obj.ext_name))
         self.obj.ico.map.outp.append(
             se.Text(self.name, esccode=self.str_esccode, state="float"),
             se.Text("!", state="float"),
@@ -224,7 +228,7 @@ class EffectPoison(EffectBurning):
 
     def __init__(self, obj=None):
         super(EffectBurning, self).__init__("poisoned", 4, 2, "(Poi)", self.color, obj)
-        self.hurt_text = "got damaged through poison!"
+        self.hurt_text = tr("got damaged through poison!")
         self.damage = 1
 
 
@@ -239,7 +243,7 @@ class EffectConfusion(Effect):
         super().__init__("confused", 3, 2, "(Con)", self.color, obj, exclude=["undead"])
 
     def effect(self):
-        self.obj.ico.map.outp.outp(f"{self.obj.ext_name} is still ")
+        self.obj.ico.map.outp.outp(tr("{p0} is still ").format(p0=self.obj.ext_name))
         self.obj.ico.map.outp.append(
             se.Text(self.name, esccode=self.str_esccode, state="float"),
             se.Text("!", state="float"),

@@ -2,7 +2,9 @@
 Version=1.0
 Type=Application
 Name=Pokete
+Name[pl]=Pokete
 Comment=A terminal based Pokemon clone, based on the scrap engine.
+Comment[pl]=Gra terminalowa inspirowana Pokémon, oparta na scrap_engine.
 Exec=/usr/bin/pokete.py
 Icon=com.github.lxgr_linux.pokete
 Terminal=true

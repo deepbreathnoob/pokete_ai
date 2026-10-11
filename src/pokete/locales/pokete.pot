@@ -1,0 +1,4023 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Pokete EN/PL\n"
+"PO-Revision-Date: 2026-10-10 19:30+0000\n"
+"Last-Translator: Pokete contributors\n"
+"Language-Team: Polish\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+
+#: data
+msgctxt "nature"
+msgid "brave"
+msgstr ""
+
+#: data
+msgctxt "nature"
+msgid "hasty"
+msgstr ""
+
+#: data
+msgctxt "nature"
+msgid "normal"
+msgstr ""
+
+#: data
+msgctxt "nature"
+msgid "relaxed"
+msgstr ""
+
+#: src/pokete/classes/effects.py:151
+msgid " and can't attack!"
+msgstr ""
+
+#: data
+msgid "$100 would be very useful for a young trainer like you, wouldn't it?"
+msgstr ""
+
+#: data
+msgid "'Shut the fuck up' stone"
+msgstr ""
+
+#: data
+msgid "'The Old Roots Hit', the most powerful of the powerful."
+msgstr ""
+
+#: src/pokete/classes/multiplayer/remote_fight/main_thread_fight_event.py:19
+msgid "'{p0}' wants to start a fight with you"
+msgstr ""
+
+#: data
+msgid "A harsh pecking on the enemy's head."
+msgstr ""
+
+#: data
+msgid "A peck at the enemy's weakest spot."
+msgstr ""
+
+#: data
+msgid "A plant Pokete found in Agrawos; it has special 'Powers'."
+msgstr ""
+
+#: data
+msgid "A plant Pokete that's often mistaken for a normal flower."
+msgstr ""
+
+#: data
+msgid ""
+"A shell that lives deep in the sea or near bays; it's pretty hard to crack."
+msgstr ""
+
+#: data
+msgid "A small 'village', that's not even worth talking about."
+msgstr ""
+
+#: data
+msgid "Breaks the enemy's toes."
+msgstr ""
+
+#: data
+msgid "But they're very tough!"
+msgstr ""
+
+#: data
+msgid "Causes confusion deep in the enemy's mind."
+msgstr ""
+
+#: data
+msgid "Collects a great amount of energy in the Pokete's tip."
+msgstr ""
+
+#: src/pokete/classes/inv/inv.py:70
+msgid "Do you want to teach '{p0}'?"
+msgstr ""
+
+#: data
+msgid "Drills a horn deep in the enemy's flesh."
+msgstr ""
+
+#: data
+msgid "Fisherman's Friend"
+msgstr ""
+
+#: src/pokete/startup/command.py:48
+msgid "Flag '%s' takes exactly one argument"
+msgstr ""
+
+#: data
+msgid "G'day, young trainer"
+msgstr ""
+
+#: data
+msgid "Haha, you're a loser!"
+msgstr ""
+
+#: data
+msgid "Haha, you're bad!"
+msgstr ""
+
+#: data
+msgid "Here you'll have to fight our best trainers and rarest Poketes!"
+msgstr ""
+
+#: src/pokete/classes/npcs/npcs.py:197
+msgid "Here's $20!"
+msgstr ""
+
+#: data
+msgid "Here's a special tip: take a look at the temple of the Wheeto."
+msgstr ""
+
+#: data
+msgid "Hey y'all, this town is soo famous for its' craaazy plants."
+msgstr ""
+
+#: data
+msgid ""
+"I added this NPC because I'm stuck on a train somewere between Hamburg and "
+"Rostock, and I'm bored."
+msgstr ""
+
+#: src/pokete/classes/npcs/data/actions.py:90
+msgid "I can't let you go!"
+msgstr ""
+
+#: data
+msgid "I didn't see you coming"
+msgstr ""
+
+#: data
+msgid "I don't think you can walk here"
+msgstr ""
+
+#: data
+msgid "I don't think you ever met an Electrode!"
+msgstr ""
+
+#: data
+msgid "I don't think you'll ever get there!"
+msgstr ""
+
+#: data
+msgid "I don't think your Pokete is better than mine!"
+msgstr ""
+
+#: data
+msgid "I guess it'll confuse you!"
+msgstr ""
+
+#: data
+msgid "I guess it's not the good stuff"
+msgstr ""
+
+#: data
+msgid "I guess you're a quite new Pokete trainer"
+msgstr ""
+
+#: data
+msgid "I haven't seen anyone down here for a while"
+msgstr ""
+
+#: data
+msgid "I haven't trained my Pokete in years!"
+msgstr ""
+
+#: data
+msgid "I hope you'll also catch one!!"
+msgstr ""
+
+#: data
+msgid "I see you're not as bad as we thought!"
+msgstr ""
+
+#: src/pokete/__main__.py:441
+msgid ""
+"I think it's now time for you to travel the world and become a Pokete-"
+"trainer."
+msgstr ""
+
+#: data
+msgid "I wish you the best of luck in 'Flowy Town'!"
+msgstr ""
+
+#: data
+msgid "I'm a Mowcow!"
+msgstr ""
+
+#: data
+msgid "I'm fine, thanks."
+msgstr ""
+
+#: data
+msgid "I'm priest of the Wheeto."
+msgstr ""
+
+#: src/pokete/classes/npcs/data/actions.py:120
+msgid "I'm thanking you!"
+msgstr ""
+
+#: data
+msgid ""
+"I'm the Master of the plants and I have one of the rarest plant Poketes!"
+msgstr ""
+
+#: data
+msgid "I'm the mayor of Agrawos, the greatest city around."
+msgstr ""
+
+#: data
+msgid "I'm the mayor of Rock-ville."
+msgstr ""
+
+#: data
+msgid "I'm trying to scatter all my belongings all over the world."
+msgstr ""
+
+#: data
+msgid "I'm your first enemy!"
+msgstr ""
+
+#: data
+msgid "I'm your last enemy!"
+msgstr ""
+
+#: data
+msgid "I've lived a looong life, b-but now it's time to go."
+msgstr ""
+
+#: data
+msgid "I've lived here for years"
+msgstr ""
+
+#: data
+msgid ""
+"I've lived in this town for long time and therefore have found some cool "
+"Poketes."
+msgstr ""
+
+#: src/pokete/classes/npcs/data/actions.py:24
+msgid "I've never seen one before!"
+msgstr ""
+
+#: data
+msgid ""
+"If I'm a problem for you, you might not be able to fight the other trainers."
+msgstr ""
+
+#: data
+msgid "In this cave your'll encounter the best Pokete trainers of this town."
+msgstr ""
+
+#: data
+msgid "Isn't it a great day?"
+msgstr ""
+
+#: data
+msgid "Isn't that great?"
+msgstr ""
+
+#: data
+msgid "Isn't the weather great today?"
+msgstr ""
+
+#: data
+msgid "Isn't this a nice town?"
+msgstr ""
+
+#: src/pokete/classes/npcs/data/actions.py:57
+msgid "It looks like you've been succesfull!"
+msgstr ""
+
+#: data
+msgid "It won't be as easy in 'Flowy Town'!"
+msgstr ""
+
+#: data
+msgid "It's a constructor, __init__?"
+msgstr ""
+
+#: data
+msgid "It's a hot sunny day!"
+msgstr ""
+
+#: data
+msgid "It's also strong"
+msgstr ""
+
+#: data
+msgid "It's cool, innit?!"
+msgstr ""
+
+#: data
+msgid "It's foggy!"
+msgstr ""
+
+#: data
+msgid "It's not as great as I thought!"
+msgstr ""
+
+#: data
+msgid "It's one of the oldest and rarest of them all."
+msgstr ""
+
+#: data
+msgid "It's our most holy monument!"
+msgstr ""
+
+#: data
+msgid "It's pretty cool huh?!"
+msgstr ""
+
+#: data
+msgid "It's raining!"
+msgstr ""
+
+#: data
+msgid "Let's have a fair fight!"
+msgstr ""
+
+#: data
+msgid "Let's see what other Poketes you have!"
+msgstr ""
+
+#: data
+msgid "Makes an apple drop on the enemy's head."
+msgstr ""
+
+#: data
+msgid "My Steini will rip out your Pokete's heart!"
+msgstr ""
+
+#: data
+msgid "Now it's my turn!"
+msgstr ""
+
+#: data
+msgid "Oh cool, you're a Pokete trainer!"
+msgstr ""
+
+#: data
+msgid "Oh, I didn't think you could defeat my Pokete!"
+msgstr ""
+
+#: src/pokete/classes/pokete_care/npc_action.py:39
+msgid "Oh, you're back."
+msgstr ""
+
+#: data
+msgid "Pecks at one of the enemy's eyes."
+msgstr ""
+
+#: data
+msgid "Pounds the enemy with the Pokete's full weight."
+msgstr ""
+
+#: data
+msgid ""
+"Since you're a Pokete trainer, you may have use for this healing potion!"
+msgstr ""
+
+#: data
+msgid "So let's have a fight"
+msgstr ""
+
+#: data
+msgid "So, I'll be your last opponent."
+msgstr ""
+
+#: data
+msgid "Stabs a venomous thorn into the enemy's flesh."
+msgstr ""
+
+#: data
+msgid "Stabs the enemy with a branch, preferably in the enemy's eyes."
+msgstr ""
+
+#: data
+msgid ""
+"Sweat and juicy plant pokete thats' looks and thiccness will drive you "
+"crazy."
+msgstr ""
+
+#: data
+msgid "Swipes through the enemy's face."
+msgstr ""
+
+#: src/pokete/classes/items/learndisc.py:28
+msgid "Teaches a Pokete the attack '{attack}'."
+msgstr ""
+
+#: src/pokete/classes/multiplayer/connector.py:81
+msgid "That username isn't available right now\n"
+msgstr ""
+
+#: data
+msgid "That's pretty cool!"
+msgstr ""
+
+#: data
+msgid "That's too bad."
+msgstr ""
+
+#: data
+msgid ""
+"The great Rock-ville is the biggest city in the region around the Big "
+"mountain. With the Rocky hotel it's also a tourist hotspot."
+msgstr ""
+
+#: data
+msgid ""
+"The great city of Agrawos, agricultural and cultural center of the whole "
+"region. It's famous for its great Pokete-Arena and its master trainer. Check"
+" out the MowCow-Burger restaurant, which offers the best, juiciest and most "
+"delicious Mowcow-burgers, cut from the happiest and most delicious Mowcows "
+"anywhere to find!"
+msgstr ""
+
+#: src/pokete/classes/mods.py:35
+msgid ""
+"The mod '{name}' lacks attributes!\n"
+"{err}"
+msgstr ""
+
+#: src/pokete/__main__.py:445
+msgid ""
+"Therefore, I'll give you this powerful 'Steini', 15 'Poketeballs' to catch "
+"Poketes, and a 'Healing potion'."
+msgstr ""
+
+#: data
+msgid ""
+"They're the dark and fiery souls of those who got burned to death by the hot"
+" sun!"
+msgstr ""
+
+#: data
+msgid "They're very tough!"
+msgstr ""
+
+#: data
+msgid ""
+"This is the Pokete Arena of Agrawos; only go there if you're sure you can "
+"beat the challenge."
+msgstr ""
+
+#: src/pokete/classes/npcs/data/actions.py:53
+msgid "This won't be easy!"
+msgstr ""
+
+#: data
+msgid "Throws ashes in the enemy's eyes."
+msgstr ""
+
+#: src/pokete/classes/npcs/data/actions.py:50
+msgid ""
+"To get to the other side of this building, you have to win some epic fights "
+"against Deepest Forests' best trainers!"
+msgstr ""
+
+#: src/pokete/classes/mods.py:52
+msgid "To load a mod, place it in '/mods' and enable mods in the menu."
+msgstr ""
+
+#: data
+msgid "Touches the enemy's heart with cold, ghostly claws."
+msgstr ""
+
+#: data
+msgid "Unleashes a sweet scent that's turning heads and minds alike."
+msgstr ""
+
+#: data
+msgid "Welcome to 'Flowy Town', home of the flowers."
+msgstr ""
+
+#: data
+msgid "Welcome to the 'Flowy Town' Arena!"
+msgstr ""
+
+#: data
+msgid "What's up?"
+msgstr ""
+
+#: data
+msgid ""
+"When leaving this town through the 'Cave of Doom' you have to fight against "
+"the best trainers of this town."
+msgstr ""
+
+#: data
+msgid ""
+"You can use it to teach the 'Flying' attack to one of your flying Poketes so"
+" you can ride it to the next town."
+msgstr ""
+
+#: src/pokete/classes/fight/items/balls.py:37
+msgid "You can't do that in a duel!"
+msgstr ""
+
+#: src/pokete/classes/deck.py:222
+msgid "You can't free all your Poketes"
+msgstr ""
+
+#: src/pokete/classes/inv/inv.py:87
+msgid ""
+"You can't teach '{p0}' to '{p1}'! \n"
+"Do you want to continue?"
+msgstr ""
+
+#: src/pokete/classes/map_additions/center.py:172
+msgid "You don't have any Poketes to cuddle with!"
+msgstr ""
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:304
+msgid ""
+"You don't have any items left!\n"
+"What do you want to do?"
+msgstr ""
+
+#: data
+msgid "You have to beat my Pokete to enter 'Flowy Town'"
+msgstr ""
+
+#: data
+msgid ""
+"You may be asking yourself: 'Lxgr, what are you doing in this game?', and "
+"the answer is: 'standing around'."
+msgstr ""
+
+#: data
+msgid "You see, it's effective"
+msgstr ""
+
+#: data
+msgid "You'll be better next time!"
+msgstr ""
+
+#: data
+msgid "You'll do better next time."
+msgstr ""
+
+#: data
+msgid "You're a good trainer, huh?"
+msgstr ""
+
+#: data
+msgid "You're a great trainer!"
+msgstr ""
+
+#: data
+msgid "You're a loooser!"
+msgstr ""
+
+#: data
+msgid "You're a loser!"
+msgstr ""
+
+#: data
+msgid "You're already a very good trainer!"
+msgstr ""
+
+#: src/pokete/classes/npcs/data/actions.py:118
+msgid "You're my hero!"
+msgstr ""
+
+#: src/pokete/__main__.py:440
+msgid "You're now ten years old."
+msgstr ""
+
+#: data
+msgid "You're quite a good trainer."
+msgstr ""
+
+#: src/pokete/classes/npcs/npcs.py:93
+msgid "{p0} gifted you a '{p1}'. Do you want to accept it?"
+msgstr ""
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:408
+msgid "{p0} has used all its' attacks!"
+msgstr ""
+
+#: src/pokete/classes/effects.py:120
+msgid "{p0} isn't "
+msgstr ""
+
+#: src/pokete/classes/effects.py:123
+msgid " anymore!"
+msgstr ""
+
+#: src/pokete/startup/command.py:35
+msgid "--language expects exactly one argument: en or pl"
+msgstr ""
+
+#: data
+msgid "...Karpis."
+msgstr ""
+
+#: src/pokete/util/command/command.py:70
+msgid ":: Error: Unknown flag `{flag}`, try `{ex} --help`"
+msgstr ""
+
+#: data
+msgid "A Great beach, with great weather, always."
+msgstr ""
+
+#: data
+msgid "A Hyperball!"
+msgstr ""
+
+#: data
+msgid ""
+"A ball floating around in dark woods and caves, that will confuse the shit "
+"out of you."
+msgstr ""
+
+#: data
+msgid "A ball you can use to catch Poketes with an increased chance"
+msgstr ""
+
+#: data
+msgid "A ball you can use to catch Poketes"
+msgstr ""
+
+#: data
+msgid "A big and heavy stone made from one of the hardest materials."
+msgstr ""
+
+#: data
+msgid "A big chunk of stone and dirt that rolls around."
+msgstr ""
+
+#: data
+msgid "A block of ice."
+msgstr ""
+
+#: data
+msgid "A bush, and just a bush. But watch out!"
+msgstr ""
+
+#: data
+msgid "A butterfly that will schmetter you away."
+msgstr ""
+
+#: data
+msgid "A chongus flying rat."
+msgstr ""
+
+#: data
+msgid "A cow-like creature found in meadows."
+msgstr ""
+
+#: data
+msgid "A crusty Pokete that loves to pinch big toes."
+msgstr ""
+
+#: data
+msgid ""
+"A crusty Pokete that will pinch your toes and check whether or not you "
+"borrowed something."
+msgstr ""
+
+#: data
+msgid "A damn dangerous and enourmous rat; it will bite of your leg."
+msgstr ""
+
+#: data
+msgid "A dangerous snake Pokete."
+msgstr ""
+
+#: data
+msgid "A dark and big cave in the Big mountain."
+msgstr ""
+
+#: data
+msgid "A dark and mysterious cave."
+msgstr ""
+
+#: data
+msgid "A dark butterfly that will schmetter you away."
+msgstr ""
+
+#: data
+msgid "A dark cave full of batos."
+msgstr ""
+
+#: data
+msgid "A deadly bubble."
+msgstr ""
+
+#: data
+msgid "A dense forest near Deepens forest."
+msgstr ""
+
+#: data
+msgid "A fiery wolf from hell on steroids."
+msgstr ""
+
+#: data
+msgid ""
+"A fiery wolf straight from hell that likes to burn 11 years old butts off."
+msgstr ""
+
+#: data
+msgid "A foggy place full of ghosts and plants."
+msgstr ""
+
+#: data
+msgid "A freshwater fighting fish Pokete."
+msgstr ""
+
+#: data
+msgid "A fucking dangerous and enormous snake Pokete."
+msgstr ""
+
+#: data
+msgid "A ghost Pokete that will scare your pants off."
+msgstr ""
+
+#: data
+msgid "A hard bite with sharp teeth."
+msgstr ""
+
+#: data
+msgid "A harmless water Pokete that can be found everywhere."
+msgstr ""
+
+#: data
+msgid "A little whatever that sticks out of the ground."
+msgstr ""
+
+#: data
+msgid ""
+"A majestic horse that is always looking for something to pick with its horn."
+msgstr ""
+
+#: data
+msgid ""
+"A nocturnal Pokete that is looking for small children to eat as a midnight "
+"snack."
+msgstr ""
+
+#: data
+msgid "A not at all suspicious plant."
+msgstr ""
+
+#: data
+msgid "A powerful and heavy stone Pokete that lives in mountain caves."
+msgstr ""
+
+#: data
+msgid "A precious diamond that can only be found in the darkest caves."
+msgstr ""
+
+#: data
+msgid "A scary and dangerous apple tree."
+msgstr ""
+
+#: data
+msgid "A scary ghost Pokete that lives in caves and old houses."
+msgstr ""
+
+#: data
+msgid "A small but powerful stone Pokete that lives in the mountains."
+msgstr ""
+
+#: data
+msgid "A small caterpillar found on leaves."
+msgstr ""
+
+#: data
+msgid "A small clearing near Deepens forest."
+msgstr ""
+
+#: data
+msgid "A small floating ball that will give you a shock."
+msgstr ""
+
+#: data
+msgid ""
+"A small heavy thing that can be found on the ground; it may reveal something"
+" wonderful later."
+msgstr ""
+
+#: data
+msgid "A small ice cube."
+msgstr ""
+
+#: data
+msgid "A small plant Pokete deeply burried in the ground."
+msgstr ""
+
+#: data
+msgid "A small plant Pokete found burried in the ground."
+msgstr ""
+
+#: data
+msgid "A small plant Pokete found in the ground."
+msgstr ""
+
+#: data
+msgid "A small see at the foot of the Big mountain."
+msgstr ""
+
+#: data
+msgid "A small sunny village."
+msgstr ""
+
+#: data
+msgid "A small town."
+msgstr ""
+
+#: data
+msgid "A squared stone that can be readily found just lying around."
+msgstr ""
+
+#: data
+msgid "A teenage unicorn in the middle of puberty."
+msgstr ""
+
+#: data
+msgid "A terrestrial crab full of accumulated electrical energy."
+msgstr ""
+
+#: data
+msgid "A tiny spider like Pokete."
+msgstr ""
+
+#: data
+msgid "A unsuspicious plant."
+msgstr ""
+
+#: data
+msgid "A very aggressive and hard to find bird Pokete."
+msgstr ""
+
+#: data
+msgid "A very aggressive bird Pokete that can only be found in the woods."
+msgstr ""
+
+#: data
+msgid ""
+"A very aggressive bird Pokete that lives near deserts; it will try to peck "
+"out your eyes."
+msgstr ""
+
+#: data
+msgid "A very common bird Pokete; it lives everywhere."
+msgstr ""
+
+#: data
+msgid "A very small whatever that sticks out of the ground."
+msgstr ""
+
+#: src/pokete/classes/fight/providers.py:114
+msgid "A wild {p0} appeared!"
+msgstr ""
+
+#: data
+msgid "ABILITIES_INFO"
+msgstr ""
+
+#: data
+msgid "ACCEPT"
+msgstr ""
+
+#: data
+msgid "AP potion"
+msgstr ""
+
+#: src/pokete/classes/learnattack.py:42
+msgid "AP:{p0}"
+msgstr ""
+
+#: src/pokete/classes/attack.py:42 src/pokete/classes/detail.py:194
+msgid "AP:{p0}/{p1}"
+msgstr ""
+
+#: data
+msgid "Abandoned House"
+msgstr ""
+
+#: data
+msgid "Abandoned Village"
+msgstr ""
+
+#: src/pokete/classes/detail.py:290
+msgid "Abilities"
+msgstr ""
+
+#: src/pokete/classes/detail.py:103 src/pokete/classes/detail.py:251
+msgid "Abilities:"
+msgstr ""
+
+#: src/pokete/classes/menu.py:38 src/pokete/classes/side_loops.py:45
+msgid "About"
+msgstr ""
+
+#: src/pokete/classes/achievements.py:87
+msgid "Achieved: "
+msgstr ""
+
+#: src/pokete/classes/achievements.py:60
+msgid "Achievement unlocked!"
+msgstr ""
+
+#: data src/pokete/classes/menu.py:37
+msgid "Achievements"
+msgstr ""
+
+#: src/pokete/base/input/hotkeys.py:69
+msgid "Action {number}"
+msgstr ""
+
+#: data
+msgid "Agrawos"
+msgstr ""
+
+#: src/pokete/classes/npcs/data/actions.py:139
+msgid "All of our beef is empty..."
+msgstr ""
+
+#: src/pokete/classes/general.py:21
+msgid ""
+"All your Poketes have died and you ran\n"
+"back to the last Pokecenter you visited to heal them!\n"
+"On the way there, ${p0} fell out of your pocket!"
+msgstr ""
+
+#: src/pokete/classes/dex.py:38
+msgid "Always"
+msgstr ""
+
+#: data
+msgid "An abandoned fisher village."
+msgstr ""
+
+#: data
+msgid ""
+"An ancient attack that summons the deepest and oldest roots from deep in the"
+" earth to defeat the enemy."
+msgstr ""
+
+#: data
+msgid "An ancient dragon Pokete famous for destroying cities and villages."
+msgstr ""
+
+#: data
+msgid "An annoying flying rat."
+msgstr ""
+
+#: data
+msgid "An annoying rat."
+msgstr ""
+
+#: src/pokete/classes/multiplayer/connector.py:107
+msgid ""
+"An error occurred connecting to {p0} :\n"
+"{p1}"
+msgstr ""
+
+#: src/pokete/classes/multiplayer/menu.py:73
+msgid ""
+"An error ocured validating game data:\n"
+"{p0}"
+msgstr ""
+
+#: data
+msgid "An even bigger whatever that sticks out of the ground."
+msgstr ""
+
+#: data
+msgid "And it will kill your lame Pokete!"
+msgstr ""
+
+#: data
+msgid "Angler Gustav"
+msgstr ""
+
+#: src/pokete/classes/menu.py:46
+msgid "Animations"
+msgstr ""
+
+#: src/pokete/classes/npcs/npcs.py:129
+msgid "Answer"
+msgstr ""
+
+#: data
+msgid "Apple Drop"
+msgstr ""
+
+#: data
+msgid "Are you a trainer yourself?"
+msgstr ""
+
+#: data
+msgid "Are you willing to fight me?"
+msgstr ""
+
+#: data
+msgid "Arena of Agrawos"
+msgstr ""
+
+#: data
+msgid "Arena"
+msgstr ""
+
+#: data
+msgid "Ash Throw"
+msgstr ""
+
+#: src/pokete/classes/npcs/data/actions.py:37
+msgid "At level {p0} It evolves into Choka."
+msgstr ""
+
+#: data src/pokete/classes/fight/fightmap/attack.py:28
+msgid "Attack Info"
+msgstr ""
+
+#: src/pokete/classes/detail.py:102
+msgid "Attack:   Defense:"
+msgstr ""
+
+#: src/pokete/classes/attack.py:45
+msgid "Attack:{p0}"
+msgstr ""
+
+#: src/pokete/classes/detail.py:258
+msgid "Attack:{p0}{p1}Defense:{p2}"
+msgstr ""
+
+#: src/pokete/classes/detail.py:100 src/pokete/classes/learnattack.py:74
+msgid "Attacks"
+msgstr ""
+
+#: src/pokete/classes/menu.py:50
+msgid "Audio"
+msgstr ""
+
+#: data
+msgid "Aurelia"
+msgstr ""
+
+#: src/pokete/classes/menu.py:45
+msgid "Autosave"
+msgstr ""
+
+#: src/pokete/base/ui/elements/labels.py:21
+msgid "Backspace"
+msgstr ""
+
+#: src/pokete/classes/menu.py:91
+msgid "Bad character"
+msgstr ""
+
+#: data
+msgid "Bark Hardening"
+msgstr ""
+
+#: data
+msgid "Battle Cave"
+msgstr ""
+
+#: data
+msgid "Bert the bird"
+msgstr ""
+
+#: data
+msgid "Bert"
+msgstr ""
+
+#: data
+msgid "Bertold"
+msgstr ""
+
+#: data
+msgid "Big Mountain Cave"
+msgstr ""
+
+#: data
+msgid "Big Mountain Sea"
+msgstr ""
+
+#: data
+msgid "Bite"
+msgstr ""
+
+#: data
+msgid "Blasts a bunch of spiky leaves at the enemy."
+msgstr ""
+
+#: data
+msgid "Branch Stab"
+msgstr ""
+
+#: data
+msgid "Brian"
+msgstr ""
+
+#: data
+msgid "Brick Throw"
+msgstr ""
+
+#: data
+msgid "British devs be like:"
+msgstr ""
+
+#: data
+msgid "Brooding"
+msgstr ""
+
+#: data
+msgid "Brother Justin"
+msgstr ""
+
+#: data
+msgid "Brother Justus"
+msgstr ""
+
+#: data
+msgid "Bubble Bomb"
+msgstr ""
+
+#: data
+msgid "Bubble Gun"
+msgstr ""
+
+#: data
+msgid "Bubble Shield"
+msgstr ""
+
+#: data
+msgid "Burns and bites the enemy at the same time."
+msgstr ""
+
+#: data
+msgid "But I can help you."
+msgstr ""
+
+#: data
+msgid "But first, we must fight!"
+msgstr ""
+
+#: data
+msgid "But first, you have to fight me!"
+msgstr ""
+
+#: data
+msgid "But have you also seen a Saugh?"
+msgstr ""
+
+#: src/pokete/classes/npcs/data/actions.py:144
+msgid ""
+"But it has to be at least on level 50 to meet our high quality standards."
+msgstr ""
+
+#: data
+msgid "But watch out, stone is their preference!"
+msgstr ""
+
+#: data
+msgid "CANCEL"
+msgstr ""
+
+#: data
+msgid "CHOOSE_ATTACK"
+msgstr ""
+
+#: data
+msgid "CHOOSE_ITEM"
+msgstr ""
+
+#: data
+msgid "CHOOSE_POKE"
+msgstr ""
+
+#: data
+msgid "CLOCK"
+msgstr ""
+
+#: data
+msgid "CONSOLE"
+msgstr ""
+
+#: src/pokete/classes/npcs/data/actions.py:122
+msgid "Can I have it?"
+msgstr ""
+
+#: data
+msgid "Can I show you my rare Pokete which can only be found in this cave?"
+msgstr ""
+
+#: data
+msgid "Candy man"
+msgstr ""
+
+#: data
+msgid "Casts a fireball at the enemy."
+msgstr ""
+
+#: data
+msgid "Casts a gust of wind at the enemy."
+msgstr ""
+
+#: data
+msgid ""
+"Casts a vicious and violent storm full of rain and hail, hitting the enemy "
+"in its weakest spots and makes it want to die."
+msgstr ""
+
+#: data
+msgid "Catch all Poketes and fill your Pokete-Dex!"
+msgstr ""
+
+#: data
+msgid "Catch em all"
+msgstr ""
+
+#: data
+msgid "Catch your first Pokete!"
+msgstr ""
+
+#: data
+msgid "Caveman Dieter"
+msgstr ""
+
+#: data
+msgid "Caveman Marc"
+msgstr ""
+
+#: data
+msgid "Center!"
+msgstr ""
+
+#: src/pokete/classes/menu.py:35
+msgid "Char:"
+msgstr ""
+
+#: data
+msgid "Charges up the Pokete."
+msgstr ""
+
+#: data
+msgid "Charging"
+msgstr ""
+
+#: data
+msgid "Check out the MowCow-Burger restaurant, they have the best beef!"
+msgstr ""
+
+#: data
+msgid ""
+"Check out the MowCow-Burger restaurant; they have the best MowCow-Burgers! "
+"Also take a look at the Pokete-Arena!"
+msgstr ""
+
+#: data
+msgid "Choker"
+msgstr ""
+
+#: data
+msgid "Chokes the enemy and makes it weaker."
+msgstr ""
+
+#: data
+msgid "Choose a Pokete to cuddle"
+msgstr ""
+
+#: data
+msgid "Citizen"
+msgstr ""
+
+#: data
+msgid "Clock"
+msgstr ""
+
+#: data
+msgid "Confuses the enemy."
+msgstr ""
+
+#: data
+msgid "Confusion"
+msgstr ""
+
+#: src/pokete/classes/npcs/data/actions.py:57
+msgid "Congrats!"
+msgstr ""
+
+#: data
+msgid "Congratulations!"
+msgstr ""
+
+#: src/pokete/classes/side_loops.py:57
+msgid ""
+"Controls:\n"
+"{up}: up, {left}: left\n"
+"{down}: down, {right}: right\n"
+"{menu}: menu\n"
+"\n"
+"In tall grass (;), wild Poketes may attack you.\n"
+"Weaken them to catch them, or defeat them to gain XP.\n"
+"Approach NPCs to talk to them.\n"
+"More information:\n"
+"https://github.com/deepbreathnoob/pokete_ai/blob/master/docs/HowToPlay.md"
+msgstr ""
+
+#: data
+msgid "Cool!"
+msgstr ""
+
+#: data src/pokete/classes/npcs/data/actions.py:73
+msgid "Cool, huh?"
+msgstr ""
+
+#: data
+msgid "Cowsay"
+msgstr ""
+
+#: data
+msgid "Creates a giant bubble that protects the Pokete."
+msgstr ""
+
+#: data
+msgid "Crushes the enemy between two heavy stones."
+msgstr ""
+
+#: data
+msgid "Cry"
+msgstr ""
+
+#: src/pokete/classes/map_additions/center.py:107
+msgid "Cuddle with the Poketes"
+msgstr ""
+
+#: src/pokete/classes/mods.py:54
+msgid "Currently {count} mod is loaded:"
+msgid_plural "Currently {count} mods are loaded:"
+msgstr ""
+
+#: data
+msgid "DECK"
+msgstr ""
+
+#: data
+msgid "DIE!"
+msgstr ""
+
+#: data
+msgid "DOWN"
+msgstr ""
+
+#: data
+msgid "Daaaamn"
+msgstr ""
+
+#: data
+msgid "Damages the enemy with an unpredictable hit out of the ground."
+msgstr ""
+
+#: data
+msgid "Damn!"
+msgstr ""
+
+#: data
+msgid "Damn, I lost!"
+msgstr ""
+
+#: data
+msgid "Dangerous spider like Pokete with strong mandibles."
+msgstr ""
+
+#: data
+msgid "Dark Cave"
+msgstr ""
+
+#: src/pokete/classes/dex.py:37
+msgid "Day"
+msgstr ""
+
+#: data
+msgid "Dazzle"
+msgstr ""
+
+#: data
+msgid "Dead or alive entity with slow movement and mental ability."
+msgstr ""
+
+#: data
+msgid ""
+"Deepens forest, a big town in the middle of the deepest forest, populated by"
+" thousands of people and cultural center of the region."
+msgstr ""
+
+#: data
+msgid "Deepest Forest"
+msgstr ""
+
+#: src/pokete/classes/detail.py:99
+msgid "Details"
+msgstr ""
+
+#: data
+msgid "Dia Stab"
+msgstr ""
+
+#: data
+msgid "Dia spikes"
+msgstr ""
+
+#: data
+msgid "Dick Energy"
+msgstr ""
+
+#: data
+msgid "Did you already find some?"
+msgstr ""
+
+#: data
+msgid "Disables audio"
+msgstr ""
+
+#: data
+msgid "Disables mods"
+msgstr ""
+
+#: src/pokete/classes/npcs/data/actions.py:101
+msgid "Do you also want to have one?"
+msgstr ""
+
+#: src/pokete/classes/deck.py:225
+msgid "Do you really want to free {p0}?"
+msgstr ""
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:291
+msgid "Do you really want to run away?"
+msgstr ""
+
+#: src/pokete/classes/inv/inv.py:103
+msgid "Do you really want to throw {p0} away?"
+msgstr ""
+
+#: src/pokete/__main__.py:315
+msgid "Do you really wish to exit?"
+msgstr ""
+
+#: data
+msgid "Do you see this abandoned house?"
+msgstr ""
+
+#: src/pokete/classes/pokete_care/npc_action.py:45
+msgid "Do you want it back?"
+msgstr ""
+
+#: src/pokete/classes/fight/providers.py:153
+msgid "Do you want to choose another Pokete?"
+msgstr ""
+
+#: data
+msgid "Do you want to fight against my rare Pokete?"
+msgstr ""
+
+#: src/pokete/classes/npcs/data/actions.py:125
+msgid "Do you want to give your Mowcow to the cook?"
+msgstr ""
+
+#: data
+msgid "Do you want to have it?"
+msgstr ""
+
+#: src/pokete/classes/pokete_care/npc_action.py:27
+msgid "Do you want to put a Pokete into the Pokete-Care?"
+msgstr ""
+
+#: data
+msgid "Do you want to trade my cool Pokete?"
+msgstr ""
+
+#: src/pokete/classes/inv/inv.py:45
+msgid "Do you want to upgrade one of your Poketes by a level?"
+msgstr ""
+
+#: src/pokete/base/ui/elements/labels.py:23
+msgid "Down"
+msgstr ""
+
+#: data
+msgid "Duck!"
+msgstr ""
+
+#: data
+msgid "EXIT_GAME"
+msgstr ""
+
+#: data
+msgid "Earthquake"
+msgstr ""
+
+#: data src/pokete/classes/fight/fightmap/attack.py:31
+msgid "Effect Info"
+msgstr ""
+
+#: data
+msgid "Ejects some poisonous spores onto the enemy."
+msgstr ""
+
+#: data
+msgid "Enables logging"
+msgstr ""
+
+#: data
+msgid "Encouragement"
+msgstr ""
+
+#: data
+msgid "Encourages and strengthens all Poketes in your team."
+msgstr ""
+
+#: src/pokete/base/ui/elements/labels.py:19
+msgid "Enter"
+msgstr ""
+
+#: src/pokete/classes/menu.py:90
+msgid "Error"
+msgstr ""
+
+#: src/pokete/classes/multiplayer/connector.py:69
+msgid "Error: {p0}"
+msgstr ""
+
+#: src/pokete/base/ui/elements/labels.py:20
+msgid "Esc"
+msgstr ""
+
+#: data
+msgid "Especially Wheeto, from which healing potions can be made."
+msgstr ""
+
+#: data
+msgid "Eva"
+msgstr ""
+
+#: data
+msgid "Evolve your first Pokete!"
+msgstr ""
+
+#: src/pokete/classes/menu.py:40
+msgid "Exit"
+msgstr ""
+
+#: data
+msgid "Eye Peck"
+msgstr ""
+
+#: data
+msgid "FREE_POKETE"
+msgstr ""
+
+#: data
+msgid "Farmer Daniel"
+msgstr ""
+
+#: data
+msgid "Farmer Doora"
+msgstr ""
+
+#: data
+msgid "Farmer Gert"
+msgstr ""
+
+#: data
+msgid "Farmer Martin"
+msgstr ""
+
+#: data
+msgid "Farmer Ralf"
+msgstr ""
+
+#: data
+msgid "Fight against your first trainer!"
+msgstr ""
+
+#: src/pokete/classes/multiplayer/remote_fight/provider.py:51
+msgid "Fight started with {p0}, good luck!"
+msgstr ""
+
+#: data
+msgid "Fight"
+msgstr ""
+
+#: data
+msgid "Fight?"
+msgstr ""
+
+#: data
+msgid "Fire Ball"
+msgstr ""
+
+#: data
+msgid "Fire Bite"
+msgstr ""
+
+#: data
+msgid "Fires pebbles at the enemy and makes it blind."
+msgstr ""
+
+#: data
+msgid "Fires some bubbles at the enemy."
+msgstr ""
+
+#: data
+msgid "First Pokete"
+msgstr ""
+
+#: data
+msgid "First Trainer of Rock-ville"
+msgstr ""
+
+#: data
+msgid "First Trainer"
+msgstr ""
+
+#: data
+msgid "First duel"
+msgstr ""
+
+#: data
+msgid "First evolution"
+msgstr ""
+
+#: data
+msgid "Flame Throw"
+msgstr ""
+
+#: data
+msgid "Flowy Town"
+msgstr ""
+
+#: data
+msgid "Flying"
+msgstr ""
+
+#: data
+msgid "For catching Poketes with a waaay higher chance"
+msgstr ""
+
+#: data
+msgid "Franz"
+msgstr ""
+
+#: data
+msgid "Freeze"
+msgstr ""
+
+#: data
+msgid ""
+"Freezes the enemy and stops it from attacking. This is reverted randomly."
+msgstr ""
+
+#: data
+msgid "Freezes the enemy."
+msgstr ""
+
+#: data
+msgid "Fucking badass looking dude in the woods"
+msgstr ""
+
+#: data
+msgid "Gardener Angela"
+msgstr ""
+
+#: data
+msgid "Gardener Daniela"
+msgstr ""
+
+#: data
+msgid "Gerald the farmer"
+msgstr ""
+
+#: data
+msgid "Gerard"
+msgstr ""
+
+#: data
+msgid "Gives the Pokete the ability to fly you around."
+msgstr ""
+
+#: data
+msgid "Gives the enemy a cold and wet slap in the face."
+msgstr ""
+
+#: data
+msgid "Gives the enemy a massive shock."
+msgstr ""
+
+#: data
+msgid "Gives the enemy a shock."
+msgstr ""
+
+#: data
+msgid "Go home, little zoomer."
+msgstr ""
+
+#: data
+msgid "Going this route you will find more Poketes, you can fight and catch."
+msgstr ""
+
+#: data
+msgid "Good luck with the last trainer!"
+msgstr ""
+
+#: data
+msgid "Good luck with the next trainer!"
+msgstr ""
+
+#: data
+msgid "Good luck!"
+msgstr ""
+
+#: data
+msgid "Ground Hit"
+msgstr ""
+
+#: data
+msgid "Guy at the Entrance"
+msgstr ""
+
+#: data
+msgid "H-h-hello young trainer."
+msgstr ""
+
+#: data
+msgid "HAHAHA, IM BETTER THAN YOU!"
+msgstr ""
+
+#: data
+msgid "HELP"
+msgstr ""
+
+#: src/pokete/classes/fight/providers.py:44
+#: src/pokete/classes/health_bar.py:43 src/pokete/classes/health_bar.py:51
+#: src/pokete/classes/poke/poke.py:122
+msgid "HP:{p0}"
+msgstr ""
+
+#: data
+msgid "Hahaha!"
+msgstr ""
+
+#: data
+msgid "Hans! Get ze Flammenwerfer!"
+msgstr ""
+
+#: data
+msgid "Hardens its outer layers to protect itself."
+msgstr ""
+
+#: data src/pokete/classes/map_additions/center.py:198
+msgid "Have a great day!"
+msgstr ""
+
+#: src/pokete/classes/npcs/data/actions.py:96
+msgid "Have a pleasant day."
+msgstr ""
+
+#: data
+msgid "Have fun in Agrawos!"
+msgstr ""
+
+#: data
+msgid "Have you already fought our lead trainer?"
+msgstr ""
+
+#: data
+msgid "Have you caught a Crabbat yet?"
+msgstr ""
+
+#: data
+msgid "He"
+msgstr ""
+
+#: src/pokete/classes/map_additions/center.py:106
+msgid "Heal all your Poketes"
+msgstr ""
+
+#: data
+msgid "Healing potion"
+msgstr ""
+
+#: data
+msgid "Heals a Pokete with 15 HP"
+msgstr ""
+
+#: data
+msgid "Heals a Pokete with 5 HP"
+msgstr ""
+
+#: data
+msgid "Heart Touch"
+msgstr ""
+
+#: data
+msgid "Heavy Hans"
+msgstr ""
+
+#: data
+msgid "Hell, what are those?"
+msgstr ""
+
+#: data
+msgid "Hello fellow cave diver!"
+msgstr ""
+
+#: data
+msgid "Hello fellow trainer!"
+msgstr ""
+
+#: data
+msgid "Hello there!"
+msgstr ""
+
+#: data
+msgid "Hello trainer!"
+msgstr ""
+
+#: data
+msgid "Hello"
+msgstr ""
+
+#: data
+msgid "Hello, fellow stranger!"
+msgstr ""
+
+#: data
+msgid "Hello, fellow trainer!"
+msgstr ""
+
+#: data
+msgid "Hello, fellow trainer."
+msgstr ""
+
+#: data
+msgid "Hello, fellow traveler. My name is lxgr and I created this game. "
+msgstr ""
+
+#: src/pokete/__main__.py:439
+msgid "Hello, my child."
+msgstr ""
+
+#: data
+msgid "Hello, noble traveler"
+msgstr ""
+
+#: data
+msgid "Hello, young pal!"
+msgstr ""
+
+#: data
+msgid "Hello, young trainer."
+msgstr ""
+
+#: src/pokete/classes/side_loops.py:68
+msgid "Help"
+msgstr ""
+
+#: src/pokete/classes/pokete_care/npc_action.py:22
+msgid ""
+"Here you can leave one of your Poketes for some time and we will train it."
+msgstr ""
+
+#: data
+msgid "Here you can meet our mayor."
+msgstr ""
+
+#: data
+msgid "Here you can rent a room to sleep."
+msgstr ""
+
+#: src/pokete/classes/pokete_care/npc_action.py:60
+msgid "Here you go!"
+msgstr ""
+
+#: src/pokete/classes/npcs/data/actions.py:129
+msgid "Here you go, have $1000!"
+msgstr ""
+
+#: src/pokete/classes/npcs/data/actions.py:25
+msgid "Here you go, have $200!"
+msgstr ""
+
+#: data
+msgid "Hey there!"
+msgstr ""
+
+#: data
+msgid "Hey there"
+msgstr ""
+
+#: data
+msgid "Hey you!"
+msgstr ""
+
+#: data
+msgid "Hey!"
+msgstr ""
+
+#: data
+msgid "Hey, my brother and I want to fight!"
+msgstr ""
+
+#: data
+msgid "Hey, you!"
+msgstr ""
+
+#: data
+msgid "Hey."
+msgstr ""
+
+#: data
+msgid "Hi!"
+msgstr ""
+
+#: data
+msgid "Hi."
+msgstr ""
+
+#: data
+msgid "Hiding"
+msgstr ""
+
+#: data
+msgid "Hits the enemy with a wing."
+msgstr ""
+
+#: data
+msgid "Hmph!"
+msgstr ""
+
+#: data
+msgid "Home."
+msgstr ""
+
+#: data
+msgid ""
+"Hopefully you can beat all other trainers with whom you may cross paths!"
+msgstr ""
+
+#: src/pokete/classes/multiplayer/connector.py:61
+msgid "Host"
+msgstr ""
+
+#: src/pokete/classes/multiplayer/connector.py:59
+msgid "Host:"
+msgstr ""
+
+#: data
+msgid "House"
+msgstr ""
+
+#: src/pokete/classes/npcs/data/actions.py:140
+msgid "How are we going to serve the best MowCow-Burgers without beef?"
+msgstr ""
+
+#: data
+msgid "How are you?"
+msgstr ""
+
+#: data
+msgid "How did you get into my room?"
+msgstr ""
+
+#: data
+msgid "How ya doin?"
+msgstr ""
+
+#: data
+msgid "Howdy, partner!"
+msgstr ""
+
+#: data
+msgid "Hyperball"
+msgstr ""
+
+#: data
+msgid "I can give you this Learning Disc."
+msgstr ""
+
+#: data
+msgid "I can heal them!"
+msgstr ""
+
+#: data
+msgid "I caught this Pokete in there!"
+msgstr ""
+
+#: data
+msgid "I demand a fight with you!"
+msgstr ""
+
+#: data
+msgid "I guess have still have to train it. :("
+msgstr ""
+
+#: data
+msgid "I guess you will be a challenge for our trainers!"
+msgstr ""
+
+#: data
+msgid "I guess yours is even more effective than mine!"
+msgstr ""
+
+#: src/pokete/classes/npcs/data/actions.py:40
+msgid "I have never seen one before!"
+msgstr ""
+
+#: data
+msgid "I hope you can also catch one!"
+msgstr ""
+
+#: data
+msgid "I hope you have a great time!"
+msgstr ""
+
+#: data
+msgid "I lost!"
+msgstr ""
+
+#: data
+msgid ""
+"I posses one of the oldest and most powerful attacks aver known to Poketes."
+msgstr ""
+
+#: data
+msgid "I think this will be helpful for you!"
+msgstr ""
+
+#: data
+msgid "I trained my Steini for years to get to this level"
+msgstr ""
+
+#: data
+msgid "I traveled here from a distant country"
+msgstr ""
+
+#: data
+msgid "I want to see you fight a Rustacean."
+msgstr ""
+
+#: data
+msgid "I want to talk to your manager!"
+msgstr ""
+
+#: data
+msgid "I will be your first challenger!"
+msgstr ""
+
+#: src/pokete/classes/npcs/data/actions.py:147
+msgid "I will pay a good price!"
+msgstr ""
+
+#: data
+msgid "I will win!"
+msgstr ""
+
+#: data
+msgid "I wish you luck!"
+msgstr ""
+
+#: data
+msgid "I wish you the best luck on your journey!"
+msgstr ""
+
+#: data
+msgid "I wish you the best of luck fighting against our best trainers!"
+msgstr ""
+
+#: data
+msgid "I wish you the best of luck"
+msgstr ""
+
+#: data
+msgid "INFO"
+msgstr ""
+
+#: data
+msgid "INTERACT"
+msgstr ""
+
+#: data
+msgid "INVENTORY"
+msgstr ""
+
+#: data
+msgid "If one is weak enought you can throw a Poketeball an try to catch it!"
+msgstr ""
+
+#: src/pokete/classes/npcs/data/actions.py:143
+msgid "If only someone here could bring me a fitting Mowcow!?"
+msgstr ""
+
+#: data
+msgid "If so, look at this cool Pokete!"
+msgstr ""
+
+#: data
+msgid ""
+"If you want a challenge, check out the Pokete-Arena; they have some quite "
+"heavy Poketes there!"
+msgstr ""
+
+#: data
+msgid ""
+"If you want to hire me and stuff you can write me at lxgr@protonmail.com ."
+msgstr ""
+
+#: data
+msgid "In this cave you may find some interesting Poketes."
+msgstr ""
+
+#: data
+msgid "In this field you can find Poketes to fight against"
+msgstr ""
+
+#: data
+msgid "In this lake live..."
+msgstr ""
+
+#: src/pokete/classes/npcs/data/actions.py:36
+msgid "In this region lives the Würgos Pokete."
+msgstr ""
+
+#: src/pokete/__main__.py:364 src/pokete/classes/fight/fightmap/attack.py:96
+msgid "Info"
+msgstr ""
+
+#: src/pokete/classes/detail.py:105
+msgid "Initiative:"
+msgstr ""
+
+#: src/pokete/classes/detail.py:265
+msgid "Initiative:{p0}"
+msgstr ""
+
+#: src/pokete/classes/multiplayer/interactions/context_menu.py:17
+msgid "Interact"
+msgstr ""
+
+#: data
+msgid "Interface language: en or pl"
+msgstr ""
+
+#: src/pokete/classes/multiplayer/connector.py:51
+msgid "Invalid Poke: {p0}"
+msgstr ""
+
+#: data
+msgid "Inventory"
+msgstr ""
+
+#: data
+msgid "Is it true that you are interested in fighting our best trainers!?"
+msgstr ""
+
+#: data
+msgid "It is stronger than you might have expected"
+msgstr ""
+
+#: src/pokete/classes/attack_actions.py:88
+msgid "It started raining!"
+msgstr ""
+
+#: data
+msgid "Jessica the fighter"
+msgstr ""
+
+#: data
+msgid "Jessica"
+msgstr ""
+
+#: data
+msgid "Just chilling."
+msgstr ""
+
+#: data
+msgid "Karen"
+msgstr ""
+
+#: data
+msgid "Kevin"
+msgstr ""
+
+#: src/pokete/classes/items/learndisc.py:24
+msgid "LD-{attack}"
+msgstr ""
+
+#: data
+msgid "LEFT"
+msgstr ""
+
+#: src/pokete/classes/menu.py:54
+msgid "Language (restart)"
+msgstr ""
+
+#: data
+msgid "Last Trainer"
+msgstr ""
+
+#: data
+msgid "Laurena"
+msgstr ""
+
+#: data
+msgid "Laurin"
+msgstr ""
+
+#: data
+msgid "Leader Sebastian"
+msgstr ""
+
+#: data
+msgid "Leaf Storm"
+msgstr ""
+
+#: src/pokete/classes/multiplayer/menu.py:37
+msgid "Leave..."
+msgstr ""
+
+#: src/pokete/base/ui/elements/labels.py:24
+msgid "Left"
+msgstr ""
+
+#: src/pokete/classes/menu.py:52
+msgid "Load mods"
+msgstr ""
+
+#: data
+msgid "Look at my newest creation!"
+msgstr ""
+
+#: src/pokete/classes/poke/evomap.py:64
+msgid "Look!"
+msgstr ""
+
+#: data
+msgid "Looooser!"
+msgstr ""
+
+#: data
+msgid "Loser"
+msgstr ""
+
+#: data
+msgid "Luther"
+msgstr ""
+
+#: src/pokete/classes/poke/poke.py:123 src/pokete/classes/poke/poke.py:220
+msgid "Lvl:{p0}"
+msgstr ""
+
+#: data
+msgid "MAP"
+msgstr ""
+
+#: data
+msgid "MENU"
+msgstr ""
+
+#: data
+msgid "MOVE_POKETE"
+msgstr ""
+
+#: data
+msgid "Makes the Pokete angry and strong."
+msgstr ""
+
+#: data
+msgid "Makes the Pokete hide under the ground to minimize damage."
+msgstr ""
+
+#: data
+msgid ""
+"Makes the enemy fall asleep and stops it from attacking. This is reverted "
+"randomly."
+msgstr ""
+
+#: data
+msgid "Makes the enemy hurt it self. This is reverted randomly."
+msgstr ""
+
+#: data
+msgid "Makes the enemy sleepy."
+msgstr ""
+
+#: data
+msgid "Makes the enemy weaker."
+msgstr ""
+
+#: data
+msgid "Makes trainer leaving you alone"
+msgstr ""
+
+#: data
+msgid "Markus"
+msgstr ""
+
+#: data
+msgid "Master of the Flowers"
+msgstr ""
+
+#: data
+msgid "Meat Skewer"
+msgstr ""
+
+#: data
+msgid "Mega Arch"
+msgstr ""
+
+#: src/pokete/classes/menu.py:29
+msgid "Menu"
+msgstr ""
+
+#: data
+msgid "Mind Blow"
+msgstr ""
+
+#: src/pokete/base/tss.py:20 src/pokete/base/tss.py:43
+msgid "Minimum windowsize is 70x20"
+msgstr ""
+
+#: src/pokete/classes/mods.py:80
+msgid "Mod-loading Error"
+msgstr ""
+
+#: src/pokete/classes/multiplayer/menu.py:39
+msgid "Mode"
+msgstr ""
+
+#: src/pokete/classes/mods.py:47
+msgid "Mods are disabled!"
+msgstr ""
+
+#: src/pokete/classes/mods.py:45
+msgid "Mods are enabled!"
+msgstr ""
+
+#: src/pokete/classes/menu.py:36 src/pokete/classes/mods.py:69
+msgid "Mods"
+msgstr ""
+
+#: data
+msgid "Monica"
+msgstr ""
+
+#: data
+msgid "Moves the ground with tremendous force."
+msgstr ""
+
+#: data
+msgid "MowCow-Burger Restaurant"
+msgstr ""
+
+#: data
+msgid "Mowcow Meadow"
+msgstr ""
+
+#: src/pokete/classes/multiplayer/menu.py:36
+msgid "Multiplayer (Beta)"
+msgstr ""
+
+#: data
+msgid "Muuuuuu!"
+msgstr ""
+
+#: data
+msgid "My Pokete is not just rare"
+msgstr ""
+
+#: data
+msgid "My Pokete is one of a kind"
+msgstr ""
+
+#: data
+msgid "My Pokete is sooo sick!"
+msgstr ""
+
+#: data
+msgid "My Pokete is very effective against bird Poketes"
+msgstr ""
+
+#: data
+msgid "My Pokete will blow you away!"
+msgstr ""
+
+#: data
+msgid "My Steini is old but classy"
+msgstr ""
+
+#: data
+msgid "Mysterious Cave"
+msgstr ""
+
+#: src/pokete/classes/poke/stats.py:129
+msgid "N/A"
+msgstr ""
+
+#: data
+msgid "NATURE_INFO"
+msgstr ""
+
+#: data
+msgid "NOOOOOO; WHYYY ARE YOU BETTER ??!!!1!!!111"
+msgstr ""
+
+#: data
+msgid "NOT MY STEINI!!!1!!1"
+msgstr ""
+
+#: src/pokete/__main__.py:430
+msgid "Name"
+msgstr ""
+
+#: src/pokete/__main__.py:428
+msgid "Name:"
+msgstr ""
+
+#: data
+msgid "Nature"
+msgstr ""
+
+#: src/pokete/classes/poke/nature.py:102
+msgid "Nature: {p0}"
+msgstr ""
+
+#: data
+msgid "Nice Town Cave"
+msgstr ""
+
+#: data
+msgid "Nice Town"
+msgstr ""
+
+#: data
+msgid "Nice."
+msgstr ""
+
+#: src/pokete/classes/dex.py:36
+msgid "Night"
+msgstr ""
+
+#: data
+msgid "No problem!"
+msgstr ""
+
+#: data src/pokete/base/input_loops/ask/bool.py:27
+#: src/pokete/classes/achievements.py:89
+msgid "No"
+msgstr ""
+
+#: data
+msgid "No, but the guy over there is."
+msgstr ""
+
+#: src/pokete/classes/roadmap.py:269
+msgid "Nothing"
+msgstr ""
+
+#: src/pokete/classes/npcs/data/actions.py:121
+msgid "Now I can still serve the best MowCow-Burgers!"
+msgstr ""
+
+#: src/pokete/__main__.py:451
+msgid "Now go out and become the best!"
+msgstr ""
+
+#: src/pokete/base/input_loops/ask/ok.py:23
+msgid "OK"
+msgstr ""
+
+#: src/pokete/classes/menu.py:45 src/pokete/classes/menu.py:46
+#: src/pokete/classes/menu.py:48 src/pokete/classes/menu.py:50
+#: src/pokete/classes/menu.py:52
+msgid "Off"
+msgstr ""
+
+#: src/pokete/classes/npcs/data/actions.py:117
+msgid "Oh great!"
+msgstr ""
+
+#: data
+msgid "Oh man, if only I had a big and tasty MowCow-Burger...!"
+msgstr ""
+
+#: data
+msgid "Oh no"
+msgstr ""
+
+#: data
+msgid "Oh!"
+msgstr ""
+
+#: data
+msgid "Oh"
+msgstr ""
+
+#: data
+msgid "Oh, I lost!"
+msgstr ""
+
+#: src/pokete/classes/npcs/data/actions.py:22
+msgid "Oh, cool!"
+msgstr ""
+
+#: data
+msgid "Oh, yours is better than mine!"
+msgstr ""
+
+#: src/pokete/classes/npcs/data/actions.py:138
+msgid "Ohhh man..."
+msgstr ""
+
+#: data
+msgid "Ohhh nooo!"
+msgstr ""
+
+#: data
+msgid "Old House"
+msgstr ""
+
+#: data
+msgid "Old geezer"
+msgstr ""
+
+#: data
+msgid "Old man"
+msgstr ""
+
+#: data
+msgid "Old woman"
+msgstr ""
+
+#: src/pokete/classes/menu.py:45 src/pokete/classes/menu.py:46
+#: src/pokete/classes/menu.py:48 src/pokete/classes/menu.py:50
+#: src/pokete/classes/menu.py:52
+msgid "On"
+msgstr ""
+
+#: data
+msgid "One day I found this very special Poketeball..."
+msgstr ""
+
+#: data
+msgid "Oooooh!"
+msgstr ""
+
+#: data
+msgid "Our best trainer will defeat you though!"
+msgstr ""
+
+#: data
+msgid "POKEDEX"
+msgstr ""
+
+#: data
+msgid ""
+"Paralyses the enemy and stops it from attacking. This is reverted randomly."
+msgstr ""
+
+#: data
+msgid "Part of light areas near Sunny Dale."
+msgstr ""
+
+#: data
+msgid "Part of the great agracultural landscape near Agrawos."
+msgstr ""
+
+#: data
+msgid "Pebble Fire"
+msgstr ""
+
+#: data
+msgid "Peck"
+msgstr ""
+
+#: data
+msgid "Pinches the enemy with its strong shell."
+msgstr ""
+
+#: src/pokete/classes/menu.py:34
+msgid "Playername:"
+msgstr ""
+
+#: src/pokete/classes/multiplayer/connector.py:58
+msgid "Please enter the servers host you want to connect to."
+msgstr ""
+
+#: src/pokete/classes/multiplayer/connector.py:82
+msgid "Please enter the username you want to use on the server"
+msgstr ""
+
+#: data
+msgid "Poison Bite"
+msgstr ""
+
+#: data
+msgid "Poison Spores"
+msgstr ""
+
+#: data
+msgid "Poison Thorn"
+msgstr ""
+
+#: data
+msgid ""
+"Poisons the enemy and damages the enemy with 1 HP every round. This is "
+"reverted randomly."
+msgstr ""
+
+#: data
+msgid "Poisopla is one of the strongest local Poketes!"
+msgstr ""
+
+#: src/pokete/classes/side_loops.py:40
+msgid ""
+"Pokete v{version} -- {codename}\n"
+"by lxgr-linux <lxgr@protonmail.com>\n"
+"\n"
+"This software is licensed under GPLv3. A copy of the license is included with the game.\n"
+"Contributions, especially new Poketes, are welcome:\n"
+"https://github.com/lxgr-linux/pokete"
+msgstr ""
+
+#: data
+msgid "Pokete-Care"
+msgstr ""
+
+#: data
+msgid "Poketeball"
+msgstr ""
+
+#: data
+msgid "Poketedex"
+msgstr ""
+
+#: data
+msgid "Polish"
+msgstr ""
+
+#: data
+msgid "Poor man"
+msgstr ""
+
+#: data
+msgid "Power Bite"
+msgstr ""
+
+#: data
+msgid "Power Peck"
+msgstr ""
+
+#: data
+msgid "Power Roll"
+msgstr ""
+
+#: src/pokete/base/input/hotkeys.py:71
+msgid "Quick attack {number}"
+msgstr ""
+
+#: src/pokete/classes/map_additions/center.py:108
+msgid "Quit"
+msgstr ""
+
+#: data
+msgid "Quit..."
+msgstr ""
+
+#: data
+msgid "REMOVE"
+msgstr ""
+
+#: data
+msgid "RIGHT"
+msgstr ""
+
+#: data
+msgid "RUN"
+msgstr ""
+
+#: data
+msgid "Rain dance"
+msgstr ""
+
+#: data
+msgid "Refills the Poketes attack APs."
+msgstr ""
+
+#: data
+msgid "Regenerates 2 HP."
+msgstr ""
+
+#: src/pokete/classes/menu.py:41
+msgid "Return to main menu"
+msgstr ""
+
+#: src/pokete/base/ui/elements/labels.py:25
+msgid "Right"
+msgstr ""
+
+#: data
+msgid "Roadmap"
+msgstr ""
+
+#: data
+msgid "Rock Smash"
+msgstr ""
+
+#: data
+msgid "Rock-hard Rick"
+msgstr ""
+
+#: data
+msgid "Rock-ville"
+msgstr ""
+
+#: data
+msgid "Rocky Hotel"
+msgstr ""
+
+#: data
+msgid "Rolls over the enemy."
+msgstr ""
+
+#: data
+msgid "Root Slap"
+msgstr ""
+
+#: data
+msgid "Root Strangler"
+msgstr ""
+
+#: data
+msgid "Route 0"
+msgstr ""
+
+#: data
+msgid "Route 1"
+msgstr ""
+
+#: data
+msgid "Route 2"
+msgstr ""
+
+#: data
+msgid "Route 3"
+msgstr ""
+
+#: data
+msgid "Route 4"
+msgstr ""
+
+#: data
+msgid "Route 5"
+msgstr ""
+
+#: data
+msgid "Route 6"
+msgstr ""
+
+#: data
+msgid "Route 7"
+msgstr ""
+
+#: data
+msgid "SCREEN_SWITCH"
+msgstr ""
+
+#: data
+msgid "STATS_INFO"
+msgstr ""
+
+#: data
+msgid "Sadly, all Poketes with this attack have been extinct for years."
+msgstr ""
+
+#: data
+msgid "Samantha"
+msgstr ""
+
+#: data
+msgid "Sand Throw"
+msgstr ""
+
+#: src/pokete/startup/command.py:73
+msgid ""
+"Save files and logs: {path}\n"
+"Contributions are welcome. See README.md for details.\n"
+"This software is licensed under GPLv3; a copy accompanies the game."
+msgstr ""
+
+#: src/pokete/classes/menu.py:48
+msgid "Save trainers"
+msgstr ""
+
+#: src/pokete/classes/menu.py:39
+msgid "Save"
+msgstr ""
+
+#: src/pokete/classes/menu.py:105
+msgid "Saving...."
+msgstr ""
+
+#: data
+msgid "Schmetter"
+msgstr ""
+
+#: data
+msgid "Schmetters the enemy away."
+msgstr ""
+
+#: data
+msgid "Screw off!"
+msgstr ""
+
+#: data
+msgid "Searching for Poketes"
+msgstr ""
+
+#: data
+msgid "Second Trainer"
+msgstr ""
+
+#: src/pokete/classes/pokete_care/npc_action.py:62
+msgid "See you!"
+msgstr ""
+
+#: src/pokete/classes/map_additions/center.py:105
+msgid "See your full deck"
+msgstr ""
+
+#: src/pokete/classes/map_additions/center.py:110
+msgid "Select"
+msgstr ""
+
+#: data
+msgid ""
+"Sets the enemy on fire and damages them with 2 HP every round. This is "
+"reverted randomly."
+msgstr ""
+
+#: src/pokete/startup/command.py:58
+msgid "Sets the path for save-files and logs, default is: {path}"
+msgstr ""
+
+#: data
+msgid "She"
+msgstr ""
+
+#: data
+msgid "Shell Pinch"
+msgstr ""
+
+#: data
+msgid "Shines a bright light at the enemy and dazzles them."
+msgstr ""
+
+#: data
+msgid "Shock"
+msgstr ""
+
+#: data
+msgid "Shop!"
+msgstr ""
+
+#: data
+msgid "Shop"
+msgstr ""
+
+#: data
+msgid "Shows help for a specific command"
+msgstr ""
+
+#: data
+msgid "Simon"
+msgstr ""
+
+#: src/pokete/classes/multiplayer/menu.py:35
+msgid "Singleplayer"
+msgstr ""
+
+#: data
+msgid "Snooze"
+msgstr ""
+
+#: data
+msgid "Snow Storm"
+msgstr ""
+
+#: data
+msgid "So loud that it confuses the enemy."
+msgstr ""
+
+#: data
+msgid "Some small patches of grass surrounded by forrest, near Nice Town."
+msgstr ""
+
+#: src/pokete/base/ui/elements/labels.py:18
+msgid "Space"
+msgstr ""
+
+#: data
+msgid "Special Smell"
+msgstr ""
+
+#: data
+msgid "Spikes"
+msgstr ""
+
+#: data
+msgid ""
+"Spreads a special smell that will make the enemy confused but very happy."
+msgstr ""
+
+#: data
+msgid "Stabs a giant ice spike into the enemy."
+msgstr ""
+
+#: data
+msgid "Stabs the enemy with a giant diamond spike."
+msgstr ""
+
+#: data
+msgid "Stabs the enemy with some small ice spikes."
+msgstr ""
+
+#: data
+msgid "Steven the Big"
+msgstr ""
+
+#: data
+msgid "Stone crush"
+msgstr ""
+
+#: data
+msgid "Storm Gale"
+msgstr ""
+
+#: data
+msgid "Sucker"
+msgstr ""
+
+#: data
+msgid "Sucks 1 HP from the enemy and adds to its own."
+msgstr ""
+
+#: data
+msgid "Sucks 2 HP from the enemy and adds to its own."
+msgstr ""
+
+#: data
+msgid "Summons a snow storm full of ice spikes onto the enemy."
+msgstr ""
+
+#: data
+msgid "Summons rainy clouds."
+msgstr ""
+
+#: data
+msgid "Sunny Beach"
+msgstr ""
+
+#: data
+msgid "Sunnydale Lake"
+msgstr ""
+
+#: data
+msgid "Sunnydale"
+msgstr ""
+
+#: data
+msgid "Super Sucker"
+msgstr ""
+
+#: data
+msgid "Super potion"
+msgstr ""
+
+#: data
+msgid "Superball"
+msgstr ""
+
+#: data
+msgid "Supercow Power"
+msgstr ""
+
+#: data
+msgid "Sweet smell"
+msgstr ""
+
+#: data
+msgid "Sword of Ice"
+msgstr ""
+
+#: data
+msgid "Tackle"
+msgstr ""
+
+#: data
+msgid "Tackles the enemy very hard."
+msgstr ""
+
+#: data
+msgid "Tail Swipe"
+msgstr ""
+
+#: data
+msgid "Thanks a lot!"
+msgstr ""
+
+#: data
+msgid "That was already quite good!"
+msgstr ""
+
+#: data
+msgid "The Fields of Agrawos"
+msgstr ""
+
+#: data
+msgid "The Old Roots Hit"
+msgstr ""
+
+#: data
+msgid "The Temple of the Wheeto"
+msgstr ""
+
+#: data
+msgid "The Undetermined"
+msgstr ""
+
+#: src/pokete/classes/menu.py:92
+msgid "The chosen character has to be a valid single-space character!"
+msgstr ""
+
+#: src/pokete/classes/npcs/data/actions.py:131
+msgid "The cook gifted you $1000. Do you want to accept it?"
+msgstr ""
+
+#: data
+msgid ""
+"The dark and fiery souls of those who got burned to death by the hot sun!"
+msgstr ""
+
+#: src/pokete/base/input/hotkeys.py:220
+msgid ""
+"The folowing keys are not set:\n"
+"{p0}\n"
+"Should defaults be loaded for those keys?"
+msgstr ""
+
+#: data
+msgid "The good stuff!"
+msgstr ""
+
+#: data
+msgid "The good stuff...!"
+msgstr ""
+
+#: data
+msgid "The hardest bite you can think of."
+msgstr ""
+
+#: src/pokete/classes/npcs/data/actions.py:79
+msgid "The man gifted you $100. Do you want to accept it?"
+msgstr ""
+
+#: data
+msgid "The man"
+msgstr ""
+
+#: data
+msgid "The only thing that remained from them is this Learning Disc."
+msgstr ""
+
+#: data
+msgid "The other trainers wont be as easy!"
+msgstr ""
+
+#: src/pokete/classes/pre_game.py:124
+msgid ""
+"The save file was created on version {saved_version}; the current version is"
+" {current_version}. Downgrading may cause data loss! Do you want to "
+"continue?"
+msgstr ""
+
+#: data
+msgid "The shore of a lake near an olf fisher village."
+msgstr ""
+
+#: data
+msgid "The shores of the great Sunnydale lake."
+msgstr ""
+
+#: data
+msgid "The woodland edge at the foot of a great mountain full of caves."
+msgstr ""
+
+#: src/pokete/classes/npcs/data/actions.py:29
+msgid "The young boy gifted you $200. Do you want to accept it?"
+msgstr ""
+
+#: data
+msgid "There is a thunderstorm going on!"
+msgstr ""
+
+#: data
+msgid "They got some very heavy Poketes in there!"
+msgstr ""
+
+#: data
+msgid "They have some speeecial abilities!"
+msgstr ""
+
+#: data
+msgid "They"
+msgstr ""
+
+#: data
+msgid "Third Trainer"
+msgstr ""
+
+#: data
+msgid "This apt has supercow-powers!"
+msgstr ""
+
+#: data
+msgid "This beach is the most beautiful in the region!"
+msgstr ""
+
+#: data
+msgid "This city has been the home of plant Poketes for generations."
+msgstr ""
+
+#: data
+msgid "This is a cool Pokete I found on my field!"
+msgstr ""
+
+#: data
+msgid ""
+"This is a very helpful potion that will save your Pokete in risky fights!"
+msgstr ""
+
+#: data
+msgid "This is the farming part of the city of Agrawos!"
+msgstr ""
+
+#: data
+msgid "This is the great Pokete arena of Flowy Town."
+msgstr ""
+
+#: data
+msgid "This is the great git tree of Flowy Town."
+msgstr ""
+
+#: data
+msgid "This is the temple of the Wheeto, they have the goood stuff in there."
+msgstr ""
+
+#: data
+msgid "This is the town hall of Rock-ville."
+msgstr ""
+
+#: data
+msgid "This region is full of stone and ground Poketes"
+msgstr ""
+
+#: data
+msgid "This server"
+msgstr ""
+
+#: data
+msgid "This town is known for its bird Poketes"
+msgstr ""
+
+#: data
+msgid "This was unfortunate!"
+msgstr ""
+
+#: data
+msgid "Those Poketes make you craaaaaazy!"
+msgstr ""
+
+#: data
+msgid "Those are fucking beasts!"
+msgstr ""
+
+#: data
+msgid "Those years of training were worth it"
+msgstr ""
+
+#: data
+msgid "Thows web towards enemy in order to immobilize."
+msgstr ""
+
+#: data
+msgid "Throws a heck of a lot of diamond spikes at the enemy."
+msgstr ""
+
+#: data
+msgid "Throws an Euler brick at the enemy."
+msgstr ""
+
+#: data
+msgid "Throws sand at the enemy and makes it blind."
+msgstr ""
+
+#: data
+msgid ""
+"To get through this town you have to win against the best trainers of "
+"Deepest Forest!"
+msgstr ""
+
+#: data
+msgid "Toe Breaker"
+msgstr ""
+
+#: data
+msgid "Town Hall"
+msgstr ""
+
+#: data
+msgid "Trade"
+msgstr ""
+
+#: data
+msgid "Treat"
+msgstr ""
+
+#: src/pokete/classes/dex.py:57
+msgid "Type: "
+msgstr ""
+
+#: src/pokete/classes/attack.py:48 src/pokete/classes/detail.py:104
+msgid "Type:"
+msgstr ""
+
+#: data
+msgid "UP"
+msgstr ""
+
+#: data
+msgid "Uhhh yeah!"
+msgstr ""
+
+#: src/pokete/classes/pokete_care/npc_action.py:60
+msgid "Until next time!"
+msgstr ""
+
+#: src/pokete/base/ui/elements/labels.py:22
+msgid "Up"
+msgstr ""
+
+#: data
+msgid "Upgrades a Pokete by a whole level."
+msgstr ""
+
+#: data
+msgid "Upgrades defense and attack points."
+msgstr ""
+
+#: src/pokete/util/command/command.py:50
+msgid "Usage:"
+msgstr ""
+
+#: src/pokete/classes/multiplayer/connector.py:85
+msgid "Username"
+msgstr ""
+
+#: src/pokete/classes/multiplayer/connector.py:83
+msgid "Username:"
+msgstr ""
+
+#: data
+msgid "Uses old and crusty roots to slap the enemy."
+msgstr ""
+
+#: data
+msgid "Uses old and crusty roots to strangle the enemy."
+msgstr ""
+
+#: src/pokete/classes/multiplayer/connector.py:49
+msgid "Version mismatch: {p0}"
+msgstr ""
+
+#: data
+msgid "Very delicious and low fat water Pokete."
+msgstr ""
+
+#: src/pokete/classes/menu.py:51
+msgid "Volume"
+msgstr ""
+
+#: data
+msgid "WTF r u doing here?"
+msgstr ""
+
+#: src/pokete/classes/multiplayer/remote_fight/controller.py:37
+msgid "Waiting for fight..."
+msgstr ""
+
+#: data
+msgid "Wanderer Murrad"
+msgstr ""
+
+#: src/pokete/classes/map_additions/center.py:190
+msgid "Wanna buy something?"
+msgstr ""
+
+#: data
+msgid "Wanna see my sick-ass Pokete?"
+msgstr ""
+
+#: data
+msgid "Want one?"
+msgstr ""
+
+#: data
+msgid "We are the elite of Rock-ville!"
+msgstr ""
+
+#: src/pokete/classes/pokete_care/npc_action.py:32
+msgid "We will take care of it."
+msgstr ""
+
+#: src/pokete/__main__.py:364
+msgid "Weather"
+msgstr ""
+
+#: data
+msgid "Web attack"
+msgstr ""
+
+#: data
+msgid "Welcome on the server!"
+msgstr ""
+
+#: data
+msgid "Welcome to Agrawos!"
+msgstr ""
+
+#: data
+msgid "Welcome to Deepest Forest!"
+msgstr ""
+
+#: src/pokete/__main__.py:427
+msgid ""
+"Welcome to Pokete!\n"
+"Please choose your name!\n"
+msgstr ""
+
+#: data
+msgid "Welcome to Pokete-Care!"
+msgstr ""
+
+#: data
+msgid ""
+"Welcome to Rock-ville, the highest place in the Pokete world and home of all"
+" stone Poketes."
+msgstr ""
+
+#: data
+msgid "Welcome to Sunnydale!"
+msgstr ""
+
+#: data
+msgid "Welcome to the Deepest Forest Pokete Arena"
+msgstr ""
+
+#: src/pokete/classes/map_additions/center.py:128
+msgid "Welcome to the Pokete-Center"
+msgstr ""
+
+#: src/pokete/classes/map_additions/center.py:190
+msgid "Welcome to the Pokete-Shop"
+msgstr ""
+
+#: data
+msgid "Welcome to the Rocky Hotel!"
+msgstr ""
+
+#: data
+msgid "Welcome to the fields of Agrawos!"
+msgstr ""
+
+#: data
+msgid "Welcome to the server"
+msgstr ""
+
+#: data
+msgid "Wet Slap"
+msgstr ""
+
+#: data
+msgid "Whaddup?"
+msgstr ""
+
+#: data
+msgid "What are you doing here at the beach?"
+msgstr ""
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:265
+#: src/pokete/classes/map_additions/center.py:129
+msgid "What do you want to do?"
+msgstr ""
+
+#: data
+msgid "When I was your age... I also was a trainer."
+msgstr ""
+
+#: data
+msgid "Where are you from?"
+msgstr ""
+
+#: data
+msgid "Wind Blow"
+msgstr ""
+
+#: data
+msgid "Wing Hit"
+msgstr ""
+
+#: data
+msgid ""
+"With its plant Poketes, Flowy Town may be the greenest spot in the Pokete "
+"world and with the great git-tree it may also be one of the most "
+"spectacular."
+msgstr ""
+
+#: data
+msgid "With those treats you can level up one of your Poketes by a level!"
+msgstr ""
+
+#: data
+msgid "Woodsman Bert"
+msgstr ""
+
+#: data
+msgid "Would you like a treat?"
+msgstr ""
+
+#: data
+msgid "Wow."
+msgstr ""
+
+#: src/pokete/classes/poke/poke.py:130 src/pokete/classes/poke/poke.py:215
+msgid "XP:{p0}/{p1}"
+msgstr ""
+
+#: data
+msgid "Yeaaah!"
+msgstr ""
+
+#: data src/pokete/base/input_loops/ask/bool.py:24
+#: src/pokete/classes/achievements.py:89
+msgid "Yes"
+msgstr ""
+
+#: data
+msgid "Yes, of course"
+msgstr ""
+
+#: data
+msgid "Yo!"
+msgstr ""
+
+#: data
+msgid "Yoooo!"
+msgstr ""
+
+#: data
+msgid "You and your Poketes look exhausted."
+msgstr ""
+
+#: data
+msgid "You are a very good trainer!"
+msgstr ""
+
+#: src/pokete/classes/npcs/data/actions.py:119
+msgid "You brought me a level {p0} Mowcow!"
+msgstr ""
+
+#: data
+msgid ""
+"You can contribute to this game at https://github.com/lxgr-linux/pokete ."
+msgstr ""
+
+#: data
+msgid "You can find some in the sand fields."
+msgstr ""
+
+#: data
+msgid "You can keep it!"
+msgstr ""
+
+#: data
+msgid "You can now leave Deepest Forest"
+msgstr ""
+
+#: src/pokete/classes/fight/items/balls.py:59
+msgid "You caught {p0}!"
+msgstr ""
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:416
+msgid "You failed to run away!"
+msgstr ""
+
+#: src/pokete/classes/npcs/data/actions.py:91
+msgid "You first have to defeat our arena leader!"
+msgstr ""
+
+#: src/pokete/classes/landscape.py:125
+msgid "You found: {item} × {count}!"
+msgstr ""
+
+#: src/pokete/classes/npcs/data/actions.py:23
+msgid "You have a Choka!"
+msgstr ""
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:371
+msgid "You have choosen {p0}"
+msgstr ""
+
+#: data
+msgid "You have to pass my field to reach Agrawos!"
+msgstr ""
+
+#: data
+msgid ""
+"You may have noticed that traveling between cities is not so comfortable "
+"nowadays."
+msgstr ""
+
+#: src/pokete/classes/fight/items/balls.py:72
+msgid "You missed!"
+msgstr ""
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:420
+msgid "You ran away!"
+msgstr ""
+
+#: src/pokete/classes/npcs/data/actions.py:69
+msgid "You received: {p0} at level {p1}."
+msgstr ""
+
+#: src/pokete/classes/fight/items/balls.py:39
+msgid "You threw a {p0}!"
+msgstr ""
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:339
+msgid "You used {p0}"
+msgstr ""
+
+#: data
+msgid "You were able to defeat me?"
+msgstr ""
+
+#: data
+msgid "You were lucky!"
+msgstr ""
+
+#: src/pokete/__main__.py:450
+msgid "You will be the best Pokete-Trainer in Nice town."
+msgstr ""
+
+#: data
+msgid "You wont be ready for my Treenator!"
+msgstr ""
+
+#: data
+msgid "Your Pokete is nooot from this planet!"
+msgstr ""
+
+#: src/pokete/classes/map_additions/center.py:145
+msgid "Your Poketes are now healed!"
+msgstr ""
+
+#: data
+msgid "Your deck"
+msgstr ""
+
+#: data
+msgid "Your full deck"
+msgstr ""
+
+#: data
+msgid "Your home"
+msgstr ""
+
+#: data
+msgid "Your journey came to a fast end!"
+msgstr ""
+
+#: src/pokete/classes/pokete_care/npc_action.py:40
+msgid "Your {p0} gained {p1}xp and reached level {p2}!"
+msgstr ""
+
+#: src/pokete/classes/achievements.py:93
+msgid ""
+"\n"
+"At: "
+msgstr ""
+
+#: src/pokete/classes/poke/stats.py:153
+msgid ""
+"\n"
+"Caught with: {p0}"
+msgstr ""
+
+#: src/pokete/classes/poke/stats.py:155
+msgid ""
+"\n"
+"Evolved date: {p0}"
+msgstr ""
+
+#: src/pokete/classes/dex.py:61
+msgid ""
+"\n"
+"HP: {p0}\n"
+"Attack: {p1}\n"
+"Defense: {p2}\n"
+"Initiative: {p3}\n"
+"Active: "
+msgstr ""
+
+#: src/pokete/classes/poke/stats.py:167
+msgid ""
+"\n"
+"Number of lost battles: {p0}"
+msgstr ""
+
+#: src/pokete/classes/poke/stats.py:171
+msgid ""
+"\n"
+"Number of run away: {p0}"
+msgstr ""
+
+#: src/pokete/classes/poke/stats.py:157
+msgid ""
+"\n"
+"Number of total battles: {p0}"
+msgstr ""
+
+#: src/pokete/classes/poke/stats.py:163
+msgid ""
+"\n"
+"Number of won battles: {p0}"
+msgstr ""
+
+#: src/pokete/classes/poke/stats.py:150
+msgid ""
+"\n"
+"Ownership date: {p0}"
+msgstr ""
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:428
+msgid ""
+"\n"
+"That was not effective! "
+msgstr ""
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:429
+msgid ""
+"\n"
+"That was very effective! "
+msgstr ""
+
+#: src/pokete/classes/poke/stats.py:175
+msgid ""
+"\n"
+"Total XP earned: {p0}\n"
+msgstr ""
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:402
+msgid ""
+"\n"
+"XP + {p0}"
+msgstr ""
+
+#: src/pokete/classes/dex.py:43
+msgid ""
+"\n"
+"\n"
+" Evolves into {p0}."
+msgstr ""
+
+#: src/pokete/classes/roadmap.py:268
+msgid ""
+"\n"
+"\n"
+" Here you can find: "
+msgstr ""
+
+#: src/pokete/classes/poke/nature.py:109
+msgid ""
+"\n"
+"\n"
+" That means it has {p0} attack, {p1} defense and {p2} initiative points compared to normal Poketes of its kind."
+msgstr ""
+
+#: data
+msgid "bird"
+msgstr ""
+
+#: src/pokete/classes/effects.py:201
+msgid "burned it self!"
+msgstr ""
+
+#: src/pokete/base/ui/elements/labels.py:58
+msgid "close"
+msgstr ""
+
+#: data
+msgid "electro"
+msgstr ""
+
+#: src/pokete/classes/poke/poke.py:160
+msgid "enemy"
+msgstr ""
+
+#: src/pokete/classes/multiplayer/exceptions.py:23
+msgid "failed to connect"
+msgstr ""
+
+#: data
+msgid "fire"
+msgstr ""
+
+#: data
+msgid "flying"
+msgstr ""
+
+#: src/pokete/classes/effects.py:231
+msgid "got damaged through poison!"
+msgstr ""
+
+#: data
+msgid "ground"
+msgstr ""
+
+#: data
+msgid "ice"
+msgstr ""
+
+#: src/pokete/base/input_loops/ask/bool.py:36
+msgid "info"
+msgstr ""
+
+#: src/pokete/classes/poke/nature.py:125
+msgid "less"
+msgstr ""
+
+#: src/pokete/classes/poke/nature.py:126
+msgid "more"
+msgstr ""
+
+#: data
+msgid "normal"
+msgstr ""
+
+#: data
+msgid "plant"
+msgstr ""
+
+#: data
+msgid "poison"
+msgstr ""
+
+#: src/pokete/classes/inv/inv.py:31
+msgid "remove"
+msgstr ""
+
+#: data
+msgid "snake"
+msgstr ""
+
+#: data
+msgid "stone"
+msgstr ""
+
+#: src/pokete/classes/poke/nature.py:123
+msgid "the same"
+msgstr ""
+
+#: data
+msgid "undead"
+msgstr ""
+
+#: src/pokete/classes/poke/nature.py:102
+msgid "very "
+msgstr ""
+
+#: data
+msgid "water"
+msgstr ""
+
+#: src/pokete/classes/poke/poke.py:160
+msgid "you"
+msgstr ""
+
+#: src/pokete/classes/learnattack.py:60
+msgid "{deck}:Details, {info}:Info"
+msgstr ""
+
+#: src/pokete/classes/multiplayer/interactions/movemap_deco.py:15
+msgid "{key}: act"
+msgstr ""
+
+#: data
+msgid "{name} looks up at you with adoring eyes!"
+msgstr ""
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:431
+msgid "{name} missed!"
+msgstr ""
+
+#: data
+msgid "{name} nuzzles against you affectionately!"
+msgstr ""
+
+#: data
+msgid "{name} nuzzles against you happily!"
+msgstr ""
+
+#: data
+msgid "{name} nuzzles against you lovingly!"
+msgstr ""
+
+#: data
+msgid "{name} purrs contentedly in your arms!"
+msgstr ""
+
+#: data
+msgid "{name} snuggles closer to you!"
+msgstr ""
+
+#: src/pokete/classes/poke/stats.py:181
+msgid "{name} statistics"
+msgstr ""
+
+#: src/pokete/classes/poke/evomap.py:81
+msgid "{p0} evolved into {p1}!"
+msgstr ""
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:448
+msgid "{p0} hurt itself!"
+msgstr ""
+
+#: src/pokete/classes/effects.py:82
+msgid "{p0} is already "
+msgstr ""
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:413
+msgid "{p0} is dead!"
+msgstr ""
+
+#: src/pokete/classes/effects.py:65
+msgid "{p0} is not affected by "
+msgstr ""
+
+#: src/pokete/classes/effects.py:75
+msgid "{p0} is now "
+msgstr ""
+
+#: src/pokete/classes/effects.py:110 src/pokete/classes/effects.py:148
+#: src/pokete/classes/effects.py:205 src/pokete/classes/effects.py:246
+msgid "{p0} is still "
+msgstr ""
+
+#: src/pokete/classes/learnattack.py:143
+msgid "{p0} learned {p1}!"
+msgstr ""
+
+#: src/pokete/classes/inv/inv.py:65
+msgid "{p0} reached level {p1}!"
+msgstr ""
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:391
+msgid "{p0} reached lvl {p1}!"
+msgstr ""
+
+#: src/pokete/classes/npcs/npcs.py:217
+msgid "{p0} started a fight!"
+msgstr ""
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:434
+msgid "{p0} used {p1}! {p2}"
+msgstr ""
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:348
+msgid "{p0} used {p1}!"
+msgstr ""
+
+#: src/pokete/classes/learnattack.py:117
+msgid "{p0} wants to learn {p1}!"
+msgstr ""
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:401
+msgid "{p0} won!"
+msgstr ""
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:68
+msgid "{p0}: Attack"
+msgstr ""
+
+#: src/pokete/classes/movemap.py:46
+msgid "{p0}: Clock"
+msgstr ""
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:77
+#: src/pokete/classes/movemap.py:41
+msgid "{p0}: Deck"
+msgstr ""
+
+#: src/pokete/classes/movemap.py:45
+msgid "{p0}: Dex"
+msgstr ""
+
+#: src/pokete/classes/deck.py:37
+msgid "{p0}: Exit  "
+msgstr ""
+
+#: src/pokete/classes/detail.py:107
+msgid "{p0}: Exit"
+msgstr ""
+
+#: src/pokete/classes/deck.py:41
+msgid "{p0}: Free"
+msgstr ""
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:74
+msgid "{p0}: Inv"
+msgstr ""
+
+#: src/pokete/classes/movemap.py:44
+msgid "{p0}: Inv."
+msgstr ""
+
+#: src/pokete/classes/movemap.py:43
+msgid "{p0}: Map"
+msgstr ""
+
+#: src/pokete/classes/deck.py:153 src/pokete/classes/deck.py:206
+#: src/pokete/classes/deck.py:39
+msgid "{p0}: Move    "
+msgstr ""
+
+#: src/pokete/classes/deck.py:183
+msgid "{p0}: Move to "
+msgstr ""
+
+#: src/pokete/classes/detail.py:110
+msgid "{p0}: Nature"
+msgstr ""
+
+#: src/pokete/classes/movemap.py:42
+msgid "{p0}: Quit"
+msgstr ""
+
+#: src/pokete/classes/fight/fightmap/fightmap.py:71
+msgid "{p0}: Run!"
+msgstr ""
+
+#: src/pokete/classes/detail.py:113
+msgid "{p0}: Statistics"
+msgstr ""
+
+#: src/pokete/classes/detail.py:116
+msgid "{p0}: Use ability"
+msgstr ""
+
+#: src/pokete/classes/movemap.py:47
+msgid "{p0}: help"
+msgstr ""
+
+#: src/pokete/classes/poke/evomap.py:67
+msgid ""
+"{p0}\n"
+"{p1} is evolving!"
+msgstr ""
+
+#: src/pokete/classes/npcs/npcs.py:220
+msgid ""
+"{p0}\n"
+"{p1} used {p2} against you!"
+msgstr ""
+
+#: src/pokete/classes/roadmap.py:166
+msgid ""
+"│ Legend:\n"
+"│ P-Pokecenter\n"
+"│ $-Shop\n"
+"│ C-PoketeCare\n"
+"│ A-Arena\n"
+"└──────────────"
+msgstr ""

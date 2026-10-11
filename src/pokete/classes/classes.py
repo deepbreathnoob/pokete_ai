@@ -1,10 +1,14 @@
 """Contains just some small classes"""
 
 from typing import Optional
+
 import scrap_engine as se
+
 import pokete.base.game_map as gm
 from pokete.base.periodic_event_manager import PeriodicEvent
 from pokete.classes.asset_service.resources import PokeArgs
+from pokete.i18n import _ as tr
+
 from .weather import Weather
 
 
@@ -36,7 +40,7 @@ class PlayMap(gm.GameMap):
         super().__init__(height, width, name=name)
         self.song = song
         self.trainers = trainers
-        self.pretty_name = pretty_name
+        self.pretty_name = tr(pretty_name)
         self.poke_args = poke_args
         self.w_poke_args = w_poke_args
         self.registry = {}
@@ -74,7 +78,9 @@ class OutP(se.Text):
         """Rechar and show wrapper
         ARGS:
             text: String that's printed out"""
-        self.rechar(text)
+        from pokete.util.liner import wrap_text
+
+        self.rechar(wrap_text(text, self.map.width - self.x - 1))
         self.map.full_show()
 
     def append(self, *args):

@@ -1,10 +1,12 @@
 """Contains the Healthbar class"""
 
 import time
+
 import scrap_engine as se
 
-from pokete.release import SPEED_OF_TIME
 from pokete.base.color import Color
+from pokete.i18n import _ as tr
+from pokete.release import SPEED_OF_TIME
 
 
 class HealthBar(se.Text):
@@ -37,14 +39,16 @@ class HealthBar(se.Text):
         while oldhp != self.poke.hp and oldhp > 0:
             oldhp += -1 if oldhp > self.poke.hp else 1
             step += 1
-            self.poke.text_hp.rechar(f"HP:{oldhp}", esccode=Color.yellow)
+            self.poke.text_hp.rechar(
+                tr("HP:{p0}").format(p0=oldhp), esccode=Color.yellow
+            )
             self.make(oldhp)
             # Easing: starts fast, slows down towards end
             progress = step / max(diff, 1)
             delay = 0.03 + (0.12 * progress * progress)
             time.sleep(SPEED_OF_TIME * delay)
             self.poke.ico.map.show()
-        self.poke.text_hp.rechar(f"HP:{oldhp}")
+        self.poke.text_hp.rechar(tr("HP:{p0}").format(p0=oldhp))
         time.sleep(SPEED_OF_TIME * 0.1)
 
 

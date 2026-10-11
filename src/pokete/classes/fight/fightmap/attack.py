@@ -11,7 +11,8 @@ from pokete.base.mouse import MouseInteractor
 from pokete.base.ui.elements import LabelBox
 from pokete.base.ui.elements.labels import GenericActionLabel
 from pokete.base.ui.views.choose_box import ChooseBoxView
-from pokete.util import liner
+from pokete.i18n import _ as tr
+from pokete.util.liner import wrap_text
 
 from ... import effects
 from ...attack import Attack
@@ -23,14 +24,19 @@ class AttackInfoBox(se.Box):
         self.effect_active = False
         self.effect_available = False
         self.attack_info = LabelBox(se.Text("", state="float"), "Attack Info")
-        self.attack_info_label = GenericActionLabel(Action.SCREEN_SWITCH, "Attack Info")
-        self.effect_info_label = GenericActionLabel(Action.SCREEN_SWITCH, "Effect Info")
+        self.attack_info_label = GenericActionLabel(
+            Action.SCREEN_SWITCH, tr("Attack Info")
+        )
+        self.effect_info_label = GenericActionLabel(
+            Action.SCREEN_SWITCH, tr("Effect Info")
+        )
         self.effect_info = LabelBox(
             se.Text("", state="float"),
             "Effect Info",
             info=[self.attack_info_label],
         )
         super().__init__(1, 1)
+        self.add_ob(self.attack_info, 0, 0)
 
     def show_effect(self):
         if self.effect_available:
@@ -52,7 +58,7 @@ class AttackInfoBox(se.Box):
             self.show_effect()
 
     def set_attack(self, attack_ob: Attack):
-        self.attack_info.label.rechar(liner(attack_ob.desc, 37))
+        self.attack_info.label.rechar(wrap_text(attack_ob.desc, 30))
         self.effect_available = attack_ob.effect is not None
         if self.effect_available:
             for label in self.attack_info.info_labels:
@@ -61,7 +67,7 @@ class AttackInfoBox(se.Box):
             self.attack_info.info_labels = [self.effect_info_label]
             self.attack_info.add_info_labels()
             self.effect_info.label.rechar(
-                liner(self.effects_dictionary[attack_ob.effect].desc, 37),
+                wrap_text(tr(self.effects_dictionary[attack_ob.effect].desc), 30),
                 esccode=self.effects_dictionary[attack_ob.effect].color,
             )
             self.effect_info.resize(
@@ -87,17 +93,28 @@ class AttackBox(ChooseBoxView[Attack]):
             6,
             25,
             "Attacks",
-            [GenericActionLabel(Action.INFO, "Info")],
+            [GenericActionLabel(Action.INFO, tr("Info"))],
             index_x=1,
         )
 
     def toggle_atk_box(self):
         """Toggles the attack info box"""
         if not self.attack_info_box.added:
-            self.add_ob(self.attack_info_box, 26, 0)
+            self.__add_attack_info()
         else:
             self.rem_ob(self.attack_info_box)
             self.attack_info_box.remove()
+
+    def __add_attack_info(self):
+        panel_height = max(
+            self.attack_info_box.attack_info.height,
+            self.attack_info_box.effect_info.height,
+        )
+        self.add_ob(
+            self.attack_info_box,
+            self.width + 1,
+            min(0, self.height - panel_height),
+        )
 
     def get_partial_interactors(self) -> list[MouseInteractor]:
         return super().get_partial_interactors() + [
@@ -112,7 +129,9 @@ class AttackBox(ChooseBoxView[Attack]):
 
     @override
     def new_size(self) -> tuple[int, int]:
-        return 6, 25
+        return 6, max(
+            25, max((attack.label.width + 3 for attack in self.attack_obs), default=0)
+        )
 
     @override
     def choose(self, ctx: Context, idx: int) -> Optional[Attack]:
@@ -128,7 +147,13 @@ class AttackBox(ChooseBoxView[Attack]):
 
     @override
     def on_index_change(self, area_idx: int):
+        was_added = self.attack_info_box.added
+        if was_added:
+            self.rem_ob(self.attack_info_box)
+            self.attack_info_box.remove()
         self.attack_info_box.set_attack(self.attack_obs[area_idx])
+        if was_added:
+            self.__add_attack_info()
 
     def handle_extra_actions(self, ctx: Context, action: ActionList) -> bool:
         if action.triggers(Action.INFO):
@@ -141,10 +166,16 @@ class AttackBox(ChooseBoxView[Attack]):
 
     def __call__(self, ctx: Context, attack_obs: list[Attack]) -> Optional[Attack]:
         self.attack_obs = attack_obs
+        self.resize(*self.new_size())
         self.elems = [atc.label for atc in attack_obs]
         self.add_elems()
         if self.index.index >= len(attack_obs):
             self.set_index(0)
         self.attack_info_box.set_attack(self.attack_obs[self.index.index])
         with self.add(ctx.map, 1, ctx.map.height - 7):
-            return super().__call__(ctx)
+            try:
+                return super().__call__(ctx)
+            finally:
+                if self.attack_info_box.added:
+                    self.rem_ob(self.attack_info_box)
+                    self.attack_info_box.remove()

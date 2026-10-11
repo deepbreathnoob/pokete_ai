@@ -8,24 +8,29 @@ from pokete.base.input import Action, _ev, get_action
 from pokete.base.input.mouse import MouseEvent, MouseEventType
 from pokete.base.mouse import MouseInteractor
 from pokete.base.ui.elements.box import Box
+from pokete.base.ui.elements.labels import action_key_label
 from pokete.base.ui.elements.text import HightlightableText
+from pokete.i18n import _ as tr
+from pokete.util.liner import wrap_text
 
 
 class AskOkBox(Box, MouseInteractor):
-    def __init__(self, text: str):
-        assert len(text) >= 4, "Text has to be longer then 4 characters!"
+    def __init__(self, text: str, max_width=76):
+        text = wrap_text(text, max_width)
         self.__do_exit = False
         self.__text_label = se.Text(text)
-        self.__ok_label = HightlightableText("[O]k")
+        self.__ok_label = HightlightableText(
+            f"[{action_key_label(Action.ACCEPT)}] " + tr("OK")
+        )
         super().__init__(
             self.__text_label.height + 3,
-            self.__text_label.width + 4,
+            max(self.__text_label.width, self.__ok_label.width) + 4,
             "info",
         )
         self.add_ob(self.__text_label, 2, 1)
         self.add_ob(
             self.__ok_label,
-            round(self.__text_label.width / 2),
+            max(2, (self.width - self.__ok_label.width) // 2),
             self.__text_label.height + 1,
         )
 
@@ -50,7 +55,7 @@ class AskOkBox(Box, MouseInteractor):
             ctx = change_ctx(ctx, self)
             while True:
                 action, _ = get_action()
-                if action.triggers(Action.ACCEPT or action == Action.CANCEL):
+                if action.triggers(Action.ACCEPT, Action.CANCEL):
                     break
                 loops.std(ctx)
                 if self.__do_exit:
@@ -64,4 +69,4 @@ def ask_ok(ctx: Context, text):
         ctx:Context
         text: The question it self"""
 
-    AskOkBox(text)(ctx)
+    AskOkBox(text, max_width=max(1, ctx.map.width - 4))(ctx)

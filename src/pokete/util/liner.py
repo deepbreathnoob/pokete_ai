@@ -1,3 +1,6 @@
+import textwrap
+
+
 def liner(text, width, pre=""):
     """Wraps a string after a certain length and respects word endings
     ARGS:
@@ -34,3 +37,17 @@ def hard_liner(l_len, name):
             "\n" if i != int(len(name) / l_len) else ""
         )
     return ret
+
+
+def wrap_text(text, width):
+    """Bound each line, including long words, while preserving whitespace.
+
+    Existing newlines and spaces also matter for animated dialog output.
+    """
+    wrapper = textwrap.TextWrapper(
+        width=max(1, width),
+        replace_whitespace=False,
+        drop_whitespace=False,
+        break_on_hyphens=False,
+    )
+    return "\n".join("\n".join(wrapper.wrap(line)) for line in text.split("\n"))

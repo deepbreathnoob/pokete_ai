@@ -10,6 +10,7 @@ import scrap_engine as se
 from pokete.base.color import Color
 from pokete.base.context import Context
 from pokete.classes.model.poke import PokeDict
+from pokete.i18n import _ as tr
 from pokete.util import liner
 
 from ..asset_service.resources.base import Poke as ResourcePoke
@@ -118,20 +119,22 @@ can't have more than 4 attacks!"
                 0,
                 0,
             )
-        self.text_hp = se.Text(f"HP:{self.hp}", state="float")
-        self.text_lvl = se.Text(f"Lvl:{self.lvl()}", state="float")
+        self.text_hp = se.Text(tr("HP:{p0}").format(p0=self.hp), state="float")
+        self.text_lvl = se.Text(tr("Lvl:{p0}").format(p0=self.lvl()), state="float")
         self.text_name = se.Text(
             (self.name.upper() if self.shiny else self.name),
             esccode=Color.underlined + self.type.color,
             state="float",
         )
         self.text_xp = se.Text(
-            f"XP:{self.xp - (self.lvl() ** 2 - 1)}/\
-{((self.lvl() + 1) ** 2 - 1) - (self.lvl() ** 2 - 1)}",
+            tr("XP:{p0}/{p1}").format(
+                p0=self.xp - (self.lvl() ** 2 - 1),
+                p1=((self.lvl() + 1) ** 2 - 1) - (self.lvl() ** 2 - 1),
+            ),
             state="float",
         )
         self.text_type = se.Text(
-            self.type.name.capitalize(), state="float", esccode=self.type.color
+            self.type.display_name.capitalize(), state="float", esccode=self.type.color
         )
         self.tril = se.Object("<", state="float")
         self.trir = se.Object(">", state="float")
@@ -154,7 +157,7 @@ can't have more than 4 attacks!"
         ARGS:
             player: Bool whether or not the Poke new belongs to the player"""
         self.player = player
-        self.affil = "you" if self.player else "enemy"
+        self.affil = tr("you") if self.player else tr("enemy")
         self.ext_name = f"{self.name}({self.affil})"
 
     def set_poke_stats(self, poke_stats):
@@ -209,10 +212,12 @@ can't have more than 4 attacks!"
         self.xp += _xp
         self.poke_stats.add_xp(_xp)
         self.text_xp.rechar(
-            f"XP:{self.xp - (self.lvl() ** 2 - 1)}/\
-{((self.lvl() + 1) ** 2 - 1) - (self.lvl() ** 2 - 1)}"
+            tr("XP:{p0}/{p1}").format(
+                p0=self.xp - (self.lvl() ** 2 - 1),
+                p1=((self.lvl() + 1) ** 2 - 1) - (self.lvl() ** 2 - 1),
+            )
         )
-        self.text_lvl.rechar(f"Lvl:{self.lvl()}")
+        self.text_lvl.rechar(tr("Lvl:{p0}").format(p0=self.lvl()))
         logging.info("[Poke][%s] Gained %dxp (curr:%d)", self.name, _xp, self.xp)
         if old_lvl < self.lvl():
             logging.info("[Poke][%s] Reached lvl. %d", self.name, self.lvl())

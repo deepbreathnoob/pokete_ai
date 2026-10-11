@@ -1,6 +1,7 @@
 """Contains Weather class"""
 
 from pokete.data import weathers
+from pokete.i18n import _ as tr
 
 
 class Weather:
@@ -9,7 +10,7 @@ class Weather:
         index: The weathers name"""
 
     def __init__(self, index):
-        self.info = weathers[index]["info"]
+        self.info = tr(weathers[index]["info"])
         self.effected = weathers[index]["effected"]
 
     def effect(self, typ):

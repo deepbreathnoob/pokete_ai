@@ -3,6 +3,7 @@ from typing import Optional
 import scrap_engine as se
 
 from pokete.base.game_map import CompatMap
+from pokete.i18n import _ as tr
 
 from ...context import Context
 from ..overview import Overview
@@ -36,7 +37,7 @@ class Box(se.Box, Overview):
         self.inner = se.Square(
             char=" ", width=width - 2, height=height - 2, state="float"
         )
-        self.name_label = se.Text(name, state="float")
+        self.name_label = se.Text(tr(name), state="float")
         self.info_labels: list[se.Text] = []
         if info is not None:
             self.info_labels = info
